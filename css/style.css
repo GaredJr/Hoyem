@@ -15,4 +15,14 @@
 body {
   background-color: var(--neutral);
   color: var(--face);
+
+  #dimensions
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.center {
+  display: flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
 }
