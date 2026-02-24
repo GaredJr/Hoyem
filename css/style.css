@@ -1,4 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("");
+
+@font-face {
+  font-family: "LEMON";
+  src: url("../fonts/Lemon\ Milk\ Pro\ Ultra\ Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMON";
+  src: url("../fonts/Lemon\ Milk\ Pro\ Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMON";
+  src: url("../fonts/Lemon\ Milk\ Pro\ Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LEMON";
+  src: url("../fonts/Lemon\ Milk\ Pro\ Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --neutral: #1D1C1C;
@@ -8,22 +39,100 @@
 } 
 
 * {
-  font-family:  "Lora", serif;
+  font-family:  "LEMON", serif;
+  font-weight: 300;
   font-optical-sizing: auto;
+
+  user-select: none;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
 body {
-  background-color: var(--neutral);
   color: var(--face);
+  background-color: #000;
+  /*dimensions*/
+  width: auto;
+  overflow: hidden;
+  
+}
 
-  #dimensions
-  width: 100dvw;
-  height: 100dvh;
+h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;          /* top:0 right:0 bottom:0 left:0 */
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;   
+}
+
+canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 .center {
+  
+  width: 100%;
+  height: 100%;
+  
+  background: radial-gradient(circle, var(--neutral) 0%, rgba(0, 0, 0, 0) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+h1,p {
+  margin: 5px 0;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(.5);
+    opacity: 0;
+  }
+  to {transform: scale(1.2);}
+}
+
+#scaler {
+  text-align: center;
+  transform: scale(1.2);
+  animation-name: scaleIn;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#scaler > * {
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#scaler > *:hover {
+  transform: scale(1.05);
+}
+
+#scaler > div {
+  display: flex;
+  flex-direction: row;
+}
+
+#scaler > div > * {
+  width: 24px;
+  height: 24px;
+}
+
+#copyright {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
 }
