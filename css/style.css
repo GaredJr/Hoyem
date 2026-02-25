@@ -136,3 +136,59 @@ h1,p {
   bottom: 10px;
   left: 20px;
 }
+
+.hcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  backdrop-filter: blur(3px);
+  position: fixed;
+  width: calc(100% - 20px);
+  top: 10px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #fffafa18;
+  filter: drop-shadow(0px 5px 15px #000000);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.navbar > .buttons {
+  display:  flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.navbar > .buttons svg {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar > .buttons a {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: start;
+}
+
+.navbar > .buttons a, .burger {
+  transition: 0.3s ease-in-out;
+  color: var(--face);
+  text-decoration: none;
+}
+
+.navbar > .buttons a:hover, .burger:hover {
+  transform: scale(1) translateY(-2px);
+}
+
+.navbar > .burger {
+  color: var(--face);
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+}
