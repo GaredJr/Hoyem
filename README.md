@@ -2,7 +2,7 @@
 
 *Min personlige hjemmeside.*
 
-![Hoyem](assets/Screenshot 2026-03-04 at 21.38.31.png)
+![Hoyem](<assets/Screenshot%202026-03-04%20at%2021.38.31.png>)
 
 [hoyem.dev](https://hoyem.dev/)
 
