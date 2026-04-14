@@ -3,24 +3,42 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Omni Wiki</title>
     <link href="/css/style.css" rel="stylesheet">
   </head>
-  <body class="hcenter">
+  <body class="hcenter wikiBody">
     <header class="navbar" id="navbar">
       <!--components/navbar.html-->
     </header>
-      <div class="center">
-        <div>
-          <h2>Omni Wiki</h2>
-          <div class="wikiMain">
-
-          </div>
-        </div>
+    <div class="center">
+      <div class="wikiPageIntro">
+        <p class="wikiEyebrow">Field Notes</p>
+        <h2>Omni Wiki</h2>
+        <p>
+          Browse the encyclopedia, open an entry, and keep that selection saved in the URL so each page can be linked directly.
+        </p>
       </div>
-      <p id="copyright">
-         <!--components/copyright.html-->
-      </p>
+      <div class="wikiShell" data-wiki-root>
+        <section class="wikiMain wikiNav">
+          <div class="wikiPanelHeading">
+            <h3>Content</h3>
+            <p>Each button loads a JSON page and swaps the article view without leaving the wiki.</p>
+          </div>
+          <div class="contentGrid" id="wiki-grid"></div>
+        </section>
+        <article class="wikiMain wikiArticle" aria-live="polite">
+          <div class="wikiArticleToolbar">
+            <button class="wikiBackButton" id="wiki-reset" type="button" hidden>All Pages</button>
+            <p class="wikiArticleStatus" id="wiki-status">Select a page to load its JSON content.</p>
+          </div>
+          <div class="wikiArticleBody" id="wiki-article-body"></div>
+        </article>
+      </div>
+    </div>
+    <p id="copyright">
+      <!--components/copyright.html-->
+    </p>
     <script src="/scripts/main.js"></script>
+    <script src="/scripts/wiki-omni.js"></script>
   </body>
 </html>

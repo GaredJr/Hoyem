@@ -1,0 +1,43 @@
+{
+  "slug": "storyline",
+  "title": "Storyline",
+  "image": "/media/placeholder.webp",
+  "summary": "A rough outline of the current story arc and major beats.",
+  "intro": "This page is a placeholder narrative overview, built to show how the wiki can hold campaign summaries now and more granular quest breakdowns later.",
+  "facts": [
+    "Story pages often need spoiler-safe summaries near the top and deeper sections lower down.",
+    "JSON makes it straightforward to keep a clean summary view while the page grows more detailed over time.",
+    "This entry focuses on structure rather than final canon text."
+  ],
+  "sections": [
+    {
+      "heading": "Opening Beat",
+      "paragraphs": [
+        "The story begins with the team operating near the edge of familiar territory, where a routine objective exposes signs that the wider region is becoming unstable.",
+        "This first beat should establish tone, key relationships, and the initial mystery without overwhelming the player."
+      ]
+    },
+    {
+      "heading": "Midgame Pressure",
+      "paragraphs": [
+        "The middle act raises stakes by forcing returns to known locations under changed conditions. That gives the world a sense of progression while also reinforcing character arcs."
+      ],
+      "items": [
+        "Camp upgrades unlock new strategies and dialogue.",
+        "Earlier allies reveal conflicting goals.",
+        "Traversal routes become more dangerous or more flexible."
+      ]
+    },
+    {
+      "heading": "Late Reveal",
+      "paragraphs": [
+        "The late-game reveal should reframe earlier discoveries, then push the player toward a decisive choice that ties the central mystery back to the cast's personal stakes."
+      ],
+      "items": [
+        "Clarify what the team misunderstood in the opening act.",
+        "Resolve at least one relationship arc before the finale.",
+        "Leave room for aftermath pages or sequel hooks in the wiki."
+      ]
+    }
+  ]
+}

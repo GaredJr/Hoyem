@@ -1,0 +1,47 @@
+{
+  "slug": "map-locations",
+  "title": "Map & Locations",
+  "image": "/media/placeholder.webp",
+  "summary": "Regions, landmarks, and traversal notes for the Omni world.",
+  "intro": "This placeholder article shows how location data can be grouped into regions now and later split into separate entries as the world map becomes more detailed.",
+  "facts": [
+    "The current regions are intentionally generic so the layout can be tested before final naming is complete.",
+    "Location pages usually benefit from short travel notes, encounter hooks, and unlock requirements.",
+    "The URL slug for this entry is map-locations."
+  ],
+  "sections": [
+    {
+      "heading": "Outer Rim",
+      "paragraphs": [
+        "The Outer Rim is framed as the rough edge of the playable space, where players first learn the rhythm of exploration, scavenging, and short narrative discoveries."
+      ],
+      "items": [
+        "Best for onboarding traversal and light danger.",
+        "Can introduce environmental storytelling before heavier plot scenes.",
+        "Good place for simple collectibles and route shortcuts."
+      ]
+    },
+    {
+      "heading": "Flooded Pass",
+      "paragraphs": [
+        "The Flooded Pass is a placeholder landmark for terrain challenges. It suggests weather, blocked routes, and tool-gated progress without needing final production art yet."
+      ],
+      "items": [
+        "Potential hazard: unstable footing or shifting water level.",
+        "Potential reward: hidden path back to camp.",
+        "Potential story beat: first clear sign of a larger threat."
+      ]
+    },
+    {
+      "heading": "Observation Tower",
+      "paragraphs": [
+        "The Observation Tower acts as a late-stop landmark in this draft layout. It works well as a reveal point for quests, fast-travel unlocks, or a panoramic story beat."
+      ],
+      "items": [
+        "Ideal spot for map updates or journal discoveries.",
+        "Could contain binocular, radio, or beacon mechanics.",
+        "Fits both exploration rewards and narrative transitions."
+      ]
+    }
+  ]
+}

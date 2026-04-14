@@ -1,0 +1,41 @@
+{
+  "title": "Omni Wiki",
+  "description": "Use the page list to open a JSON-backed article. The selected page is mirrored in the URL with the page query parameter.",
+  "pages": [
+    {
+      "slug": "keybinds",
+      "title": "Keybinds & Shortcuts",
+      "image": "/media/kb1to1.webp",
+      "summary": "A cleaner at-a-glance reference for the controls players use most often.",
+      "file": "./pages/keybinds.json"
+    },
+    {
+      "slug": "characters",
+      "title": "Characters",
+      "image": "/media/Characters/ali1to1.png",
+      "summary": "Placeholder bios for the cast members currently shown in the project.",
+      "file": "./pages/characters.json"
+    },
+    {
+      "slug": "map-locations",
+      "title": "Map & Locations",
+      "image": "/media/placeholder.webp",
+      "summary": "Regions, landmarks, and traversal notes for the Omni world.",
+      "file": "./pages/map-locations.json"
+    },
+    {
+      "slug": "storyline",
+      "title": "Storyline",
+      "image": "/media/placeholder.webp",
+      "summary": "A rough outline of the current story arc and major beats.",
+      "file": "./pages/storyline.json"
+    },
+    {
+      "slug": "the-camp",
+      "title": "The Camp",
+      "image": "/media/placeholder.webp",
+      "summary": "The home base overview, its stations, and why players return to it.",
+      "file": "./pages/the-camp.json"
+    }
+  ]
+}

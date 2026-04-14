@@ -1,0 +1,49 @@
+{
+  "slug": "characters",
+  "title": "Characters",
+  "image": "/media/Characters/ali1to1.png",
+  "summary": "Placeholder bios for the cast members currently shown in the project.",
+  "intro": "Character pages are a natural fit for JSON because each person can eventually become its own linked entry with art, relationships, and progression notes.",
+  "facts": [
+    "Ali and Amy are used here as visible placeholders because both already have project art in the media folder.",
+    "The structure leaves room for future factions, relationship tags, and spoiler-safe summaries.",
+    "This article can be linked directly with ?page=characters for testing or sharing."
+  ],
+  "sections": [
+    {
+      "heading": "Ali",
+      "paragraphs": [
+        "Ali currently serves as a clear anchor character for the placeholder wiki. Their profile can later hold role details, narrative beats, and inventory preferences.",
+        "This entry is written as broad placeholder text so the UI can be tested before the final lore is locked in."
+      ],
+      "items": [
+        "Visual hook: practical gear and a grounded silhouette.",
+        "Narrative role: a likely guide, scout, or first companion.",
+        "Future fields: trust level, quest chain, and notable scenes."
+      ]
+    },
+    {
+      "heading": "Amy",
+      "paragraphs": [
+        "Amy is a good second example because the page layout can contrast personalities, specialties, and story roles without needing separate templates.",
+        "As the wiki grows, this section could become a small directory with links to fully dedicated character pages."
+      ],
+      "items": [
+        "Visual hook: a distinct portrait that reads differently from Ali at thumbnail size.",
+        "Narrative role: support, strategist, or emotional counterweight.",
+        "Future fields: dialogue tone, camp interactions, and branching outcomes."
+      ]
+    },
+    {
+      "heading": "Relationship Notes",
+      "paragraphs": [
+        "A shared relationship section helps the wiki move past isolated bios. It is useful for documenting party dynamics, rivalries, and how camp scenes evolve over time."
+      ],
+      "items": [
+        "Track major trust shifts after story milestones.",
+        "Note which camp upgrades unlock new conversations.",
+        "Use spoiler labels once the final story order is fixed."
+      ]
+    }
+  ]
+}
