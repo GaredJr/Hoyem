@@ -1,42 +1,42 @@
 {
   "slug": "storyline",
   "title": "Storyline",
-  "image": "/media/placeholder.webp",
-  "summary": "A broad outline of the current arc, its pressure points, and its reveals.",
-  "intro": "A rough campaign skeleton meant to hold tone and momentum before every scene is locked.",
+  "image": "/media/wiki-story.svg",
+  "summary": "The current story spine, from opening setup to bigger reveals.",
+  "intro": "A rough story outline meant to hold tone, pacing, and momentum before every scene is locked in.",
   "facts": [
-    "The opening should establish the group's dynamic before the larger problem fully surfaces.",
-    "Midgame pressure works best when familiar places come back changed.",
-    "The late reveal should clarify the mystery without flattening it."
+    "The opening should make the group feel real before the bigger problem fully shows itself.",
+    "Midgame tension works best when familiar places come back changed.",
+    "The late reveal should answer the mystery without draining all the intrigue out of it."
   ],
   "sections": [
     {
-      "heading": "Opening Beat",
+      "heading": "Opening Setup",
       "paragraphs": [
-        "The story opens at the edge of familiar territory, where an ordinary objective starts to feel wrong in small, accumulating ways.",
-        "That first stretch should establish tone, group chemistry, and the shape of the mystery without rushing to explain everything."
+        "The story starts close to familiar ground, where a routine objective begins to feel wrong in small ways.",
+        "That opening stretch should introduce the cast, set the tone, and hint at the mystery without rushing to explain it."
       ]
     },
     {
       "heading": "Midgame Pressure",
       "paragraphs": [
-        "The middle act should push the player back through places they already know, only this time with more pressure, less certainty, and more to lose."
+        "The middle should send the player back through places they thought they understood, only now with more risk, less certainty, and more at stake."
       ],
       "items": [
-        "Camp upgrades unlock new strategies and dialogue.",
-        "Earlier allies start revealing conflicting goals.",
-        "Traversal routes become more dangerous or, occasionally, more open."
+        "Camp upgrades open up new tactics and new conversations.",
+        "Earlier allies start showing conflicting goals.",
+        "Travel routes become more dangerous or, sometimes, newly open."
       ]
     },
     {
       "heading": "Late Reveal",
       "paragraphs": [
-        "The late reveal should make the earlier clues click into place, then force a choice that matters to the cast as much as it does to the wider world."
+        "The late reveal should make the earlier clues snap into focus, then force a choice that matters to the group as much as it matters to the world around them."
       ],
       "items": [
-        "Clarify what the group misunderstood early on.",
+        "Make clear what the group misunderstood early on.",
         "Resolve at least one relationship arc before the ending lands.",
-        "Leave just enough room for aftermath notes or future fallout."
+        "Leave some room for aftermath, fallout, or future notes."
       ]
     }
   ]

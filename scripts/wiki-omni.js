@@ -1,489 +1,221 @@
-const wikiRoot = document.querySelector("[data-wiki-root]");
+const legacyPageMap = {
+  "keybinds": "/subdomains/wiki-omni/keybinds/",
+  "characters": "/subdomains/wiki-omni/characters/",
+  "map-locations": "/subdomains/wiki-omni/map-locations/",
+  "storyline": "/subdomains/wiki-omni/storyline/",
+  "the-camp": "/subdomains/wiki-omni/the-camp/",
+};
 
-if (wikiRoot) {
-  const manifestUrl = new URL("./contentpages.json", window.location.href);
-  const pageCache = new Map();
-  let manifestData;
-  let currentRequestId = 0;
+const searchInput = document.querySelector("[data-search]");
+const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
+const cards = Array.from(document.querySelectorAll("[data-entry-card]"));
+const groups = Array.from(document.querySelectorAll("[data-group]"));
+const resultCount = document.querySelector("[data-result-count]");
+const emptyState = document.querySelector("[data-empty-state]");
+const legacyNotice = document.querySelector("[data-legacy-notice]");
+const resetButton = document.querySelector("[data-reset-filters]");
+const sectionNavLinks = Array.from(document.querySelectorAll(".wikiSectionNav a[href^='#']"));
 
-  const pageIntro = document.getElementById("wiki-page-intro");
-  const archiveView = document.getElementById("wiki-archive-view");
-  const archiveDescription = document.getElementById("wiki-archive-description");
-  const entryView = document.getElementById("wiki-entry-view");
-  const archiveList = document.getElementById("wiki-grid");
-  const sidebarList = document.getElementById("wiki-sidebar-list");
-  const articleBody = document.getElementById("wiki-article-body");
-  const articleStatus = document.getElementById("wiki-status");
-  const resetButton = document.getElementById("wiki-reset");
+handleLegacyQueryPage();
 
-  resetButton.addEventListener("click", () => {
-    void showArchiveState({ updateHistory: true });
-  });
+if (searchInput && filterButtons.length > 0 && cards.length > 0) {
+  const params = new URLSearchParams(window.location.search);
+  let activeFilter = getInitialFilter(params.get("category"));
+  const initialQuery = params.get("q") || "";
 
-  window.addEventListener("popstate", () => {
-    void syncPageFromUrl();
-  });
+  searchInput.value = initialQuery;
+  setActiveFilterButton(activeFilter);
 
-  void initializeWiki();
-
-  async function initializeWiki() {
-    try {
-      const manifest = await loadManifest();
-      archiveDescription.textContent = manifest.description || "Browse the current Omni entries.";
-      renderArchiveCards(manifest.pages);
-      renderSidebarLinks(manifest.pages);
-      await syncPageFromUrl();
-    } catch (error) {
-      console.error("Unable to initialize the Omni wiki.", error);
-      showArchiveMode();
-      renderArchiveMessage(
-        "Archive unavailable",
-        "The archive list could not be loaded, so the Omni wiki is temporarily unavailable."
-      );
-    }
-  }
-
-  async function syncPageFromUrl() {
-    const manifest = await loadManifest();
-    const slug = getSelectedPageFromUrl();
-
-    if (!slug) {
-      currentRequestId += 1;
-      showArchiveMode();
-      archiveDescription.textContent = manifest.description || "Browse the current Omni entries.";
-      setActiveLinks();
-      document.title = "Omni Wiki";
-      return;
-    }
-
-    await openPage(slug, { updateHistory: false });
-  }
-
-  async function loadManifest() {
-    if (manifestData) {
-      return manifestData;
-    }
-
-    const response = await fetch(manifestUrl.href);
-
-    if (!response.ok) {
-      throw new Error(`Manifest request failed with status ${response.status}.`);
-    }
-
-    manifestData = await response.json();
-    return manifestData;
-  }
-
-  function renderArchiveCards(pages) {
-    const cards = pages.map((page) => createPageLink(page, "archive"));
-    archiveList.replaceChildren(...cards);
-  }
-
-  function renderSidebarLinks(pages) {
-    const links = pages.map((page) => createPageLink(page, "sidebar"));
-    sidebarList.replaceChildren(...links);
-  }
-
-  function createPageLink(page, variant) {
-    const link = document.createElement("a");
-    const copy = document.createElement("div");
-    const title = document.createElement("strong");
-    const summary = document.createElement("span");
-
-    link.href = createPageUrl(page.slug);
-    link.dataset.page = page.slug;
-    link.addEventListener("click", (event) => {
-      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-        return;
-      }
-
-      event.preventDefault();
-      void openPage(page.slug, { updateHistory: true });
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+      searchInput.value = "";
+      activeFilter = "all";
+      setActiveFilterButton(activeFilter);
+      applyFilters();
+      searchInput.focus();
     });
-
-    title.textContent = page.title;
-    summary.textContent = page.summary;
-
-    if (variant === "archive") {
-      const image = document.createElement("img");
-
-      link.className = "wikiArchiveCard";
-      copy.className = "wikiArchiveCardText";
-      title.className = "wikiArchiveCardTitle";
-      summary.className = "wikiArchiveCardSummary";
-
-      image.src = page.image;
-      image.alt = page.title;
-
-      copy.append(title, summary);
-      link.append(image, copy);
-      return link;
-    }
-
-    link.className = "wikiEntryLink";
-    copy.className = "wikiEntryLinkText";
-    title.className = "wikiEntryLinkTitle";
-    summary.className = "wikiEntryLinkSummary";
-
-    copy.append(title, summary);
-    link.append(copy);
-    return link;
   }
 
-  async function openPage(slug, options) {
-    const manifest = await loadManifest();
-    const pageMeta = manifest.pages.find((page) => page.slug === slug);
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter || "all";
+      setActiveFilterButton(activeFilter);
+      applyFilters();
+    });
+  });
 
-    showEntryMode();
+  searchInput.addEventListener("input", () => {
+    applyFilters();
+  });
 
-    if (!pageMeta) {
-      setActiveLinks();
-      renderMessageState(
-        "Entry not found",
-        `There is no archive entry called "${slug}". Use the archive links to open another page.`
-      );
-      return;
-    }
+  applyFilters();
 
-    const requestId = ++currentRequestId;
+  function applyFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
 
-    setActiveLinks(slug);
-    renderLoadingState(pageMeta.title);
+    cards.forEach((card) => {
+      const category = card.dataset.category || "";
+      const title = card.dataset.title || "";
+      const keywords = card.dataset.keywords || "";
+      const haystack = `${title} ${keywords}`.toLowerCase();
 
-    try {
-      const pageData = await loadPage(pageMeta);
+      const matchesFilter = activeFilter === "all" || category === activeFilter;
+      const matchesSearch = query === "" || haystack.includes(query);
+      const isVisible = matchesFilter && matchesSearch;
 
-      if (requestId !== currentRequestId) {
-        return;
+      card.hidden = !isVisible;
+
+      if (isVisible) {
+        visibleCount += 1;
       }
-
-      renderArticle(pageData);
-
-      if (options.updateHistory) {
-        const nextUrl = createPageUrl(slug);
-        const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-
-        if (nextUrl !== currentUrl) {
-          window.history.pushState({ page: slug }, "", nextUrl);
-        }
-      }
-    } catch (error) {
-      if (requestId !== currentRequestId) {
-        return;
-      }
-
-      console.error(`Unable to load the page "${slug}".`, error);
-      renderMessageState(
-        "Entry unavailable",
-        `The "${pageMeta.title}" entry could not be opened just now.`
-      );
-    }
-  }
-
-  async function loadPage(pageMeta) {
-    if (pageCache.has(pageMeta.slug)) {
-      return pageCache.get(pageMeta.slug);
-    }
-
-    const pageUrl = new URL(pageMeta.file, manifestUrl);
-    const response = await fetch(pageUrl.href);
-
-    if (!response.ok) {
-      throw new Error(`Page request failed with status ${response.status}.`);
-    }
-
-    const pageData = await response.json();
-    pageCache.set(pageMeta.slug, pageData);
-    return pageData;
-  }
-
-  async function showArchiveState(options) {
-    const manifest = await loadManifest();
-    currentRequestId += 1;
-    showArchiveMode();
-    archiveDescription.textContent = manifest.description || "Browse the current Omni entries.";
-    setActiveLinks();
-    document.title = "Omni Wiki";
-
-    if (options.updateHistory) {
-      const nextUrl = createPageUrl();
-      const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-
-      if (nextUrl !== currentUrl) {
-        window.history.pushState({}, "", nextUrl);
-      }
-    }
-  }
-
-  function showArchiveMode() {
-    pageIntro.hidden = false;
-    archiveView.hidden = false;
-    entryView.hidden = true;
-    resetButton.hidden = true;
-    articleStatus.textContent = "Archive";
-  }
-
-  function showEntryMode() {
-    pageIntro.hidden = true;
-    archiveView.hidden = true;
-    entryView.hidden = false;
-    resetButton.hidden = false;
-  }
-
-  function renderArchiveMessage(title, message) {
-    const wrapper = document.createElement("div");
-    const heading = document.createElement("h3");
-    const text = document.createElement("p");
-
-    wrapper.className = "wikiEmptyState wikiArchiveMessage";
-    heading.textContent = title;
-    text.textContent = message;
-
-    wrapper.append(heading, text);
-    archiveList.replaceChildren(wrapper);
-  }
-
-  function renderLoadingState(title) {
-    articleStatus.textContent = `Archive / ${title}`;
-    document.title = `${title} | Omni Wiki`;
-
-    const wrapper = document.createElement("div");
-    const heading = document.createElement("h3");
-    const text = document.createElement("p");
-    const bar = document.createElement("div");
-
-    wrapper.className = "wikiLoadingState";
-    heading.textContent = title;
-    text.textContent = "Loading entry.";
-    bar.className = "wikiLoadingBar";
-
-    wrapper.append(heading, text, bar);
-    articleBody.replaceChildren(wrapper);
-  }
-
-  function renderMessageState(title, message) {
-    articleStatus.textContent = title;
-    document.title = "Omni Wiki";
-    renderStateBlock(title, message);
-  }
-
-  function renderStateBlock(title, message) {
-    const wrapper = document.createElement("div");
-    const heading = document.createElement("h3");
-    const text = document.createElement("p");
-
-    wrapper.className = "wikiEmptyState";
-    heading.textContent = title;
-    text.textContent = message;
-
-    wrapper.append(heading, text);
-    articleBody.replaceChildren(wrapper);
-  }
-
-  function renderArticle(pageData) {
-    articleStatus.textContent = `Archive / ${pageData.title}`;
-    document.title = `${pageData.title} | Omni Wiki`;
-
-    const article = document.createElement("div");
-    const hero = document.createElement("div");
-    const heroCopy = document.createElement("div");
-    const title = document.createElement("h3");
-    const summary = document.createElement("p");
-
-    article.className = "wikiArticleContent";
-    hero.className = "wikiArticleHero";
-
-    title.className = "wikiArticleTitle";
-    title.textContent = pageData.title;
-
-    summary.className = "wikiArticleSummary";
-    summary.textContent = pageData.summary;
-    heroCopy.append(title, summary);
-
-    if (pageData.intro) {
-      const intro = document.createElement("p");
-      intro.className = "wikiIntro";
-      intro.textContent = pageData.intro;
-      heroCopy.append(intro);
-    }
-
-    if (pageData.showImage !== false && pageData.image) {
-      const image = document.createElement("img");
-      image.className = "wikiArticleHeroImage";
-      image.src = pageData.image;
-      image.alt = pageData.title;
-      hero.append(image);
-    } else {
-      hero.classList.add("is-text-only");
-    }
-
-    hero.append(heroCopy);
-    article.append(hero);
-
-    if (Array.isArray(pageData.facts) && pageData.facts.length > 0) {
-      const factList = document.createElement("ul");
-
-      factList.className = "wikiFactList";
-
-      pageData.facts.forEach((fact) => {
-        const item = document.createElement("li");
-        item.textContent = fact;
-        factList.append(item);
-      });
-
-      article.append(factList);
-    }
-
-    if (Array.isArray(pageData.shortcutGroups) && pageData.shortcutGroups.length > 0) {
-      article.append(renderShortcutGroups(pageData.shortcutGroups));
-    }
-
-    if (Array.isArray(pageData.sections) && pageData.sections.length > 0) {
-      const sections = document.createElement("div");
-      sections.className = "wikiSections";
-
-      pageData.sections.forEach((section) => {
-        const wrapper = document.createElement("section");
-        const heading = document.createElement("h4");
-
-        wrapper.className = "wikiSection";
-        heading.textContent = section.heading;
-        wrapper.append(heading);
-
-        if (Array.isArray(section.paragraphs)) {
-          section.paragraphs.forEach((paragraph) => {
-            const text = document.createElement("p");
-            text.textContent = paragraph;
-            wrapper.append(text);
-          });
-        }
-
-        if (Array.isArray(section.items) && section.items.length > 0) {
-          const list = document.createElement("ul");
-
-          section.items.forEach((entry) => {
-            const item = document.createElement("li");
-            item.textContent = entry;
-            list.append(item);
-          });
-
-          wrapper.append(list);
-        }
-
-        sections.append(wrapper);
-      });
-
-      article.append(sections);
-    }
-
-    articleBody.replaceChildren(article);
-  }
-
-  function renderShortcutGroups(groups) {
-    const groupsWrapper = document.createElement("div");
-    groupsWrapper.className = "wikiShortcutGroups";
+    });
 
     groups.forEach((group) => {
-      const wrapper = document.createElement("section");
-      const header = document.createElement("div");
-      const headerCopy = document.createElement("div");
-      const heading = document.createElement("h4");
-      const list = document.createElement("div");
-
-      wrapper.className = "wikiShortcutGroup";
-      header.className = "wikiShortcutGroupHeader";
-      headerCopy.className = "wikiShortcutGroupHeaderCopy";
-      heading.className = "wikiShortcutGroupTitle";
-      heading.textContent = group.title;
-
-      headerCopy.append(heading);
-
-      if (group.description) {
-        const description = document.createElement("p");
-        description.className = "wikiShortcutGroupDescription";
-        description.textContent = group.description;
-        headerCopy.append(description);
-      }
-
-      header.append(headerCopy);
-
-      if (group.tag) {
-        const tag = document.createElement("span");
-        tag.className = "wikiShortcutGroupTag";
-        tag.textContent = group.tag;
-        header.append(tag);
-      }
-
-      list.className = "wikiShortcutList";
-
-      group.entries.forEach((entry) => {
-        const row = document.createElement("div");
-        const copy = document.createElement("div");
-        const action = document.createElement("strong");
-        const description = document.createElement("p");
-        const keys = document.createElement("div");
-
-        row.className = "wikiShortcutRow";
-        copy.className = "wikiShortcutCopy";
-        action.className = "wikiShortcutAction";
-        action.textContent = entry.action;
-        copy.append(action);
-
-        if (entry.description) {
-          description.className = "wikiShortcutDescription";
-          description.textContent = entry.description;
-          copy.append(description);
-        }
-
-        keys.className = "wikiShortcutKeys";
-
-        entry.keys.forEach((key) => {
-          const keycap = document.createElement("kbd");
-          keycap.className = "wikiKeycap";
-          keycap.textContent = key;
-          keys.append(keycap);
-        });
-
-        row.append(copy, keys);
-        list.append(row);
-      });
-
-      wrapper.append(header, list);
-      groupsWrapper.append(wrapper);
+      const visibleCards = group.querySelectorAll("[data-entry-card]:not([hidden])").length;
+      group.hidden = visibleCards === 0;
     });
 
-    return groupsWrapper;
-  }
-
-  function setActiveLinks(activeSlug) {
-    const links = wikiRoot.querySelectorAll("[data-page]");
-
-    links.forEach((link) => {
-      const isActive = link.dataset.page === activeSlug;
-      link.classList.toggle("is-active", isActive);
-
-      if (isActive) {
-        link.setAttribute("aria-current", "page");
-      } else {
-        link.removeAttribute("aria-current");
-      }
-    });
-  }
-
-  function getSelectedPageFromUrl() {
-    const searchParams = new URLSearchParams(window.location.search);
-    return searchParams.get("page");
-  }
-
-  function createPageUrl(slug) {
-    const nextUrl = new URL(window.location.href);
-
-    if (slug) {
-      nextUrl.searchParams.set("page", slug);
-    } else {
-      nextUrl.searchParams.delete("page");
+    if (emptyState) {
+      emptyState.hidden = visibleCount !== 0;
     }
 
-    return `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
+    if (resultCount) {
+      const parts = [visibleCount === 1 ? "Showing 1 entry" : `Showing ${visibleCount} entries`];
+
+      if (activeFilter !== "all") {
+        parts.push(`in ${getFilterLabel(activeFilter)}`);
+      }
+
+      if (query) {
+        parts.push(`for "${query}"`);
+      }
+
+      resultCount.textContent = `${parts.join(" ")}.`;
+    }
+
+    if (resetButton) {
+      resetButton.disabled = activeFilter === "all" && query === "";
+    }
+
+    updateUrlState(activeFilter, query);
+  }
+
+  function setActiveFilterButton(activeValue) {
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.filter === activeValue;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
+  function getInitialFilter(value) {
+    if (value && filterButtons.some((button) => button.dataset.filter === value)) {
+      return value;
+    }
+
+    return "all";
+  }
+
+  function getFilterLabel(value) {
+    const matchingButton = filterButtons.find((button) => button.dataset.filter === value);
+    return matchingButton ? matchingButton.textContent.trim().toLowerCase() : value;
+  }
+
+  function updateUrlState(filter, query) {
+    const nextUrl = new URL(window.location.href);
+
+    nextUrl.searchParams.delete("page");
+
+    if (query) {
+      nextUrl.searchParams.set("q", query);
+    } else {
+      nextUrl.searchParams.delete("q");
+    }
+
+    if (filter !== "all") {
+      nextUrl.searchParams.set("category", filter);
+    } else {
+      nextUrl.searchParams.delete("category");
+    }
+
+    window.history.replaceState({}, "", `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
+  }
+}
+
+function handleLegacyQueryPage() {
+  const params = new URLSearchParams(window.location.search);
+  const legacyPage = params.get("page");
+
+  if (!legacyPage) {
+    return;
+  }
+
+  if (legacyPageMap[legacyPage]) {
+    window.location.replace(legacyPageMap[legacyPage]);
+    return;
+  }
+
+  if (legacyNotice) {
+    legacyNotice.hidden = false;
+    legacyNotice.textContent = `There is no archive entry called "${legacyPage}". Use the archive below to open another page.`;
+  }
+}
+
+if (sectionNavLinks.length > 0) {
+  const sectionTargets = sectionNavLinks
+    .map((link) => {
+      const sectionId = decodeURIComponent(link.getAttribute("href").slice(1));
+      const target = document.getElementById(sectionId);
+
+      if (!target) {
+        return null;
+      }
+
+      return { link, sectionId, target };
+    })
+    .filter(Boolean);
+
+  if (sectionTargets.length > 0) {
+    const updateActiveSection = () => {
+      let activeSectionId = sectionTargets[0].sectionId;
+
+      sectionTargets.forEach(({ sectionId, target }) => {
+        if (target.getBoundingClientRect().top <= 160) {
+          activeSectionId = sectionId;
+        }
+      });
+
+      sectionTargets.forEach(({ link, sectionId }) => {
+        const isActive = sectionId === activeSectionId;
+        link.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+
+    sectionTargets.forEach(({ link, sectionId }) => {
+      link.addEventListener("click", () => {
+        sectionTargets.forEach(({ link: otherLink, sectionId: otherId }) => {
+          const isActive = otherId === sectionId;
+          otherLink.classList.toggle("is-active", isActive);
+
+          if (isActive) {
+            otherLink.setAttribute("aria-current", "location");
+          } else {
+            otherLink.removeAttribute("aria-current");
+          }
+        });
+      });
+    });
+
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    window.addEventListener("hashchange", updateActiveSection);
+    updateActiveSection();
   }
 }

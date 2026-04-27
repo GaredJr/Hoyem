@@ -1,42 +1,42 @@
 {
   "slug": "the-camp",
   "title": "The Camp",
-  "image": "/media/placeholder.webp",
-  "summary": "The home base, its routines, and why everything keeps circling back there.",
-  "intro": "The camp is where the world exhales. Part refuge, part workshop, part social space, it should feel like more than a menu with firelight.",
+  "image": "/media/wiki-camp.svg",
+  "summary": "Notes on the home base, its routines, and why it matters between expeditions.",
+  "intro": "The camp is where the world finally slows down. It is part refuge, part workshop, part social space, and it should feel like more than a menu with a fire pit.",
   "facts": [
-    "A memorable camp should feel changed by what happened outside it.",
-    "The hub works best when narrative rest and practical upgrades sit close together.",
-    "Players come back for safety, but they stay for the people and the small changes."
+    "A good camp should reflect what happened outside it.",
+    "The hub works best when practical upgrades and story downtime live side by side.",
+    "Players return for safety, but they remember the camp because of the people and the small changes."
   ],
   "sections": [
     {
-      "heading": "Purpose",
+      "heading": "Why It Matters",
       "paragraphs": [
-        "The camp is the reset point between expeditions, but it should also feel like the place where consequences finally settle in.",
-        "It gives the player room to plan, recover, and notice what changed after the last trip out."
+        "The camp resets the rhythm between expeditions, but it should also be the place where consequences finally catch up with the player.",
+        "It gives the group room to plan, recover, and notice what changed after the last trip out."
       ],
       "items": [
-        "Safe space for dialogue and downtime scenes.",
-        "Central location for upgrades and progression tracking.",
+        "A safe place for dialogue, downtime, and smaller character moments.",
+        "The main space for upgrades and progression tracking.",
         "A natural place to quietly restate what matters before the next outing."
       ]
     },
     {
       "heading": "Stations",
       "paragraphs": [
-        "Breaking the camp into stations keeps the place readable without flattening it. Each corner of the camp should hint at a habit, a person, or a routine."
+        "Breaking the camp into stations keeps it readable without flattening it. Each corner should hint at a habit, a person, or a routine."
       ],
       "items": [
         "Workshop for repair, tuning, and the practical side of staying alive.",
         "Planning table for map review, route choices, and mission selection.",
-        "Firepit or commons area for quieter conversations and morale beats."
+        "Fire pit or commons area for quieter conversations and morale beats."
       ]
     },
     {
-      "heading": "Growth Over Time",
+      "heading": "How It Changes",
       "paragraphs": [
-        "A camp becomes real when it visibly changes. New tools, repaired structures, and fresh ambient dialogue make progress feel lived in rather than logged."
+        "A camp starts to feel real when it changes with the story. New tools, repaired structures, and fresh ambient dialogue make progress feel lived in instead of logged."
       ],
       "items": [
         "Let story milestones leave visible marks on the space.",

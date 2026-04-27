@@ -2,80 +2,80 @@
   "slug": "keybinds",
   "title": "Keybinds & Shortcuts",
   "image": "/media/kb1to1.webp",
-  "summary": "Quick-reference controls for the actions players use every session.",
-  "intro": "A lean control sheet for the buttons that matter most in the field. Built to be scanned mid-session, not studied.",
+  "summary": "A quick control sheet for the buttons players use most often.",
+  "intro": "A simple control sheet for the buttons that matter most out in the field. Made to be checked fast and closed just as fast.",
   "showImage": false,
   "shortcutGroups": [
     {
-      "title": "Essential Omni Shortcuts",
-      "description": "The buttons most players will reach for every few seconds out in the field.",
+      "title": "Essential Shortcuts",
+      "description": "The buttons players will reach for constantly during normal play.",
       "tag": "Core Loop",
       "entries": [
         {
           "action": "Move",
-          "description": "Use the standard movement cluster to walk and adjust position in combat or exploration.",
+          "description": "Standard movement keys for exploration, positioning, and combat.",
           "keys": ["W", "A", "S", "D"]
         },
         {
           "action": "Sprint",
-          "description": "Hold the sprint key to cover open terrain more quickly.",
+          "description": "Hold to move faster across open ground.",
           "keys": ["Shift"]
         },
         {
           "action": "Jump / Vault",
-          "description": "Use the traversal button for jumps, ledges, and low obstacles.",
+          "description": "Use for jumps, ledges, and low obstacles.",
           "keys": ["Space"]
         },
         {
           "action": "Interact",
-          "description": "Talk to characters, pick up items, and use camp stations or doors.",
+          "description": "Talk to characters, pick things up, and use doors or camp stations.",
           "keys": ["E"]
         },
         {
           "action": "Open Inventory",
-          "description": "Review gear, quick slots, and any important items you are carrying.",
+          "description": "Check gear, quick slots, and important items.",
           "keys": ["Tab"]
         },
         {
           "action": "Quick Map",
-          "description": "Bring up the current area map and your active objective overview.",
+          "description": "Open the current map and your active objective view.",
           "keys": ["M"]
         },
         {
           "action": "Utility Action",
-          "description": "Trigger the currently equipped tool, gadget, or context action.",
+          "description": "Use the tool or context action you have equipped.",
           "keys": ["Q"]
         },
         {
           "action": "Pause / Back",
-          "description": "Open the pause menu or close the panel you are currently looking at.",
+          "description": "Open the pause menu or back out of the screen you are in.",
           "keys": ["Esc"]
         }
       ]
     },
     {
       "title": "Combat & Field Actions",
-      "description": "The more situational actions that still need to be easy to find in a hurry.",
+      "description": "Less frequent, but still worth finding fast when things get messy.",
       "tag": "Situational",
       "entries": [
         {
           "action": "Primary Action",
-          "description": "Use the main equipped action, attack, or tool interaction.",
+          "description": "Use your main attack, tool, or equipped action.",
           "keys": ["LMB"]
         },
         {
           "action": "Secondary Action",
-          "description": "Use an alternate fire mode, aim state, or secondary tool function.",
+          "description": "Use an alternate fire mode, aim state, or secondary tool.",
           "keys": ["RMB"]
         },
         {
           "action": "Swap Tool",
-          "description": "Cycle between quick-slot items without opening the full inventory.",
+          "description": "Cycle quick-slot tools without opening the inventory.",
           "keys": ["MW"]
         },
         {
           "action": "Flashlight / Focus",
-          "description": "Toggle a support ability used for visibility or clue hunting.",
+          "description": "Toggle the support action used for visibility or clue tracking.",
           "keys": ["F"]
         }
       ]
@@ -83,15 +83,15 @@
   ],
   "sections": [
     {
-      "heading": "Notes",
+      "heading": "Using This Page",
       "paragraphs": [
-        "The goal here is speed. This page should stay clean enough to glance at once and jump straight back into the game.",
-        "This page should stay blunt and useful. If a key matters during regular play, it belongs here near the top."
+        "This page is here for speed. You should be able to glance at it once and get straight back to playing.",
+        "If a key matters during normal play, it belongs near the top. If it only matters once in a while, it can sit lower down."
       ],
       "items": [
-        "Keep the core loop together so movement and interaction are easy to scan.",
-        "Only add extra description when the action is easy to forget under pressure.",
-        "If controller support lands later, mirror the same structure instead of mixing layouts."
+        "Keep movement and interaction together so the core loop is easy to scan.",
+        "Only add extra description when an action is easy to forget under pressure.",
+        "If controller support gets added later, mirror this layout instead of mixing formats."
       ]
     }
   ]

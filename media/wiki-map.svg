@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Omni map preview</title>
+  <desc id="desc">Stylized map card with routes, landmarks, and region markers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f1a17"/>
+      <stop offset="100%" stop-color="#12100f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.1" r="0.9">
+      <stop offset="0%" stop-color="#c8ae93" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#c8ae93" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" rx="36" fill="url(#bg)"/>
+  <rect width="1200" height="800" rx="36" fill="url(#glow)"/>
+  <path d="M86 618c90-118 168-169 270-210 88-34 157-48 250-162 98-120 179-153 356-160" fill="none" stroke="#6d6257" stroke-dasharray="14 12" stroke-linecap="round" stroke-width="10"/>
+  <path d="M224 170c46 26 87 59 132 72 38 12 72 6 115 45 47 42 76 75 139 93 57 16 128 13 206 45" fill="none" stroke="#3f3833" stroke-width="8"/>
+  <path d="M205 523c41-63 96-99 168-115 88-19 161-6 241-56 82-51 142-139 290-182" fill="none" stroke="#867465" stroke-width="7"/>
+  <circle cx="261" cy="526" r="22" fill="#e2c6ab"/>
+  <circle cx="566" cy="428" r="18" fill="#c8ae93"/>
+  <circle cx="892" cy="236" r="19" fill="#e2c6ab"/>
+  <circle cx="821" cy="520" r="15" fill="#c8ae93"/>
+  <circle cx="392" cy="248" r="14" fill="#c8ae93"/>
+  <rect x="706" y="476" width="206" height="114" rx="22" fill="#1d1a17" stroke="#433b35" stroke-width="3"/>
+  <text x="742" y="524" fill="#fff8f2" font-family="Georgia, serif" font-size="36">Observation</text>
+  <text x="742" y="565" fill="#b9b1aa" font-family="Georgia, serif" font-size="32">Tower</text>
+  <rect x="154" y="128" width="214" height="114" rx="22" fill="#1d1a17" stroke="#433b35" stroke-width="3"/>
+  <text x="188" y="176" fill="#fff8f2" font-family="Georgia, serif" font-size="40">Outer Rim</text>
+  <text x="188" y="214" fill="#b9b1aa" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">ROUTE GRID</text>
+  <rect x="118" y="588" width="232" height="118" rx="22" fill="#1d1a17" stroke="#433b35" stroke-width="3"/>
+  <text x="153" y="636" fill="#fff8f2" font-family="Georgia, serif" font-size="38">Flooded Pass</text>
+  <text x="153" y="676" fill="#b9b1aa" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">SHIFTING WATERLINE</text>
+</svg>

@@ -1,46 +1,49 @@
 {
   "slug": "map-locations",
   "title": "Map & Locations",
-  "image": "/media/placeholder.webp",
-  "summary": "Regions, landmarks, and route notes across the Omni world.",
-  "intro": "A rough map of the places that already feel important, even if some names and borders are still in flux.",
+  "image": "/media/wiki-map.svg",
+  "summary": "Places worth remembering, plus the routes and landmarks that shape the journey.",
+  "intro": "A loose map of the places that already feel important, even if some names and borders are still likely to change.",
   "facts": [
-    "Good location notes say how a place feels, not just what sits there.",
-    "Travel friction matters because routes shape tension as much as destinations do.",
-    "A strong landmark usually carries both story weight and navigational value."
+    "Good location notes should tell you what a place feels like, not just what is there.",
+    "Routes matter because tension often comes from the journey, not only the destination.",
+    "The best landmarks do double duty: they help you navigate and they carry story weight."
   ],
   "sections": [
     {
       "heading": "Outer Rim",
       "paragraphs": [
-        "The Outer Rim feels like the edge of what is still knowable. It is where the player learns the rhythm of scavenging, route-reading, and low-level unease."
+        "The Outer Rim feels like the edge of familiar ground. It is a good place to teach scavenging, route-reading, and that low-grade sense that something is slightly off.",
+        "It should feel open enough to learn in, but never fully comfortable."
       ],
       "items": [
-        "Best place to teach traversal and low-stakes danger.",
-        "A good home for environmental storytelling before the plot hardens.",
-        "Useful for early shortcuts, small finds, and first warnings."
+        "Good first-stop region for traversal basics and manageable danger.",
+        "Plenty of room for small discoveries and environmental hints.",
+        "A natural place for the first warnings that the world is changing."
       ]
     },
     {
       "heading": "Flooded Pass",
       "paragraphs": [
-        "The Flooded Pass is the kind of landmark that immediately implies weather, blocked routes, and patience. Even before it has final art, it already suggests friction."
+        "Flooded Pass immediately suggests bad weather, blocked routes, and the need to slow down. Even as a rough idea, it already carries friction.",
+        "It feels like the kind of place players remember because they had to work to get through it."
       ],
       "items": [
-        "Potential hazard: unstable footing or shifting water level.",
-        "Potential reward: a hidden path back toward camp.",
-        "Potential story beat: the first clear sign that the region is changing."
+        "Potential hazard: unstable footing or a shifting waterline.",
+        "Potential reward: a hidden route back toward camp.",
+        "Potential story beat: the first obvious sign that the region is changing."
       ]
     },
     {
       "heading": "Observation Tower",
       "paragraphs": [
-        "The Observation Tower feels like a reveal point: somewhere the player earns a wider understanding of the map and the trouble moving through it."
+        "The Observation Tower feels like a reveal point. It is the kind of place where the player finally sees how the world fits together, or how much worse it has gotten.",
+        "That makes it useful both as a navigational reward and as a turning point in the story."
       ],
       "items": [
-        "Ideal spot for map updates or journal discoveries.",
+        "Good place for map updates or journal discoveries.",
         "Could support binocular, radio, or beacon mechanics.",
-        "Fits both exploration rewards and larger narrative turns."
+        "Works for both exploration payoffs and bigger narrative turns."
       ]
     }
   ]

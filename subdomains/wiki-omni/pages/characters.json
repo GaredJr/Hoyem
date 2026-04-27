@@ -2,31 +2,31 @@
   "slug": "characters",
   "title": "Characters",
   "image": "/media/Characters/ali1to1.png",
-  "summary": "Current cast notes, first-impression roles, and relationship hooks.",
-  "intro": "These are less like final biographies and more like first impressions: who each person feels like on screen, what space they occupy in the group, and where their story could bend.",
+  "summary": "Early notes on the cast, their roles, and how they play off each other.",
+  "intro": "These are early character notes, not locked biographies. The goal is to catch what each person feels like, what role they seem to fill in the group, and where their story might start to shift.",
   "facts": [
-    "Ali and Amy are the clearest visual anchors in the current material.",
-    "These notes are meant to catch tone and chemistry before every canon detail is fixed.",
-    "As the cast grows, each of these could split into a dedicated entry."
+    "Ali and Amy still feel like the clearest anchors in the current material.",
+    "The focus here is tone, chemistry, and first read, not final canon.",
+    "If the cast expands, each character can branch into a full entry of their own."
   ],
   "sections": [
     {
       "heading": "Ali",
       "paragraphs": [
-        "Ali reads like the grounded presence in the group: practical, watchful, and easy to imagine as the first person players learn to trust.",
-        "There is a steadiness to the silhouette and gear that makes Ali feel less theatrical than dependable, which is useful when the rest of the world starts getting strange."
+        "Ali comes across as the grounded one in the group: practical, observant, and easy to trust early.",
+        "The gear and silhouette do a lot of quiet work here. Ali feels built for rough conditions, which makes them a strong anchor once the world starts getting stranger."
       ],
       "items": [
-        "Visual hook: practical gear and a grounded silhouette.",
-        "Narrative role: likely guide, scout, or first companion.",
-        "Emotional read: steady enough to anchor riskier personalities."
+        "Visual hook: practical gear and a solid silhouette.",
+        "Narrative role: guide, scout, or first companion.",
+        "Emotional read: steady enough to ground riskier personalities."
       ]
     },
     {
       "heading": "Amy",
       "paragraphs": [
-        "Amy brings a different energy. Where Ali feels grounded, Amy feels sharper and more interpretive, like someone who notices the second layer of a situation before anyone else does.",
-        "That contrast makes the pair useful early on because their differences can show up in both dialogue and decision-making without much exposition."
+        "Amy brings a different energy. Where Ali feels steady, Amy feels sharper and more analytical, like someone who notices the extra layer in a situation before anyone says it out loud.",
+        "That difference gives the pair immediate shape. You can imagine it surfacing in dialogue, priorities, and how they read the same problem."
       ],
       "items": [
         "Visual hook: a portrait that reads differently from Ali even at thumbnail size.",
@@ -37,12 +37,12 @@
     {
       "heading": "Relationship Notes",
       "paragraphs": [
-        "The relationship layer matters because the cast should not feel like isolated profile cards. The more the camp scenes and field choices affect how people read each other, the more these notes become worth keeping."
+        "The relationships matter because the cast should feel connected, not filed away as separate profile cards. The more camp scenes, field choices, and shared pressure change how people read each other, the more useful this page becomes."
       ],
       "items": [
-        "Track the major trust shifts after each turning point.",
-        "Mark which camp upgrades unlock new conversations.",
-        "Keep spoilers tucked deeper in the entry once the final order is set."
+        "Track the big trust shifts after each turning point.",
+        "Note which camp upgrades unlock new conversations.",
+        "Keep heavier spoilers deeper in the entry once the final story order is set."
       ]
     }
   ]
