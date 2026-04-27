@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,28 +11,38 @@
       <!--components/navbar.html-->
     </header>
     <div class="center">
-      <div class="wikiPageIntro">
-        <p class="wikiEyebrow">Field Notes</p>
+      <div class="wikiPageIntro" id="wiki-page-intro">
+        <p class="wikiEyebrow">Omni Wiki</p>
         <h2>Omni Wiki</h2>
         <p>
-          Browse the encyclopedia, open an entry, and keep that selection saved in the URL so each page can be linked directly.
+          Reference notes for controls, characters, places, and story beats. Open any entry from the archive or link directly to it with the URL.
         </p>
       </div>
       <div class="wikiShell" data-wiki-root>
-        <section class="wikiMain wikiNav">
+        <section class="wikiArchiveView" id="wiki-archive-view">
           <div class="wikiPanelHeading">
-            <h3>Content</h3>
-            <p>Each button loads a JSON page and swaps the article view without leaving the wiki.</p>
+            <h3>Archive</h3>
+            <p id="wiki-archive-description">Browse the current Omni entries.</p>
           </div>
-          <div class="contentGrid" id="wiki-grid"></div>
+          <div class="wikiArchiveList" id="wiki-grid"></div>
         </section>
-        <article class="wikiMain wikiArticle" aria-live="polite">
+        <section class="wikiEntryView" id="wiki-entry-view" hidden>
           <div class="wikiArticleToolbar">
-            <button class="wikiBackButton" id="wiki-reset" type="button" hidden>All Pages</button>
-            <p class="wikiArticleStatus" id="wiki-status">Select a page to load its JSON content.</p>
+            <button class="wikiBackButton" id="wiki-reset" type="button" hidden>Back to archive</button>
+            <p class="wikiArticleStatus" id="wiki-status">Archive</p>
           </div>
-          <div class="wikiArticleBody" id="wiki-article-body"></div>
-        </article>
+          <div class="wikiEntryLayout">
+            <article class="wikiArticle" aria-live="polite">
+              <div class="wikiArticleBody" id="wiki-article-body"></div>
+            </article>
+            <aside class="wikiEntryAside">
+              <div class="wikiEntryAsideBlock">
+                <p class="wikiAsideLabel">Archive</p>
+                <nav class="wikiEntryList" id="wiki-sidebar-list" aria-label="Archive entries"></nav>
+              </div>
+            </aside>
+          </div>
+        </section>
       </div>
     </div>
     <p id="copyright">

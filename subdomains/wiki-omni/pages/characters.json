@@ -2,47 +2,47 @@
   "slug": "characters",
   "title": "Characters",
   "image": "/media/Characters/ali1to1.png",
-  "summary": "Placeholder bios for the cast members currently shown in the project.",
-  "intro": "Character pages are a natural fit for JSON because each person can eventually become its own linked entry with art, relationships, and progression notes.",
+  "summary": "Current cast notes, first-impression roles, and relationship hooks.",
+  "intro": "These are less like final biographies and more like first impressions: who each person feels like on screen, what space they occupy in the group, and where their story could bend.",
   "facts": [
-    "Ali and Amy are used here as visible placeholders because both already have project art in the media folder.",
-    "The structure leaves room for future factions, relationship tags, and spoiler-safe summaries.",
-    "This article can be linked directly with ?page=characters for testing or sharing."
+    "Ali and Amy are the clearest visual anchors in the current material.",
+    "These notes are meant to catch tone and chemistry before every canon detail is fixed.",
+    "As the cast grows, each of these could split into a dedicated entry."
   ],
   "sections": [
     {
       "heading": "Ali",
       "paragraphs": [
-        "Ali currently serves as a clear anchor character for the placeholder wiki. Their profile can later hold role details, narrative beats, and inventory preferences.",
-        "This entry is written as broad placeholder text so the UI can be tested before the final lore is locked in."
+        "Ali reads like the grounded presence in the group: practical, watchful, and easy to imagine as the first person players learn to trust.",
+        "There is a steadiness to the silhouette and gear that makes Ali feel less theatrical than dependable, which is useful when the rest of the world starts getting strange."
       ],
       "items": [
         "Visual hook: practical gear and a grounded silhouette.",
-        "Narrative role: a likely guide, scout, or first companion.",
-        "Future fields: trust level, quest chain, and notable scenes."
+        "Narrative role: likely guide, scout, or first companion.",
+        "Emotional read: steady enough to anchor riskier personalities."
       ]
     },
     {
       "heading": "Amy",
       "paragraphs": [
-        "Amy is a good second example because the page layout can contrast personalities, specialties, and story roles without needing separate templates.",
-        "As the wiki grows, this section could become a small directory with links to fully dedicated character pages."
+        "Amy brings a different energy. Where Ali feels grounded, Amy feels sharper and more interpretive, like someone who notices the second layer of a situation before anyone else does.",
+        "That contrast makes the pair useful early on because their differences can show up in both dialogue and decision-making without much exposition."
       ],
       "items": [
-        "Visual hook: a distinct portrait that reads differently from Ali at thumbnail size.",
-        "Narrative role: support, strategist, or emotional counterweight.",
-        "Future fields: dialogue tone, camp interactions, and branching outcomes."
+        "Visual hook: a portrait that reads differently from Ali even at thumbnail size.",
+        "Narrative role: strategist, support, or emotional counterweight.",
+        "Dialogue texture: quicker, sharper, and a little harder to read."
       ]
     },
     {
       "heading": "Relationship Notes",
       "paragraphs": [
-        "A shared relationship section helps the wiki move past isolated bios. It is useful for documenting party dynamics, rivalries, and how camp scenes evolve over time."
+        "The relationship layer matters because the cast should not feel like isolated profile cards. The more the camp scenes and field choices affect how people read each other, the more these notes become worth keeping."
       ],
       "items": [
-        "Track major trust shifts after story milestones.",
-        "Note which camp upgrades unlock new conversations.",
-        "Use spoiler labels once the final story order is fixed."
+        "Track the major trust shifts after each turning point.",
+        "Mark which camp upgrades unlock new conversations.",
+        "Keep spoilers tucked deeper in the entry once the final order is set."
       ]
     }
   ]

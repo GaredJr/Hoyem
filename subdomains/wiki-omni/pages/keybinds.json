@@ -2,13 +2,13 @@
   "slug": "keybinds",
   "title": "Keybinds & Shortcuts",
   "image": "/media/kb1to1.webp",
-  "summary": "A cleaner at-a-glance reference for the controls players use most often.",
-  "intro": "This page now uses a shortcut-focused layout so the most important controls can be scanned quickly instead of getting buried inside regular paragraph sections.",
+  "summary": "Quick-reference controls for the actions players use every session.",
+  "intro": "A lean control sheet for the buttons that matter most in the field. Built to be scanned mid-session, not studied.",
   "showImage": false,
   "shortcutGroups": [
     {
       "title": "Essential Omni Shortcuts",
-      "description": "Core actions for movement, interaction, and opening the main overlays during normal play.",
+      "description": "The buttons most players will reach for every few seconds out in the field.",
       "tag": "Core Loop",
       "entries": [
         {
@@ -55,7 +55,7 @@
     },
     {
       "title": "Combat & Field Actions",
-      "description": "A second group for the more situational buttons that still need to be easy to find mid-session.",
+      "description": "The more situational actions that still need to be easy to find in a hurry.",
       "tag": "Situational",
       "entries": [
         {
@@ -85,13 +85,13 @@
     {
       "heading": "Notes",
       "paragraphs": [
-        "The shortcut layout is driven entirely by JSON, so you can keep adding rows or split the controls into more groups without changing the HTML.",
-        "If you want later, we can also add controller tabs, platform-specific bindings, or little icons for mouse and modifier keys."
+        "The goal here is speed. This page should stay clean enough to glance at once and jump straight back into the game.",
+        "This page should stay blunt and useful. If a key matters during regular play, it belongs here near the top."
       ],
       "items": [
-        "Each shortcut row supports a title, description, and any number of keys.",
-        "Setting showImage to false keeps the page focused on the controls instead of the article hero art.",
-        "Other wiki pages still use the regular article layout unless they define their own custom content blocks."
+        "Keep the core loop together so movement and interaction are easy to scan.",
+        "Only add extra description when the action is easy to forget under pressure.",
+        "If controller support lands later, mirror the same structure instead of mixing layouts."
       ]
     }
   ]

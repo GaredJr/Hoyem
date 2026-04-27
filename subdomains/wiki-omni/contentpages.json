@@ -1,40 +1,40 @@
 {
   "title": "Omni Wiki",
-  "description": "Use the page list to open a JSON-backed article. The selected page is mirrored in the URL with the page query parameter.",
+  "description": "Pick a note from the archive to open a character file, a location brief, or a reference page for the Omni world.",
   "pages": [
     {
       "slug": "keybinds",
       "title": "Keybinds & Shortcuts",
       "image": "/media/kb1to1.webp",
-      "summary": "A cleaner at-a-glance reference for the controls players use most often.",
+      "summary": "Quick-reference controls for the actions players use every session.",
       "file": "./pages/keybinds.json"
     },
     {
       "slug": "characters",
       "title": "Characters",
       "image": "/media/Characters/ali1to1.png",
-      "summary": "Placeholder bios for the cast members currently shown in the project.",
+      "summary": "Current cast notes, first-impression roles, and relationship hooks.",
       "file": "./pages/characters.json"
     },
     {
       "slug": "map-locations",
       "title": "Map & Locations",
       "image": "/media/placeholder.webp",
-      "summary": "Regions, landmarks, and traversal notes for the Omni world.",
+      "summary": "Regions, landmarks, and route notes across the Omni world.",
       "file": "./pages/map-locations.json"
     },
     {
       "slug": "storyline",
       "title": "Storyline",
       "image": "/media/placeholder.webp",
-      "summary": "A rough outline of the current story arc and major beats.",
+      "summary": "A broad outline of the current arc, its pressure points, and its reveals.",
       "file": "./pages/storyline.json"
     },
     {
       "slug": "the-camp",
       "title": "The Camp",
       "image": "/media/placeholder.webp",
-      "summary": "The home base overview, its stations, and why players return to it.",
+      "summary": "The home base, its routines, and why everything keeps circling back there.",
       "file": "./pages/the-camp.json"
     }
   ]

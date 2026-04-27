@@ -6,13 +6,18 @@ if (wikiRoot) {
   let manifestData;
   let currentRequestId = 0;
 
-  const grid = document.getElementById("wiki-grid");
+  const pageIntro = document.getElementById("wiki-page-intro");
+  const archiveView = document.getElementById("wiki-archive-view");
+  const archiveDescription = document.getElementById("wiki-archive-description");
+  const entryView = document.getElementById("wiki-entry-view");
+  const archiveList = document.getElementById("wiki-grid");
+  const sidebarList = document.getElementById("wiki-sidebar-list");
   const articleBody = document.getElementById("wiki-article-body");
   const articleStatus = document.getElementById("wiki-status");
   const resetButton = document.getElementById("wiki-reset");
 
   resetButton.addEventListener("click", () => {
-    void showLandingState({ updateHistory: true });
+    void showArchiveState({ updateHistory: true });
   });
 
   window.addEventListener("popstate", () => {
@@ -24,16 +29,16 @@ if (wikiRoot) {
   async function initializeWiki() {
     try {
       const manifest = await loadManifest();
-      renderPageCards(manifest.pages);
+      archiveDescription.textContent = manifest.description || "Browse the current Omni entries.";
+      renderArchiveCards(manifest.pages);
+      renderSidebarLinks(manifest.pages);
       await syncPageFromUrl();
     } catch (error) {
       console.error("Unable to initialize the Omni wiki.", error);
-      resetButton.hidden = true;
-      articleStatus.textContent = "Wiki unavailable";
-      document.title = "Omni Wiki";
-      renderStateBlock(
-        "Wiki unavailable",
-        "The page manifest could not be loaded, so the Omni wiki content is temporarily unavailable."
+      showArchiveMode();
+      renderArchiveMessage(
+        "Archive unavailable",
+        "The archive list could not be loaded, so the Omni wiki is temporarily unavailable."
       );
     }
   }
@@ -44,8 +49,10 @@ if (wikiRoot) {
 
     if (!slug) {
       currentRequestId += 1;
-      renderEmptyState(manifest.description);
-      setActiveCard();
+      showArchiveMode();
+      archiveDescription.textContent = manifest.description || "Browse the current Omni entries.";
+      setActiveLinks();
+      document.title = "Omni Wiki";
       return;
     }
 
@@ -67,56 +74,80 @@ if (wikiRoot) {
     return manifestData;
   }
 
-  function renderPageCards(pages) {
-    const cards = pages.map((page) => {
-      const card = document.createElement("a");
+  function renderArchiveCards(pages) {
+    const cards = pages.map((page) => createPageLink(page, "archive"));
+    archiveList.replaceChildren(...cards);
+  }
+
+  function renderSidebarLinks(pages) {
+    const links = pages.map((page) => createPageLink(page, "sidebar"));
+    sidebarList.replaceChildren(...links);
+  }
+
+  function createPageLink(page, variant) {
+    const link = document.createElement("a");
+    const copy = document.createElement("div");
+    const title = document.createElement("strong");
+    const summary = document.createElement("span");
+
+    link.href = createPageUrl(page.slug);
+    link.dataset.page = page.slug;
+    link.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      event.preventDefault();
+      void openPage(page.slug, { updateHistory: true });
+    });
+
+    title.textContent = page.title;
+    summary.textContent = page.summary;
+
+    if (variant === "archive") {
       const image = document.createElement("img");
-      const text = document.createElement("div");
-      const title = document.createElement("strong");
-      const summary = document.createElement("span");
 
-      card.className = "wikiCard";
-      card.href = createPageUrl(page.slug);
-      card.dataset.page = page.slug;
-      card.addEventListener("click", (event) => {
-        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-          return;
-        }
-
-        event.preventDefault();
-        void openPage(page.slug, { updateHistory: true });
-      });
+      link.className = "wikiArchiveCard";
+      copy.className = "wikiArchiveCardText";
+      title.className = "wikiArchiveCardTitle";
+      summary.className = "wikiArchiveCardSummary";
 
       image.src = page.image;
       image.alt = page.title;
 
-      text.className = "wikiCardText";
-      title.textContent = page.title;
-      summary.textContent = page.summary;
+      copy.append(title, summary);
+      link.append(image, copy);
+      return link;
+    }
 
-      text.append(title, summary);
-      card.append(image, text);
-      return card;
-    });
+    link.className = "wikiEntryLink";
+    copy.className = "wikiEntryLinkText";
+    title.className = "wikiEntryLinkTitle";
+    summary.className = "wikiEntryLinkSummary";
 
-    grid.replaceChildren(...cards);
+    copy.append(title, summary);
+    link.append(copy);
+    return link;
   }
 
   async function openPage(slug, options) {
     const manifest = await loadManifest();
     const pageMeta = manifest.pages.find((page) => page.slug === slug);
 
+    showEntryMode();
+
     if (!pageMeta) {
-      setActiveCard();
+      setActiveLinks();
       renderMessageState(
-        "Page not found",
-        `No wiki page exists for "${slug}". Pick another card to load its JSON article.`
+        "Entry not found",
+        `There is no archive entry called "${slug}". Use the archive links to open another page.`
       );
       return;
     }
 
     const requestId = ++currentRequestId;
-    setActiveCard(slug);
+
+    setActiveLinks(slug);
     renderLoadingState(pageMeta.title);
 
     try {
@@ -143,8 +174,8 @@ if (wikiRoot) {
 
       console.error(`Unable to load the page "${slug}".`, error);
       renderMessageState(
-        "Page unavailable",
-        `The "${pageMeta.title}" article could not be loaded from JSON.`
+        "Entry unavailable",
+        `The "${pageMeta.title}" entry could not be opened just now.`
       );
     }
   }
@@ -166,11 +197,13 @@ if (wikiRoot) {
     return pageData;
   }
 
-  async function showLandingState(options) {
+  async function showArchiveState(options) {
     const manifest = await loadManifest();
     currentRequestId += 1;
-    setActiveCard();
-    renderEmptyState(manifest.description);
+    showArchiveMode();
+    archiveDescription.textContent = manifest.description || "Browse the current Omni entries.";
+    setActiveLinks();
+    document.title = "Omni Wiki";
 
     if (options.updateHistory) {
       const nextUrl = createPageUrl();
@@ -182,19 +215,36 @@ if (wikiRoot) {
     }
   }
 
-  function renderEmptyState(description) {
+  function showArchiveMode() {
+    pageIntro.hidden = false;
+    archiveView.hidden = false;
+    entryView.hidden = true;
     resetButton.hidden = true;
-    articleStatus.textContent = "Select a page to load its JSON content.";
-    document.title = "Omni Wiki";
-    renderStateBlock(
-      "Choose a page",
-      description || "Pick any entry from the list to load its JSON file into this panel."
-    );
+    articleStatus.textContent = "Archive";
+  }
+
+  function showEntryMode() {
+    pageIntro.hidden = true;
+    archiveView.hidden = true;
+    entryView.hidden = false;
+    resetButton.hidden = false;
+  }
+
+  function renderArchiveMessage(title, message) {
+    const wrapper = document.createElement("div");
+    const heading = document.createElement("h3");
+    const text = document.createElement("p");
+
+    wrapper.className = "wikiEmptyState wikiArchiveMessage";
+    heading.textContent = title;
+    text.textContent = message;
+
+    wrapper.append(heading, text);
+    archiveList.replaceChildren(wrapper);
   }
 
   function renderLoadingState(title) {
-    resetButton.hidden = false;
-    articleStatus.textContent = `Loading ${title}...`;
+    articleStatus.textContent = `Archive / ${title}`;
     document.title = `${title} | Omni Wiki`;
 
     const wrapper = document.createElement("div");
@@ -204,7 +254,7 @@ if (wikiRoot) {
 
     wrapper.className = "wikiLoadingState";
     heading.textContent = title;
-    text.textContent = "Fetching this article from its JSON file and preparing the page content.";
+    text.textContent = "Loading entry.";
     bar.className = "wikiLoadingBar";
 
     wrapper.append(heading, text, bar);
@@ -212,7 +262,6 @@ if (wikiRoot) {
   }
 
   function renderMessageState(title, message) {
-    resetButton.hidden = false;
     articleStatus.textContent = title;
     document.title = "Omni Wiki";
     renderStateBlock(title, message);
@@ -232,8 +281,7 @@ if (wikiRoot) {
   }
 
   function renderArticle(pageData) {
-    resetButton.hidden = false;
-    articleStatus.textContent = pageData.summary;
+    articleStatus.textContent = `Archive / ${pageData.title}`;
     document.title = `${pageData.title} | Omni Wiki`;
 
     const article = document.createElement("div");
@@ -390,7 +438,7 @@ if (wikiRoot) {
         keys.className = "wikiShortcutKeys";
 
         entry.keys.forEach((key) => {
-          const keycap = document.createElement("span");
+          const keycap = document.createElement("kbd");
           keycap.className = "wikiKeycap";
           keycap.textContent = key;
           keys.append(keycap);
@@ -407,17 +455,17 @@ if (wikiRoot) {
     return groupsWrapper;
   }
 
-  function setActiveCard(activeSlug) {
-    const cards = grid.querySelectorAll("[data-page]");
+  function setActiveLinks(activeSlug) {
+    const links = wikiRoot.querySelectorAll("[data-page]");
 
-    cards.forEach((card) => {
-      const isActive = card.dataset.page === activeSlug;
-      card.classList.toggle("is-active", isActive);
+    links.forEach((link) => {
+      const isActive = link.dataset.page === activeSlug;
+      link.classList.toggle("is-active", isActive);
 
       if (isActive) {
-        card.setAttribute("aria-current", "page");
+        link.setAttribute("aria-current", "page");
       } else {
-        card.removeAttribute("aria-current");
+        link.removeAttribute("aria-current");
       }
     });
   }

@@ -2,45 +2,45 @@
   "slug": "map-locations",
   "title": "Map & Locations",
   "image": "/media/placeholder.webp",
-  "summary": "Regions, landmarks, and traversal notes for the Omni world.",
-  "intro": "This placeholder article shows how location data can be grouped into regions now and later split into separate entries as the world map becomes more detailed.",
+  "summary": "Regions, landmarks, and route notes across the Omni world.",
+  "intro": "A rough map of the places that already feel important, even if some names and borders are still in flux.",
   "facts": [
-    "The current regions are intentionally generic so the layout can be tested before final naming is complete.",
-    "Location pages usually benefit from short travel notes, encounter hooks, and unlock requirements.",
-    "The URL slug for this entry is map-locations."
+    "Good location notes say how a place feels, not just what sits there.",
+    "Travel friction matters because routes shape tension as much as destinations do.",
+    "A strong landmark usually carries both story weight and navigational value."
   ],
   "sections": [
     {
       "heading": "Outer Rim",
       "paragraphs": [
-        "The Outer Rim is framed as the rough edge of the playable space, where players first learn the rhythm of exploration, scavenging, and short narrative discoveries."
+        "The Outer Rim feels like the edge of what is still knowable. It is where the player learns the rhythm of scavenging, route-reading, and low-level unease."
       ],
       "items": [
-        "Best for onboarding traversal and light danger.",
-        "Can introduce environmental storytelling before heavier plot scenes.",
-        "Good place for simple collectibles and route shortcuts."
+        "Best place to teach traversal and low-stakes danger.",
+        "A good home for environmental storytelling before the plot hardens.",
+        "Useful for early shortcuts, small finds, and first warnings."
       ]
     },
     {
       "heading": "Flooded Pass",
       "paragraphs": [
-        "The Flooded Pass is a placeholder landmark for terrain challenges. It suggests weather, blocked routes, and tool-gated progress without needing final production art yet."
+        "The Flooded Pass is the kind of landmark that immediately implies weather, blocked routes, and patience. Even before it has final art, it already suggests friction."
       ],
       "items": [
         "Potential hazard: unstable footing or shifting water level.",
-        "Potential reward: hidden path back to camp.",
-        "Potential story beat: first clear sign of a larger threat."
+        "Potential reward: a hidden path back toward camp.",
+        "Potential story beat: the first clear sign that the region is changing."
       ]
     },
     {
       "heading": "Observation Tower",
       "paragraphs": [
-        "The Observation Tower acts as a late-stop landmark in this draft layout. It works well as a reveal point for quests, fast-travel unlocks, or a panoramic story beat."
+        "The Observation Tower feels like a reveal point: somewhere the player earns a wider understanding of the map and the trouble moving through it."
       ],
       "items": [
         "Ideal spot for map updates or journal discoveries.",
-        "Could contain binocular, radio, or beacon mechanics.",
-        "Fits both exploration rewards and narrative transitions."
+        "Could support binocular, radio, or beacon mechanics.",
+        "Fits both exploration rewards and larger narrative turns."
       ]
     }
   ]

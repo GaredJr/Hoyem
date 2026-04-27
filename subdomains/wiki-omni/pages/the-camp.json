@@ -2,45 +2,46 @@
   "slug": "the-camp",
   "title": "The Camp",
   "image": "/media/placeholder.webp",
-  "summary": "The home base overview, its stations, and why players return to it.",
-  "intro": "The camp is a useful example of a systems-heavy wiki page because it combines narrative, upgrades, and player services in one space.",
+  "summary": "The home base, its routines, and why everything keeps circling back there.",
+  "intro": "The camp is where the world exhales. Part refuge, part workshop, part social space, it should feel like more than a menu with firelight.",
   "facts": [
-    "This page can later branch into subpages for crafting, companions, upgrades, and camp events.",
-    "A strong camp page usually explains both the fiction of the hub and the practical reason players care about it.",
-    "The camp URL slug is the-camp."
+    "A memorable camp should feel changed by what happened outside it.",
+    "The hub works best when narrative rest and practical upgrades sit close together.",
+    "Players come back for safety, but they stay for the people and the small changes."
   ],
   "sections": [
     {
       "heading": "Purpose",
       "paragraphs": [
-        "The camp functions as the emotional and mechanical reset point between expeditions. It gives the player a place to plan, recover, and see the consequences of recent events."
+        "The camp is the reset point between expeditions, but it should also feel like the place where consequences finally settle in.",
+        "It gives the player room to plan, recover, and notice what changed after the last trip out."
       ],
       "items": [
         "Safe space for dialogue and downtime scenes.",
         "Central location for upgrades and progression tracking.",
-        "Natural place to recap active goals before the next outing."
+        "A natural place to quietly restate what matters before the next outing."
       ]
     },
     {
       "heading": "Stations",
       "paragraphs": [
-        "Breaking the camp into stations gives the wiki a predictable structure. Each system can stay readable here before it eventually earns a page of its own."
+        "Breaking the camp into stations keeps the place readable without flattening it. Each corner of the camp should hint at a habit, a person, or a routine."
       ],
       "items": [
-        "Workshop for gear tuning, crafting, or repair.",
-        "Planning table for map review and mission selection.",
-        "Firepit or commons area for conversation scenes and morale beats."
+        "Workshop for repair, tuning, and the practical side of staying alive.",
+        "Planning table for map review, route choices, and mission selection.",
+        "Firepit or commons area for quieter conversations and morale beats."
       ]
     },
     {
       "heading": "Growth Over Time",
       "paragraphs": [
-        "A camp becomes more memorable when it visibly changes. Visual upgrades, new interactions, and fresh ambient dialogue make the hub feel connected to player progress."
+        "A camp becomes real when it visibly changes. New tools, repaired structures, and fresh ambient dialogue make progress feel lived in rather than logged."
       ],
       "items": [
-        "Add visual changes after story milestones.",
+        "Let story milestones leave visible marks on the space.",
         "Unlock companion interactions through trust or quest completion.",
-        "Let new tools at camp feed directly into field exploration."
+        "Make new camp tools feed back into field exploration."
       ]
     }
   ]
