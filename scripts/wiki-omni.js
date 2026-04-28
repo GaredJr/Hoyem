@@ -10,6 +10,7 @@ const searchInput = document.querySelector("[data-search]");
 const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
 const cards = Array.from(document.querySelectorAll("[data-entry-card]"));
 const groups = Array.from(document.querySelectorAll("[data-group]"));
+const archiveRoot = document.querySelector("[data-archive-root]");
 const resultCount = document.querySelector("[data-result-count]");
 const emptyState = document.querySelector("[data-empty-state]");
 const legacyNotice = document.querySelector("[data-legacy-notice]");
@@ -52,16 +53,17 @@ if (searchInput && filterButtons.length > 0 && cards.length > 0) {
 
   function applyFilters() {
     const query = searchInput.value.trim().toLowerCase();
+    const queryTerms = query.split(/\s+/).filter(Boolean);
     let visibleCount = 0;
 
     cards.forEach((card) => {
       const category = card.dataset.category || "";
       const title = card.dataset.title || "";
       const keywords = card.dataset.keywords || "";
-      const haystack = `${title} ${keywords}`.toLowerCase();
+      const haystack = `${title} ${keywords} ${card.textContent || ""}`.toLowerCase();
 
       const matchesFilter = activeFilter === "all" || category === activeFilter;
-      const matchesSearch = query === "" || haystack.includes(query);
+      const matchesSearch = queryTerms.length === 0 || queryTerms.every((term) => haystack.includes(term));
       const isVisible = matchesFilter && matchesSearch;
 
       card.hidden = !isVisible;
@@ -75,6 +77,10 @@ if (searchInput && filterButtons.length > 0 && cards.length > 0) {
       const visibleCards = group.querySelectorAll("[data-entry-card]:not([hidden])").length;
       group.hidden = visibleCards === 0;
     });
+
+    if (archiveRoot) {
+      archiveRoot.hidden = visibleCount === 0;
+    }
 
     if (emptyState) {
       emptyState.hidden = visibleCount !== 0;

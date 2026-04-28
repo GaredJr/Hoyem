@@ -37,7 +37,7 @@
 
   function updateToggleButtons(activeTheme) {
     const nextTheme = activeTheme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
-    const nextLabel = nextTheme === LIGHT_THEME ? "Light" : "Dark";
+    const currentLabel = activeTheme === LIGHT_THEME ? "Light" : "Dark";
 
     document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
       button.dataset.themeCurrent = activeTheme;
@@ -47,7 +47,7 @@
 
       const label = button.querySelector("[data-theme-toggle-label]");
       if (label) {
-        label.textContent = nextLabel;
+        label.textContent = currentLabel;
       }
     });
   }

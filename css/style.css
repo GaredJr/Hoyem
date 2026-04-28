@@ -304,9 +304,9 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: 38px;
-  padding: 0 14px;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--nav-control-bg);
@@ -328,9 +328,8 @@ ol {
 
 .navbar > .buttons a > span,
 .themeToggleLabel {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
 }
 
 .navbar > .buttons svg {
@@ -532,6 +531,17 @@ ol {
   display: grid;
   gap: 20px;
   align-content: start;
+}
+
+.homePanelVisual {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  border: 1px solid var(--media-border);
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background:
+    radial-gradient(circle at top, rgba(200, 174, 147, 0.14) 0%, rgba(200, 174, 147, 0) 40%),
+    var(--media-bg-strong);
 }
 
 .homePanelTitle,
@@ -890,6 +900,12 @@ ol {
   gap: 28px;
 }
 
+.wikiArchiveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+
 .wikiArchiveGroup {
   display: grid;
   gap: 16px;
@@ -977,12 +993,14 @@ ol {
 
 .wikiEntryLayout {
   display: grid;
+  grid-template-areas: "article aside";
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: 28px;
   align-items: start;
 }
 
 .wikiArticle {
+  grid-area: article;
   display: grid;
   gap: 18px;
   padding: 28px;
@@ -1164,16 +1182,18 @@ ol {
 }
 
 .wikiEntryAside {
+  grid-area: aside;
   display: grid;
   gap: 18px;
+  position: sticky;
+  top: 88px;
+  align-self: start;
 }
 
 .wikiEntryAsideBlock {
   display: grid;
   gap: 14px;
   padding: 18px;
-  position: sticky;
-  top: 88px;
 }
 
 .wikiEntryList,
@@ -1321,8 +1341,38 @@ ol {
     grid-template-columns: 1fr;
   }
 
-  .wikiEntryAsideBlock {
+  .wikiEntryLayout {
+    grid-template-areas:
+      "aside"
+      "article";
+  }
+
+  .wikiEntryAside {
     position: static;
+    top: auto;
+  }
+
+  .wikiSectionNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .wikiSectionNav a,
+  .wikiSectionNav a:first-child,
+  .wikiSectionNav a:last-child {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    background: var(--chip-bg-soft);
+  }
+
+  .wikiSectionNav a.is-active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
   }
 }
 
@@ -1366,13 +1416,27 @@ ol {
     display: none;
   }
 
+  .navbar > .buttons {
+    gap: 8px;
+  }
+
   .navbar > .buttons :is(a, button) {
-    padding: 0 12px;
+    min-height: 40px;
+    padding: 0 13px;
   }
 
   .navbar > .buttons a > span,
   .themeToggleLabel {
-    font-size: 0.66rem;
+    font-size: 0.72rem;
+  }
+
+  .navbar > .buttons a[href*="github"] {
+    width: 40px;
+    padding: 0;
+  }
+
+  .navbar > .buttons a[href*="github"] > span {
+    display: none;
   }
 
   .homeHeroPanel,
