@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hoyem Framework | CSS System</title>
+    <meta
+      name="description"
+      content="A reusable CSS framework distilled from the Hoyem portfolio and Omni Wiki styling."
+    >
+    <meta name="theme-color" content="#110f0e">
+    <script src="/scripts/theme.js"></script>
+    <meta property="og:title" content="Hoyem Framework | CSS System">
+    <meta
+      property="og:description"
+      content="Code blocks, cards, motion, and themed UI previews built from the Hoyem framework."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/media/kb1to1.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hoyem Framework | CSS System">
+    <meta
+      name="twitter:description"
+      content="Code blocks, cards, motion, and themed UI previews built from the Hoyem framework."
+    >
+    <meta name="twitter:image" content="/media/kb1to1.webp">
+    <link rel="canonical" href="/framework/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/framework-page.css" rel="stylesheet">
+  </head>
+  <body class="homeBody frameworkBody">
+    <a class="skipLink" href="#main-content">Skip to content</a>
+
+    <header class="navbar">
+      <a class="burger" href="/" aria-label="HØYEM home">
+        <span class="burgerMark">HØYEM</span>
+        <span class="burgerNote">Portfolio</span>
+      </a>
+      <nav class="buttons" aria-label="Primary">
+        <a href="/framework/" aria-current="page" aria-label="Open Hoyem Framework">
+          <span>Framework</span>
+        </a>
+        <a href="/subdomains/wiki-omni/" aria-label="Open Omni Wiki">
+          <span>Wiki</span>
+          <svg aria-hidden="true" focusable="false" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
+        </a>
+        <a href="https://github.com/GaredJr" aria-label="Open GitHub profile">
+          <span>GitHub</span>
+          <svg aria-hidden="true" focusable="false" fill="white" viewBox="-0.5 -0.5 26 26" xmlns="http://www.w3.org/2000/svg"><path d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005z"/></svg>
+        </a>
+        <button class="themeToggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
+          <span class="themeToggleDot" aria-hidden="true"></span>
+          <span class="themeToggleLabel" data-theme-toggle-label>Theme</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main-content" class="center frameworkPage">
+      <section class="frameworkHero" aria-labelledby="framework-page-title">
+        <div class="frameworkHeroCopy">
+          <p class="frameworkLabel">Hoyem Framework</p>
+          <h1 class="frameworkHeroTitle" id="framework-page-title">Preview the system, not just the stylesheet.</h1>
+          <p class="frameworkHeroLead">Cards. Code. Motion. Theme tokens.</p>
+          <div class="frameworkHeroActions">
+            <a class="homePillButton" href="/css/hoyem-framework.css">Open CSS</a>
+            <a class="homePillButton is-secondary" href="/">Back to portfolio</a>
+          </div>
+          <div class="frameworkHeroMeta" aria-label="Framework highlights">
+            <span class="hf-chip">Dark + light</span>
+            <span class="hf-chip">Live previews</span>
+            <span class="hf-chip">Reusable chrome</span>
+            <span class="hf-chip">Fast page starts</span>
+          </div>
+        </div>
+
+        <div class="frameworkHeroPreview">
+          <div class="frameworkWindow">
+            <div class="frameworkWindowBar">
+              <div class="frameworkWindowDots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="frameworkWindowTitle">framework.css</span>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Framework code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span><span class="frameworkCodeKey">.hf-card</span> <span class="frameworkCodeDim">{</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  padding<span class="frameworkCodeDim">:</span> <span class="frameworkCodeValue">28px</span><span class="frameworkCodeDim">;</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>  border-radius<span class="frameworkCodeDim">:</span> <span class="frameworkCodeValue">var(--radius-lg)</span><span class="frameworkCodeDim">;</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">4</span><span>  background<span class="frameworkCodeDim">:</span> <span class="frameworkCodeValue">var(--panel)</span><span class="frameworkCodeDim">;</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">5</span><span>  box-shadow<span class="frameworkCodeDim">:</span> <span class="frameworkCodeValue">var(--shadow)</span><span class="frameworkCodeDim">;</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">6</span><span><span class="frameworkCodeDim">}</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">7</span><span><span class="frameworkCodeComment">/* build the page, keep the atmosphere */</span></span></span></code></pre>
+
+            <div class="frameworkHeroTicker" aria-hidden="true">
+              <span>hf-shell</span>
+              <span>hf-card</span>
+              <span>hf-button</span>
+              <span>hf-chip</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="frameworkSection" aria-labelledby="preview-wall-title">
+        <div class="frameworkSectionHeading">
+          <p class="frameworkLabel">Preview wall</p>
+          <h2 class="frameworkSectionTitle" id="preview-wall-title">Live pieces. Tight snippets.</h2>
+        </div>
+
+        <div class="frameworkDemoGrid">
+          <article class="frameworkDemoCard">
+            <div class="frameworkDemoHead">
+              <p class="frameworkLabel">Buttons</p>
+              <h3>Calls to action</h3>
+              <p class="frameworkDemoNote">Primary, secondary, chips.</p>
+            </div>
+
+            <div class="frameworkPreviewCanvas frameworkPreviewCanvas--buttons">
+              <div class="frameworkPreviewRow">
+                <button class="hf-button" type="button">Primary</button>
+                <button class="hf-button hf-button--secondary" type="button">Secondary</button>
+              </div>
+              <div class="frameworkPreviewRow">
+                <span class="hf-chip">Static</span>
+                <button class="hf-chip hf-chip--interactive is-active" type="button">Active</button>
+                <button class="hf-chip hf-chip--interactive" type="button">Filter</button>
+              </div>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Button code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span>&lt;div class=<span class="frameworkCodeValue">"hf-action-row"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  &lt;a class=<span class="frameworkCodeValue">"hf-button"</span>&gt;Primary&lt;/a&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>  &lt;a class=<span class="frameworkCodeValue">"hf-button hf-button--secondary"</span>&gt;Secondary&lt;/a&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">4</span><span>  &lt;button class=<span class="frameworkCodeValue">"hf-chip hf-chip--interactive is-active"</span>&gt;Active&lt;/button&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">5</span><span>&lt;/div&gt;</span></span></code></pre>
+          </article>
+
+          <article class="frameworkDemoCard">
+            <div class="frameworkDemoHead">
+              <p class="frameworkLabel">Cards</p>
+              <h3>Layered surfaces</h3>
+              <p class="frameworkDemoNote">Big panel. Soft nested tile.</p>
+            </div>
+
+            <div class="frameworkPreviewCanvas frameworkPreviewCanvas--cards">
+              <article class="frameworkMiniCard">
+                <span class="frameworkMiniBadge">Feature</span>
+                <h4>Archive panel</h4>
+                <p>Readable, dense, and still warm.</p>
+                <div class="frameworkMiniCardFoot">
+                  <span class="hf-chip">Grid</span>
+                  <span class="hf-chip">Card</span>
+                </div>
+              </article>
+
+              <article class="frameworkMiniCard frameworkMiniCard--offset">
+                <span class="frameworkMiniBadge">Nested</span>
+                <h4>Soft tile</h4>
+                <p>Secondary detail without losing depth.</p>
+                <div class="frameworkMiniCardFoot">
+                  <span class="hf-chip">Soft</span>
+                  <span class="hf-chip">Dense</span>
+                </div>
+              </article>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Card code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span>&lt;section class=<span class="frameworkCodeValue">"hf-grid-auto"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  &lt;article class=<span class="frameworkCodeValue">"hf-card"</span>&gt;...&lt;/article&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>  &lt;article class=<span class="frameworkCodeValue">"hf-card--soft"</span>&gt;...&lt;/article&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">4</span><span>&lt;/section&gt;</span></span></code></pre>
+          </article>
+
+          <article class="frameworkDemoCard">
+            <div class="frameworkDemoHead">
+              <p class="frameworkLabel">Motion</p>
+              <h3>Ambient movement</h3>
+              <p class="frameworkDemoNote">Float, pulse, sweep.</p>
+            </div>
+
+            <div class="frameworkPreviewCanvas frameworkPreviewCanvas--motion">
+              <div class="frameworkMotionGlow" aria-hidden="true"></div>
+              <div class="frameworkMotionCard">
+                <div class="frameworkMotionBar"></div>
+                <div class="frameworkMotionMetrics">
+                  <div class="frameworkMotionMetric"><span>Stagger</span><strong>180ms</strong></div>
+                  <div class="frameworkMotionMetric"><span>Hover lift</span><strong>2px</strong></div>
+                  <div class="frameworkMotionMetric"><span>Ease</span><strong>soft</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Motion code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span><span class="frameworkCodeKey">@keyframes</span> frameworkFloat <span class="frameworkCodeDim">{</span> ... <span class="frameworkCodeDim">}</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span><span class="frameworkCodeKey">@keyframes</span> frameworkPulse <span class="frameworkCodeDim">{</span> ... <span class="frameworkCodeDim">}</span></span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span><span class="frameworkCodeKey">.preview-card</span> <span class="frameworkCodeDim">{</span> animation<span class="frameworkCodeDim">:</span> <span class="frameworkCodeValue">frameworkFloat 7.5s ease-in-out infinite</span><span class="frameworkCodeDim">;</span> <span class="frameworkCodeDim">}</span></span></span></code></pre>
+          </article>
+
+          <article class="frameworkDemoCard">
+            <div class="frameworkDemoHead">
+              <p class="frameworkLabel">Code blocks</p>
+              <h3>Docs-style windows</h3>
+              <p class="frameworkDemoNote">Terminal energy, site palette.</p>
+            </div>
+
+            <div class="frameworkPreviewCanvas frameworkPreviewCanvas--code">
+              <div class="frameworkCodeWindow">
+                <div class="frameworkWindowDots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="frameworkCodeBars" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Code block sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span>&lt;pre class=<span class="frameworkCodeValue">"frameworkCodeBlock"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  &lt;code&gt;line by line preview markup&lt;/code&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>&lt;/pre&gt;</span></span></code></pre>
+          </article>
+
+          <article class="frameworkDemoCard">
+            <div class="frameworkDemoHead">
+              <p class="frameworkLabel">Sliders</p>
+              <h3>Tuned controls</h3>
+              <p class="frameworkDemoNote">Range input, quick feedback.</p>
+            </div>
+
+            <div class="frameworkPreviewCanvas frameworkPreviewCanvas--sliders">
+              <div class="frameworkSliderBank">
+                <label class="frameworkSliderRow">
+                  <div class="frameworkSliderMeta">
+                    <span>Texture</span>
+                    <strong class="frameworkSliderValue">72%</strong>
+                  </div>
+                  <input class="frameworkRange" type="range" min="0" max="100" value="72">
+                </label>
+                <label class="frameworkSliderRow">
+                  <div class="frameworkSliderMeta">
+                    <span>Contrast</span>
+                    <strong class="frameworkSliderValue">48%</strong>
+                  </div>
+                  <input class="frameworkRange frameworkRange--cool" type="range" min="0" max="100" value="48">
+                </label>
+                <label class="frameworkSliderRow">
+                  <div class="frameworkSliderMeta">
+                    <span>Calm</span>
+                    <strong class="frameworkSliderValue">81%</strong>
+                  </div>
+                  <input class="frameworkRange frameworkRange--calm" type="range" min="0" max="100" value="81">
+                </label>
+              </div>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Slider code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span>&lt;label class=<span class="frameworkCodeValue">"frameworkSliderRow"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  &lt;div class=<span class="frameworkCodeValue">"frameworkSliderMeta"</span>&gt;...&lt;/div&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>  &lt;input class=<span class="frameworkCodeValue">"frameworkRange"</span> type=<span class="frameworkCodeValue">"range"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">4</span><span>&lt;/label&gt;</span></span></code></pre>
+          </article>
+
+          <article class="frameworkDemoCard">
+            <div class="frameworkDemoHead">
+              <p class="frameworkLabel">Rails</p>
+              <h3>Moving badge lanes</h3>
+              <p class="frameworkDemoNote">Marquee energy without heavy JS.</p>
+            </div>
+
+            <div class="frameworkPreviewCanvas frameworkPreviewCanvas--marquee">
+              <div class="frameworkMarqueeLane">
+                <div class="frameworkMarqueeTrack" aria-hidden="true">
+                  <span>hf-card</span>
+                  <span>hf-shell</span>
+                  <span>hf-button</span>
+                  <span>hf-chip</span>
+                  <span>hf-grid-auto</span>
+                  <span>hf-card</span>
+                  <span>hf-shell</span>
+                  <span>hf-button</span>
+                </div>
+              </div>
+              <div class="frameworkMarqueeLane">
+                <div class="frameworkMarqueeTrack frameworkMarqueeTrack--reverse" aria-hidden="true">
+                  <span>Theme aware</span>
+                  <span>Rounded chrome</span>
+                  <span>Soft motion</span>
+                  <span>Dense UI</span>
+                  <span>Theme aware</span>
+                  <span>Rounded chrome</span>
+                  <span>Soft motion</span>
+                  <span>Dense UI</span>
+                </div>
+              </div>
+            </div>
+
+            <pre class="frameworkCodeBlock" aria-label="Marquee code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span>&lt;div class=<span class="frameworkCodeValue">"frameworkMarqueeLane"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  &lt;div class=<span class="frameworkCodeValue">"frameworkMarqueeTrack"</span>&gt;...&lt;/div&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>&lt;/div&gt;</span></span></code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="frameworkWorkbench" aria-labelledby="workbench-title">
+        <div class="frameworkWorkbenchCode">
+          <div class="frameworkWorkbenchHead">
+            <p class="frameworkLabel">Workbench</p>
+            <h2 class="frameworkWorkbenchTitle" id="workbench-title">One page. Shared parts.</h2>
+            <div class="frameworkTabRow" aria-label="Preview tabs">
+              <span class="frameworkTab is-active">HTML</span>
+              <span class="frameworkTab">Theme</span>
+              <span class="frameworkTab">Motion</span>
+            </div>
+          </div>
+
+          <pre class="frameworkCodeBlock frameworkCodeBlock--wide" aria-label="Workbench code sample"><code><span class="frameworkCodeLine"><span class="frameworkCodeNo">1</span><span>&lt;main class=<span class="frameworkCodeValue">"hf-page"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">2</span><span>  &lt;section class=<span class="frameworkCodeValue">"hf-shell hf-stack"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">3</span><span>    &lt;article class=<span class="frameworkCodeValue">"hf-card"</span>&gt;Hero&lt;/article&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">4</span><span>    &lt;div class=<span class="frameworkCodeValue">"hf-grid-auto"</span>&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">5</span><span>      &lt;article class=<span class="frameworkCodeValue">"hf-card--soft"</span>&gt;Tile&lt;/article&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">6</span><span>      &lt;article class=<span class="frameworkCodeValue">"hf-card--soft"</span>&gt;Tile&lt;/article&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">7</span><span>      &lt;article class=<span class="frameworkCodeValue">"hf-card--soft"</span>&gt;Tile&lt;/article&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">8</span><span>    &lt;/div&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">9</span><span>  &lt;/section&gt;</span></span>
+<span class="frameworkCodeLine"><span class="frameworkCodeNo">10</span><span>&lt;/main&gt;</span></span></code></pre>
+        </div>
+
+        <div class="frameworkWorkbenchPreview">
+          <div class="frameworkMiniSite">
+            <div class="frameworkMiniSiteTopbar">
+              <div class="frameworkMiniSiteBrand">
+                <strong>HOYEM</strong>
+                <span>Framework preview</span>
+              </div>
+              <div class="frameworkMiniSiteNav" aria-hidden="true">
+                <span>Home</span>
+                <span>Docs</span>
+                <span>Theme</span>
+              </div>
+            </div>
+
+            <article class="frameworkMiniSiteHero">
+              <p class="frameworkLabel">hf-shell</p>
+              <h3>Ship a page fast.</h3>
+              <p>Start with the shared atmosphere. Layer the special parts last.</p>
+              <div class="frameworkMiniSiteHeroActions">
+                <span class="frameworkMiniPill">Primary</span>
+                <span class="frameworkMiniPill frameworkMiniPill--ghost">Secondary</span>
+              </div>
+            </article>
+
+            <div class="frameworkMiniSiteGrid">
+              <article class="frameworkMiniTile">
+                <div class="frameworkMiniTileSwatch"></div>
+                <h4>Cards</h4>
+                <p>Stack panels without flattening the page.</p>
+              </article>
+              <article class="frameworkMiniTile">
+                <div class="frameworkMiniTileSwatch"></div>
+                <h4>Inputs</h4>
+                <p>Search fields and filters use the same chrome.</p>
+              </article>
+              <article class="frameworkMiniTile">
+                <div class="frameworkMiniTileSwatch"></div>
+                <h4>Theme</h4>
+                <p>Dark and light stay within the same system.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="frameworkExpansionGrid" aria-labelledby="extra-previews-title">
+        <article class="frameworkExpansionCard">
+          <div class="frameworkDemoHead">
+            <p class="frameworkLabel">Theme split</p>
+            <h3 id="extra-previews-title">Dark and light in the same voice</h3>
+            <p class="frameworkDemoNote">Same shapes. Same rhythm. Different atmosphere.</p>
+          </div>
+
+          <div class="frameworkThemeSplit">
+            <article class="frameworkThemePane">
+              <span class="frameworkThemePaneLabel">Dark</span>
+              <div class="frameworkThemePaneDisplay">Dense, warm, low-glare.</div>
+              <p class="frameworkThemePaneCopy">Editorial contrast, muted chrome, soft highlights.</p>
+              <div class="frameworkThemePaneChips">
+                <span>Panel</span>
+                <span>Accent</span>
+                <span>Glow</span>
+              </div>
+            </article>
+
+            <article class="frameworkThemePane frameworkThemePane--light">
+              <span class="frameworkThemePaneLabel">Light</span>
+              <div class="frameworkThemePaneDisplay">Same system, brighter read.</div>
+              <p class="frameworkThemePaneCopy">Warm paper base, softer borders, clearer daytime contrast.</p>
+              <div class="frameworkThemePaneChips">
+                <span>Surface</span>
+                <span>Copy</span>
+                <span>Tone</span>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="frameworkExpansionCard">
+          <div class="frameworkDemoHead">
+            <p class="frameworkLabel">Signal board</p>
+            <h3>Quiet motion, active page</h3>
+            <p class="frameworkDemoNote">Pulse, blink, sweep.</p>
+          </div>
+
+          <div class="frameworkSignalBoard">
+            <div class="frameworkSignalDots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="frameworkSignalRow">
+              <div class="frameworkSignalMeta">
+                <span>Accent sweep</span>
+                <strong>100%</strong>
+              </div>
+              <div class="frameworkSignalBar frameworkSignalBar--wide"></div>
+            </div>
+            <div class="frameworkSignalRow">
+              <div class="frameworkSignalMeta">
+                <span>Layout rhythm</span>
+                <strong>74%</strong>
+              </div>
+              <div class="frameworkSignalBar frameworkSignalBar--mid"></div>
+            </div>
+            <div class="frameworkSignalRow">
+              <div class="frameworkSignalMeta">
+                <span>Noise</span>
+                <strong>52%</strong>
+              </div>
+              <div class="frameworkSignalBar frameworkSignalBar--short"></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="frameworkUtilityStrip" aria-labelledby="token-strip-title">
+        <article class="frameworkUtilityCard">
+          <p class="frameworkLabel">Tokens</p>
+          <h2 id="token-strip-title">Palette</h2>
+          <div class="frameworkSwatchGrid" aria-label="Color swatches">
+            <div class="frameworkSwatch">
+              <div class="frameworkSwatchColor frameworkSwatchColor--bg"></div>
+              <span>Background</span>
+            </div>
+            <div class="frameworkSwatch">
+              <div class="frameworkSwatchColor frameworkSwatchColor--panel"></div>
+              <span>Panel</span>
+            </div>
+            <div class="frameworkSwatch">
+              <div class="frameworkSwatchColor frameworkSwatchColor--accent"></div>
+              <span>Accent</span>
+            </div>
+            <div class="frameworkSwatch">
+              <div class="frameworkSwatchColor frameworkSwatchColor--soft"></div>
+              <span>Soft mix</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="frameworkUtilityCard">
+          <p class="frameworkLabel">Files</p>
+          <h2>Open the source</h2>
+          <div class="frameworkFileList">
+            <a href="/css/hoyem-framework.css">/css/hoyem-framework.css</a>
+            <a href="/css/framework-page.css">/css/framework-page.css</a>
+            <a href="/">/index.html</a>
+          </div>
+        </article>
+
+        <article class="frameworkUtilityCard">
+          <p class="frameworkLabel">Quick hits</p>
+          <h2>Use first</h2>
+          <div class="frameworkBulletList">
+            <span>hf-shell for width and rhythm.</span>
+            <span>hf-card for primary surfaces.</span>
+            <span>hf-button and hf-chip for controls.</span>
+            <span>Page CSS for the weird, special bits.</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="siteFooter">
+      <div class="siteFooterInner">
+        <a class="siteFooterLink" href="mailto:contact@hoyem.dev">contact@hoyem.dev</a>
+        <p class="siteFooterCopy">&copy; 2026 Hoyem.</p>
+      </div>
+    </footer>
+  </body>
+</html>
