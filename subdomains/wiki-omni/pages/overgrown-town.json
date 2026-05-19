@@ -1,0 +1,36 @@
+{
+  "slug": "overgrown-town",
+  "title": "Overgrown Town",
+  "image": "/media/wiki-omni/overgrown-town.png",
+  "imageAlt": "Overgrown abandoned industrial town under a corrupted camera feed",
+  "tags": ["World", "Exploration"],
+  "aliases": ["Overgrown Town", "the town", "empty town", "overgrown streets", "the streets"],
+  "summary": "The abandoned town surrounding the Hospital, where the Player first sees how empty the world has become.",
+  "intro": "The Overgrown Town is the early outdoor area. It looks familiar enough to read quickly and abandoned enough to feel impossible.",
+  "details": [
+    { "label": "Location type", "value": "Early exploration zone" },
+    { "label": "Connected locations", "value": "Hospital, The Camp, Signal Tower, Other Camp" },
+    { "label": "World condition", "value": "No service, overgrowth, abandoned vehicles" },
+    { "label": "Primary role", "value": "Shows that the emptiness is not limited to one building" }
+  ],
+  "facts": [
+    "The town is empty but not completely ruined.",
+    "Overgrowth shows that time passed while humans were gone.",
+    "Ali first becomes important on or near the route through this area, while Frank and Fiona later expand the town into stranger side routes."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "The Overgrown Town begins immediately after the Hospital. It includes streets, homes, shops, roadblocks, abandoned vehicles, and plant growth taking over maintained spaces.",
+        "This area makes the Player feel exposed. The world is bigger than the hospital, but there is still nobody to ask for help.",
+        "The town later supports supply runs from The Camp, letting the same streets change meaning as the Player learns more. Frank's service depot and Fiona's old neighborhood route make the town feel occupied by memories instead of people."
+      ],
+      "items": [
+        "Early function: teach exploration and route reading.",
+        "Midgame function: supply runs and clue recovery.",
+        "Clue: emergency signs that avoid naming the actual threat."
+      ]
+    }
+  ]
+}

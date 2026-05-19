@@ -2,80 +2,96 @@
   "slug": "keybinds",
   "title": "Keybinds & Shortcuts",
   "image": "/media/kb1to1.webp",
-  "summary": "A quick control sheet for the buttons players use most often.",
-  "intro": "A simple control sheet for the buttons that matter most out in the field. Made to be checked fast and closed just as fast.",
+  "imageAlt": "Keybinds reference preview",
+  "tags": ["Reference", "Controls"],
+  "aliases": ["controls", "keybinds", "shortcuts"],
+  "summary": "Reference controls for exploration, investigation, camp use, and field movement.",
+  "intro": "This page lists the controls for Omni. The control scheme is built around quiet exploration, checking details, and returning to The Camp between routes.",
   "showImage": false,
+  "details": [
+    { "label": "Input type", "value": "Keyboard and mouse" },
+    { "label": "Focus", "value": "Exploration and investigation" },
+    { "label": "Combat state", "value": "Limited and secondary" },
+    { "label": "Controller support", "value": "Planned later" }
+  ],
   "shortcutGroups": [
     {
-      "title": "Essential Shortcuts",
-      "description": "The buttons players will reach for constantly during normal play.",
-      "tag": "Core Loop",
+      "title": "Core Movement",
+      "description": "Controls used while exploring the hospital, streets, routes, and camp.",
+      "tag": "Movement",
       "entries": [
         {
           "action": "Move",
-          "description": "Standard movement keys for exploration, positioning, and combat.",
+          "description": "Standard movement.",
           "keys": ["W", "A", "S", "D"]
         },
         {
           "action": "Sprint",
-          "description": "Hold to move faster across open ground.",
+          "description": "Move faster across open ground or unsafe routes.",
           "keys": ["Shift"]
         },
         {
           "action": "Jump / Vault",
-          "description": "Use for jumps, ledges, and low obstacles.",
+          "description": "Cross small obstacles, ledges, fences, and blocked paths.",
           "keys": ["Space"]
         },
         {
-          "action": "Interact",
-          "description": "Talk to characters, pick things up, and use doors or camp stations.",
-          "keys": ["E"]
-        },
-        {
-          "action": "Open Inventory",
-          "description": "Check gear, quick slots, and important items.",
-          "keys": ["Tab"]
-        },
-        {
-          "action": "Quick Map",
-          "description": "Open the current map and your active objective view.",
-          "keys": ["M"]
-        },
-        {
-          "action": "Utility Action",
-          "description": "Use the tool or context action you have equipped.",
-          "keys": ["Q"]
-        },
-        {
           "action": "Pause / Back",
-          "description": "Open the pause menu or back out of the screen you are in.",
+          "description": "Open the pause menu or close the current screen.",
           "keys": ["Esc"]
         }
       ]
     },
     {
-      "title": "Combat & Field Actions",
-      "description": "Less frequent, but still worth finding fast when things get messy.",
-      "tag": "Situational",
+      "title": "Interaction",
+      "description": "Controls used to inspect the world and manage field information.",
+      "tag": "Investigation",
       "entries": [
         {
-          "action": "Primary Action",
-          "description": "Use your main attack, tool, or equipped action.",
-          "keys": ["LMB"]
+          "action": "Interact",
+          "description": "Talk, pick up items, use doors, read notes, and operate stations.",
+          "keys": ["E"]
         },
         {
-          "action": "Secondary Action",
-          "description": "Use an alternate fire mode, aim state, or secondary tool.",
+          "action": "Inspect / Focus",
+          "description": "Look closer at documents, faces, signals, or objects that seem wrong.",
           "keys": ["RMB"]
         },
         {
+          "action": "Open Inventory",
+          "description": "Review supplies, notes, tools, and collected evidence.",
+          "keys": ["Tab"]
+        },
+        {
+          "action": "Quick Map",
+          "description": "Open known routes, marked locations, camp notes, and objectives.",
+          "keys": ["M"]
+        }
+      ]
+    },
+    {
+      "title": "Field Tools",
+      "description": "Controls for equipped tools and signal-related actions.",
+      "tag": "Tools",
+      "entries": [
+        {
+          "action": "Primary Action",
+          "description": "Use the active item or confirm the focused action.",
+          "keys": ["LMB"]
+        },
+        {
+          "action": "Utility Action",
+          "description": "Use the equipped field tool or context item.",
+          "keys": ["Q"]
+        },
+        {
           "action": "Swap Tool",
-          "description": "Cycle quick-slot tools without opening the inventory.",
+          "description": "Cycle quick tools without opening the inventory.",
           "keys": ["MW"]
         },
         {
-          "action": "Flashlight / Focus",
-          "description": "Toggle the support action used for visibility or clue tracking.",
+          "action": "Flashlight / Signal Check",
+          "description": "Toggle light or check signal behavior in no-service zones.",
           "keys": ["F"]
         }
       ]
@@ -83,15 +99,15 @@
   ],
   "sections": [
     {
-      "heading": "Using This Page",
+      "heading": "Design Notes",
       "paragraphs": [
-        "This page is here for speed. You should be able to glance at it once and get straight back to playing.",
-        "If a key matters during normal play, it belongs near the top. If it only matters once in a while, it can sit lower down."
+        "The controls stay simple because the game depends on atmosphere and attention. The player thinks about what feels wrong instead of fighting the interface.",
+        "Investigation controls become more important than combat controls because Omni focuses on mystery, signal behavior, and almost-human encounters."
       ],
       "items": [
-        "Keep movement and interaction together so the core loop is easy to scan.",
-        "Only add extra description when an action is easy to forget under pressure.",
-        "If controller support gets added later, mirror this layout instead of mixing formats."
+        "Keep movement, interact, inventory, and map easy to reach.",
+        "Use inspect/focus for details that are easy to miss in the environment.",
+        "Keep combat labels flexible until the threat model is clearer."
       ]
     }
   ]

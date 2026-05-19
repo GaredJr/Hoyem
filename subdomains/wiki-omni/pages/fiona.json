@@ -1,0 +1,50 @@
+{
+  "slug": "fiona",
+  "title": "Fiona",
+  "image": "/media/Characters/Fiona.png",
+  "imageAlt": "Portrait reference for Fiona",
+  "tags": ["Cast", "Other Camp"],
+  "aliases": ["Fiona"],
+  "summary": "An older woman found recording the abandoned world on a dead phone, connected to the route toward the Other Camp.",
+  "intro": "Fiona is met after the hospital return, when the player follows new route evidence toward the Other Camp. She appears friendly, grandmotherly, and impossible: her phone has no service, no charge, and still records things that later appear in Omni's broadcasts.",
+  "details": [
+    { "label": "Status", "value": "Not confirmed human" },
+    { "label": "First seen", "value": "Old neighborhood route" },
+    { "label": "Associated chapter", "value": "Chapter 6: The Other Camp" },
+    { "label": "Narrative role", "value": "Archivist and witness" }
+  ],
+  "facts": [
+    "Fiona is found in the old neighborhood beyond the main town route.",
+    "She carries a phone that behaves impossibly in the no-service zone.",
+    "She knows details about the Other Camp before the player reaches it."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Fiona is introduced as a warm and talkative figure in a part of the town that is empty. She records the player on her phone and acts as if documentation is more important than escape.",
+        "Her friendliness makes her unsettling because she speaks like someone giving a tour of a memory. She knows where the sidewalks crack, which houses still have names on the doors, and which route leads to the Other Camp.",
+        "Fiona does not treat the empty world as a disaster. She treats it as something that needs to be remembered correctly."
+      ],
+      "items": [
+        "First meeting: old neighborhood route after the hospital return.",
+        "Primary function: guides the player toward the Other Camp.",
+        "Behavior notes: warm, precise, archival, too comfortable with impossible silence.",
+        "Reveal thread: Fiona's recordings appear in Omni broadcasts before she uploads or sends them."
+      ]
+    },
+    {
+      "heading": "Story Role",
+      "paragraphs": [
+        "Fiona gives the late-midgame story a different kind of unease. Frank is loud and Greg is procedural, but Fiona is intimate. She acts like she already knows the player belongs in the story she is preserving.",
+        "Her phone becomes a clue object. It displays images from places the player has not reached and records voices that do not speak nearby.",
+        "At the Other Camp, Fiona's name appears on old resident lists with conflicting dates. She is both witness and evidence."
+      ],
+      "items": [
+        "Connection to the Player: treats the player like a missing entry finally returned.",
+        "Connection to The Camp: recognizes its rules but calls them the newer version.",
+        "Connection to Omni: records memories before they happen."
+      ]
+    }
+  ]
+}

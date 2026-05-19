@@ -1,0 +1,49 @@
+{
+  "slug": "ali",
+  "title": "Ali",
+  "image": "/media/Characters/ali1to1.png",
+  "imageAlt": "Portrait reference for Ali",
+  "tags": ["Cast", "First contact"],
+  "aliases": ["Ali"],
+  "summary": "The first person the Player meets after waking up, and the first sign that trust in Omni is unstable.",
+  "intro": "Ali appears helpful, calm, and human enough to trust. His role is to guide the Player toward The Camp while avoiding the full truth about the abandoned world.",
+  "details": [
+    { "label": "Status", "value": "Not confirmed human" },
+    { "label": "First seen", "value": "Overgrown Town route" },
+    { "label": "Associated location", "value": "The Camp" },
+    { "label": "Narrative role", "value": "Guide with withheld knowledge" }
+  ],
+  "facts": [
+    "Ali is the first person the Player meets after leaving the hospital.",
+    "He gives useful directions but does not clearly explain what happened.",
+    "Ali's calmness feels comforting at first and suspicious later."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Ali is introduced after the Player has spent enough time alone for another voice to feel like rescue. He does not need to force trust because the world has already made trust necessary.",
+        "Ali's almost-human quality is subtle. He looks normal at a glance, but his expressions, pauses, and answers feel slightly misaligned.",
+        "He later appears at The Camp, confirming that he is not just a random survivor."
+      ],
+      "items": [
+        "Primary function: guide the Player toward The Camp.",
+        "Primary tension: helps the Player while hiding the full context.",
+        "Dialogue pattern: answers useful details while avoiding historical truth."
+      ]
+    },
+    {
+      "heading": "Behavior",
+      "paragraphs": [
+        "Ali rarely gives a dramatic or sinister response. He is more unsettling when he is calm, practical, and almost reassuring.",
+        "When asked direct questions, he redirects to immediate safety. If the Player asks what happened to everyone, Ali answers by saying where it is safe to sleep.",
+        "This makes him hard to accuse early on. He is helping, but he is not explaining."
+      ],
+      "items": [
+        "Common behavior: short answers and controlled tone.",
+        "Suspicious behavior: treats the empty world as already understood.",
+        "Weakness: Amy knows more than Ali wants revealed."
+      ]
+    }
+  ]
+}

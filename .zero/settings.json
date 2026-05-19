@@ -1,0 +1,40 @@
+{
+  "customTheme": {
+    "accent": "#4f7a28",
+    "accentStrong": "#a77b00",
+    "appBg": "#111310",
+    "borderSoft": "#c4bc00",
+    "borderStrong": "#f5ec00",
+    "editorBackground": "#e32400",
+    "editorComment": "#7f8b83",
+    "editorForeground": "#d95000",
+    "editorFunction": "#e5d08f",
+    "editorKeyword": "#d7b36a",
+    "editorLineHighlight": "#ffa57d",
+    "editorNumber": "#df8f7b",
+    "editorSelection": "#fffc41",
+    "editorString": "#8ccf9f",
+    "editorType": "#91b4d8",
+    "editorVariable": "#e5e1d7",
+    "surface0": "#151715",
+    "surface1": "#666100",
+    "surface2": "#4f5503",
+    "surface3": "#263e0f",
+    "terminalBg": "#101210",
+    "terminalText": "#d9d4c9",
+    "textMuted": "#00c7fc",
+    "textPrimary": "#e32400",
+    "textSecondary": "#e63b7a"
+  },
+  "fontSize": 11,
+  "renderWhitespace": "none",
+  "searchExcludes": [
+    "node_modules",
+    "target",
+    "dist",
+    ".git",
+    ".zero"
+  ],
+  "terminalShell": "",
+  "wordWrap": "on"
+}

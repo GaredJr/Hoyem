@@ -78,12 +78,56 @@
     updateToggleButtons(root.dataset.theme || getSystemTheme());
   }
 
+  function initializeLucideIcons() {
+    if (!document.querySelector("[data-lucide]")) {
+      return;
+    }
+
+    const renderIcons = () => {
+      if (window.lucide && typeof window.lucide.createIcons === "function") {
+        window.lucide.createIcons({
+          attrs: {
+            "aria-hidden": "true",
+            focusable: "false",
+          },
+        });
+      }
+    };
+
+    if (window.lucide) {
+      renderIcons();
+      return;
+    }
+
+    const existingScript = document.querySelector("[data-lucide-loader]");
+
+    if (existingScript) {
+      existingScript.addEventListener("load", renderIcons, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/lucide@latest/dist/umd/lucide.min.js";
+    script.async = true;
+    script.dataset.lucideLoader = "true";
+    script.addEventListener("load", renderIcons, { once: true });
+    document.head.append(script);
+  }
+
   applyTheme(readStoredTheme() || getSystemTheme());
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initializeThemeToggle, { once: true });
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+        initializeThemeToggle();
+        initializeLucideIcons();
+      },
+      { once: true },
+    );
   } else {
     initializeThemeToggle();
+    initializeLucideIcons();
   }
 
   const syncWithSystemTheme = (event) => {

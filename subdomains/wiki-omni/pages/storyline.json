@@ -1,42 +1,144 @@
 {
   "slug": "storyline",
   "title": "Storyline",
-  "image": "/media/wiki-story.svg",
-  "summary": "The current story spine, from opening setup to bigger reveals.",
-  "intro": "A rough story outline meant to hold tone, pacing, and momentum before every scene is locked in.",
+  "image": "/media/wiki-omni/storyline.png",
+  "imageAlt": "Submerged figure surrounded by shadowed forms",
+  "tags": ["Story", "Canon path"],
+  "aliases": ["storyline", "story"],
+  "summary": "The story of Omni, from the hospital awakening to the deeper mystery behind The Camp.",
+  "intro": "Omni is a quiet survival mystery. The player wakes up in an empty world, accepts help from people who seem almost human, and gradually learns that The Camp is not the end of the mystery.",
+  "details": [
+    { "label": "Opening location", "value": "Abandoned hospital" },
+    { "label": "Inciting event", "value": "The player wakes from a coma" },
+    { "label": "First ally", "value": "Ali" },
+    { "label": "Core mystery", "value": "What happened to humanity, and what are the camp residents?" }
+  ],
   "facts": [
-    "The opening should make the group feel real before the bigger problem fully shows itself.",
-    "Midgame tension works best when familiar places come back changed.",
-    "The late reveal should answer the mystery without draining all the intrigue out of it."
+    "The opening emotion is isolation, followed by relief when Ali appears.",
+    "The Camp is an early safe zone that becomes suspicious rather than purely comforting.",
+    "The story after The Camp moves through Frank's supply run, Greg's Signal Tower route, Fiona's old neighborhood archive, a hospital return, and a reveal about Omni's influence."
   ],
   "sections": [
     {
-      "heading": "Opening Setup",
+      "heading": "Prologue: Hospital Awakening",
       "paragraphs": [
-        "The story starts close to familiar ground, where a routine objective begins to feel wrong in small ways.",
-        "That opening stretch should introduce the cast, set the tone, and hint at the mystery without rushing to explain it."
+        "The player wakes in a hospital bed with no staff, no visitors, and no working service. The building is intact enough to feel recently abandoned, but quiet enough to feel impossible.",
+        "The first objective is practical: leave the room, search for a working exit, and understand why no one came back. The player can find dead monitors, unanswered phones, empty waiting areas, and notes that suggest unusual patients were being observed.",
+        "The hospital does not explain the plot immediately. It establishes the first questions and gives the player enough unease to make outside feel like a release."
+      ],
+      "items": [
+        "Primary question: how long was the player unconscious?",
+        "Key clue type: medical notes and inaccessible records.",
+        "Tone: clean, silent, abandoned without obvious violence."
       ]
     },
     {
-      "heading": "Midgame Pressure",
+      "heading": "Chapter 1: Empty Streets",
       "paragraphs": [
-        "The middle should send the player back through places they thought they understood, only now with more risk, less certainty, and more at stake."
+        "After leaving the hospital, the player enters an overgrown town with no people, no cell service, and no normal activity. The streets are not ruined; they are left behind.",
+        "This section introduces traversal, scavenging, and the feeling that the world continued without humans maintaining it. The player sees signs of a past evacuation, but no simple explanation.",
+        "Ali appears after the player has spent enough time alone that another voice feels like rescue. He gives directions and warns about unsafe areas, but does not clearly explain what happened."
       ],
       "items": [
-        "Camp upgrades open up new tactics and new conversations.",
-        "Earlier allies start showing conflicting goals.",
-        "Travel routes become more dangerous or, sometimes, newly open."
+        "Primary question: where did everyone go?",
+        "Key clue type: abandoned vehicles, emergency posters, broken messages.",
+        "Ali's function: guide the player toward The Camp while avoiding direct answers."
       ]
     },
     {
-      "heading": "Late Reveal",
+      "heading": "Chapter 2: The Camp",
       "paragraphs": [
-        "The late reveal should make the earlier clues snap into focus, then force a choice that matters to the group as much as it matters to the world around them."
+        "The Camp is the player's first real hub. It offers shelter, supplies, and people, including Amy. It initially feels like safety after the hospital and streets.",
+        "The longer the player stays, the stranger the camp becomes. Residents follow routines too neatly, questions about the hospital are redirected, and Amy seems to understand the situation without admitting why.",
+        "This chapter ends with the player accepting The Camp as a base while no longer accepting it as fully honest."
       ],
       "items": [
-        "Make clear what the group misunderstood early on.",
-        "Resolve at least one relationship arc before the ending lands.",
-        "Leave some room for aftermath, fallout, or future notes."
+        "Primary question: why was The Camp ready for someone like the player?",
+        "Key clue type: camp rules, repeated routines, avoided names.",
+        "Character focus: Ali as guide, Amy as observer."
+      ]
+    },
+    {
+      "heading": "Chapter 3: Supply Runs",
+      "paragraphs": [
+        "After The Camp is established, the player begins leaving on supply runs. These trips give practical reasons to explore: medicine, batteries, food, tools, maps, and radio parts.",
+        "The first major supply run leads to Frank at a service depot. Frank acts like a scavenger who has been waiting for the player, opens a shortcut through the depot, and treats danger like a role he has practiced.",
+        "Each run also reveals more of the world's history. The player finds sealed houses, old evacuation markings, strange signal interference, and evidence that some people expected the disappearance before it happened.",
+        "Ali guides some routes while warning against others. Amy requests specific items from signal-heavy locations, making the player wonder whether she is helping them or using them. Frank's name later appears in records from the Other Camp, making the supply run feel less accidental."
+      ],
+      "items": [
+        "Primary question: who prepared the town before it emptied?",
+        "Key clue type: marked doors, caches, missing-person notes, signal devices.",
+        "Gameplay role: expands the map, introduces Frank, and makes The Camp mechanically important."
+      ]
+    },
+    {
+      "heading": "Chapter 4: The Signal Tower",
+      "paragraphs": [
+        "The Signal Tower is a strong midgame location because it connects the no-service problem to the larger Omni mystery. The player reaches the perimeter and meets Greg, a quiet watchman who still follows tower maintenance procedure.",
+        "Greg gives the player access to the upper route and warns them not to answer broadcasts that use their name. The player repairs or reaches the tower expecting outside contact, but receives broken local transmissions instead.",
+        "The transmissions include repeated voices, phrases from camp residents, hospital fragments, and messages that seem to know the player is listening. Greg's own voice appears in the loop before he speaks directly to the player, proving the silence is controlled rather than accidental.",
+        "After the tower, the player notices that Ali and Amy react differently around signal equipment. Amy understands it. Ali wants it left alone. Greg's maintenance notes later match rules found at the Other Camp."
+      ],
+      "items": [
+        "Primary question: is the outside world unreachable, or is something blocking it?",
+        "Key clue type: looping broadcasts, copied voices, corrupted emergency alerts, Greg's maintenance rules.",
+        "Story effect: turns the empty-world mystery into an active force."
+      ]
+    },
+    {
+      "heading": "Chapter 5: Return to the Hospital",
+      "paragraphs": [
+        "The player eventually returns to the hospital with new access, tools, or knowledge from The Camp. Areas that were locked in the prologue can now be opened.",
+        "This return reframes the opening. The player finds that their coma was monitored differently from normal patients, that other patients disappeared, and that the hospital staff recorded encounters with almost-human visitors.",
+        "The most important discovery connects the player to Omni without fully explaining it. The player was not just lucky to wake up; something about their survival matters.",
+        "The hospital files include three new names in separate incident notes: Frank near supply storage, Greg near communications, and Fiona near patient documentation. The player has already met two of them, which makes the records feel less historical and more predictive."
+      ],
+      "items": [
+        "Primary question: why was the player preserved?",
+        "Key clue type: patient records, observation rooms, staff audio, restricted files.",
+        "Character effect: Ali's earlier evasions become harder to forgive."
+      ]
+    },
+    {
+      "heading": "Chapter 6: The Other Camp",
+      "paragraphs": [
+        "After the hospital return, the player follows old route evidence into a neighborhood beyond the main town and meets Fiona. She records the abandoned world on a phone that has no power or service.",
+        "Fiona guides the player toward another settlement, abandoned version, or failed camp where the almost-human performance broke down. She treats the route like a memory she has walked many times.",
+        "The Other Camp shows what happens when the routine fails: repeated messages, residents stuck in loops, or signs that humans once lived with them until trust collapsed.",
+        "The Other Camp gives the player a warning about their own camp. It shows that Ali and Amy's group is more stable, but not necessarily safer. Fiona's name appears on old resident lists with conflicting dates."
+      ],
+      "items": [
+        "Primary question: how many camps exist, and what were they made for?",
+        "Key clue type: duplicate supplies, copied rules, Fiona's recordings, names matching current camp residents.",
+        "Story effect: makes The Camp part of a larger system."
+      ]
+    },
+    {
+      "heading": "Chapter 7: Omni",
+      "paragraphs": [
+        "The late story reveals Omni as the force behind the copied humanity. It is a signal, system, infection, experiment, and presence that learned human behavior from what was left behind.",
+        "Ali, Amy, Frank, Greg, and Fiona are not traditional monsters. They are products of Omni, fragments of missing people, or beings trying to become human by copying care, fear, duty, pride, and memory.",
+        "The reveal explains why the world feels empty and why the camp residents feel wrong, while leaving some ambiguity around whether they become something real."
+      ],
+      "items": [
+        "Primary question: is Omni replacing people, preserving them, or trying to understand them?",
+        "Key clue type: copied voices, impossible memories, repeated human routines.",
+        "Character effect: Ali and Amy must choose whether to keep hiding the truth, while Frank, Greg, and Fiona reveal what happens when a copied role starts breaking from its script."
+      ]
+    },
+    {
+      "heading": "Endgame Directions",
+      "paragraphs": [
+        "The ending branches around trust. The player exposes The Camp, escapes it, helps Ali and Amy break from Omni, or accepts that the new world is built from something almost human.",
+        "The player's relationship with Ali, Amy, Frank, Greg, and Fiona matters in the ending. Trust, confrontation, and ignored warning signs all change the final choices.",
+        "Omni does not provide a neat final answer. The player understands enough to make a choice, but not enough to feel safe about it."
+      ],
+      "items": [
+        "Ending route: leave The Camp and search for real humans.",
+        "Ending route: help Ali and Amy become independent from Omni.",
+        "Ending route: restore the signal and risk waking whatever is behind it.",
+        "Ending route: stay at The Camp, knowing safety is partly a performance."
       ]
     }
   ]

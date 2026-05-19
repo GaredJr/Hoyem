@@ -2,48 +2,112 @@
   "slug": "map-locations",
   "title": "Map & Locations",
   "image": "/media/wiki-map.svg",
-  "summary": "Places worth remembering, plus the routes and landmarks that shape the journey.",
-  "intro": "A loose map of the places that already feel important, even if some names and borders are still likely to change.",
+  "imageAlt": "Stylized map preview for Omni locations",
+  "tags": ["World", "Locations"],
+  "aliases": ["map", "locations", "map and locations"],
+  "summary": "A reference for major known locations, including the hospital, The Camp, and later story areas.",
+  "intro": "Locations in Omni feel ordinary at first, then reveal that ordinary life has been interrupted, copied, or preserved in the wrong way.",
+  "details": [
+    { "label": "Starting area", "value": "Hospital ward" },
+    { "label": "Main hub", "value": "The Camp" },
+    { "label": "World state", "value": "Abandoned, overgrown, signal-dead" },
+    { "label": "Exploration style", "value": "Quiet routes, clue sites, returning locations" }
+  ],
   "facts": [
-    "Good location notes should tell you what a place feels like, not just what is there.",
-    "Routes matter because tension often comes from the journey, not only the destination.",
-    "The best landmarks do double duty: they help you navigate and they carry story weight."
+    "The world looks left behind rather than destroyed.",
+    "No-service areas and broken signals are recurring clues.",
+    "Several locations are revisited after The Camp gives the player tools or context."
   ],
   "sections": [
     {
-      "heading": "Outer Rim",
+      "heading": "Hospital",
       "paragraphs": [
-        "The Outer Rim feels like the edge of familiar ground. It is a good place to teach scavenging, route-reading, and that low-grade sense that something is slightly off.",
-        "It should feel open enough to learn in, but never fully comfortable."
+        "The Hospital is the first known location and the site where the player wakes from a coma. It appears abandoned, mostly intact, and recently emptied.",
+        "Early exploration focuses on locked doors, dead monitors, unanswered phones, empty staff stations, and signs that the player was not treated like a normal patient.",
+        "A later return reveals restricted records, observation rooms, and evidence that the hospital staff knew about almost-human visitors before the player woke up."
       ],
       "items": [
-        "Good first-stop region for traversal basics and manageable danger.",
-        "Plenty of room for small discoveries and environmental hints.",
-        "A natural place for the first warnings that the world is changing."
+        "Type: opening area, later investigation site.",
+        "Connected story beat: the player's survival and missing time.",
+        "Clue: patient files marked with Omni-related terminology."
       ]
     },
     {
-      "heading": "Flooded Pass",
+      "heading": "Overgrown Town",
       "paragraphs": [
-        "Flooded Pass immediately suggests bad weather, blocked routes, and the need to slow down. Even as a rough idea, it already carries friction.",
-        "It feels like the kind of place players remember because they had to work to get through it."
+        "The Overgrown Town surrounds the hospital. It includes empty roads, abandoned vehicles, closed shops, houses with untouched interiors, and plants growing through maintained spaces.",
+        "This area gives the player their first look at the larger world. It is quiet enough that every sign of movement feels important.",
+        "The town can expand in stages after The Camp, with new routes opening for supply runs, signal checks, and hospital return objectives."
       ],
       "items": [
-        "Potential hazard: unstable footing or a shifting waterline.",
-        "Potential reward: a hidden route back toward camp.",
-        "Potential story beat: the first obvious sign that the region is changing."
+        "Type: early exploration zone.",
+        "Connected story beat: first realization that the emptiness is larger than the hospital.",
+        "Clue: emergency notices that use careful wording instead of naming the threat."
       ]
     },
     {
-      "heading": "Observation Tower",
+      "heading": "The Camp",
       "paragraphs": [
-        "The Observation Tower feels like a reveal point. It is the kind of place where the player finally sees how the world fits together, or how much worse it has gotten.",
-        "That makes it useful both as a navigational reward and as a turning point in the story."
+        "The Camp is the main hub and the first place that contains an organized group. It is introduced through Ali and becomes the player's base after the first encounters.",
+        "It contains practical stations for supplies, planning, repairs, and signal work. It also contains social unease: repeated routines, avoided topics, and residents who appear human but do not fully behave like it.",
+        "The Camp changes as the story progresses. The more the player learns, the more defensive or unstable the camp's normal behavior becomes."
       ],
       "items": [
-        "Good place for map updates or journal discoveries.",
-        "Could support binocular, radio, or beacon mechanics.",
-        "Works for both exploration payoffs and bigger narrative turns."
+        "Type: hub, social mystery location.",
+        "Connected story beat: trust becomes complicated.",
+        "Clue: camp rules that make more sense after learning about Omni."
+      ]
+    },
+    {
+      "heading": "No-Service Zones",
+      "paragraphs": [
+        "No-Service Zones are areas where phones, radios, and emergency signals fail completely or behave strangely. They help make the lack of communication feel like part of the lore.",
+        "Some zones are silent, while others play fragments of old broadcasts or repeated phrases. Signal behavior becomes a way to track Omni's influence.",
+        "Amy is tied to these zones through her interest in patterns, while Ali discourages the player from investigating them too closely."
+      ],
+      "items": [
+        "Type: recurring environmental condition.",
+        "Connected story beat: the world is being blocked or filtered.",
+        "Clue: a broadcast using a camp resident's voice before the player has heard them say it."
+      ]
+    },
+    {
+      "heading": "Signal Tower",
+      "paragraphs": [
+        "The Signal Tower is a midgame objective. The player reaches or repairs it hoping to contact the outside world.",
+        "Instead of restoring normal service, the tower reveals corrupted local transmissions. These include hospital audio, copied voices, and phrases that sound like they were assembled from human memories.",
+        "The tower marks the point where the player can no longer treat the empty world as a simple disaster."
+      ],
+      "items": [
+        "Type: midgame investigation site.",
+        "Connected story beat: Omni becomes an active force.",
+        "Clue: a transmission that reacts to the player's presence."
+      ]
+    },
+    {
+      "heading": "Outer Roads",
+      "paragraphs": [
+        "The Outer Roads lead away from the main town and toward checkpoints, blocked exits, old supply caches, and later story locations.",
+        "They make the world feel larger while still refusing the player a clean escape. Roads loop, collapse, or lead to places that suggest other groups tried to leave and failed.",
+        "Ali knows these routes too well. Amy knows which ones still carry signal traces."
+      ],
+      "items": [
+        "Type: expanded traversal area.",
+        "Connected story beat: the emptiness is not local.",
+        "Clue: signs of organized evacuation without evidence of arrival."
+      ]
+    },
+    {
+      "heading": "Other Camp",
+      "paragraphs": [
+        "The Other Camp is a late-midgame location. It is a failed settlement, duplicate camp, or abandoned testing ground that mirrors the player's own hub.",
+        "This location reveals that The Camp is part of a wider pattern. The player finds similar rules, repeated station layouts, and names connected to current camp residents.",
+        "It stands as a warning. Whatever is happening at the player's camp has happened before, and it did not end cleanly."
+      ],
+      "items": [
+        "Type: late-midgame reveal location.",
+        "Connected story beat: The Camp is not unique.",
+        "Clue: a camp rule list matching the player's camp word for word."
       ]
     }
   ]

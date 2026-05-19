@@ -1,0 +1,49 @@
+{
+  "slug": "amy",
+  "title": "Amy",
+  "image": "/media/Characters/Amy.png",
+  "imageAlt": "Portrait reference for Amy",
+  "tags": ["Cast", "Signal"],
+  "aliases": ["Amy"],
+  "summary": "A Camp resident connected to patterns, signals, and the parts of the world Ali avoids explaining.",
+  "intro": "Amy is introduced through The Camp. She is helpful, observant, and harder to read than Ali, with a strong connection to signals and hidden systems.",
+  "details": [
+    { "label": "Status", "value": "Not confirmed human" },
+    { "label": "First seen", "value": "The Camp" },
+    { "label": "Associated systems", "value": "Signal equipment, route notes, pattern tracking" },
+    { "label": "Narrative role", "value": "Analyst and uncomfortable truth source" }
+  ],
+  "facts": [
+    "Amy often understands situations before the Player has enough evidence.",
+    "Her comfort and concern can feel learned rather than natural.",
+    "Amy is a strong candidate for revealing how Omni works."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Amy begins with borrowed trust because the Player meets her after Ali leads them to The Camp. She is not as immediately reassuring as Ali, but she is often more valuable.",
+        "Her speech feels precise and slightly delayed, as if she knows the correct response but has to choose it manually.",
+        "Amy helps the Player find truth while still being part of the thing the Player fears."
+      ],
+      "items": [
+        "Primary function: explain patterns without giving full answers.",
+        "Primary tension: studies the Player while appearing helpful.",
+        "Useful contrast: Ali calms; Amy analyzes."
+      ]
+    },
+    {
+      "heading": "Connection to Signals",
+      "paragraphs": [
+        "Amy is tied to signal behavior, broken broadcasts, and no-service zones. She understands why phones fail and why certain transmissions repeat.",
+        "Her knowledge can guide the Player toward the Signal Tower, but it can also suggest that she has been listening for much longer than she admits.",
+        "After the Signal Tower, Amy's role can shift from suspicious helper to key source of dangerous information."
+      ],
+      "items": [
+        "Tool: signal notes at The Camp.",
+        "Reveal thread: Amy recognizes copied voices.",
+        "Conflict: Ali wants some signal evidence left alone."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "hospital",
+  "title": "Hospital",
+  "image": "/media/wiki-omni/hospital.png",
+  "imageAlt": "Abandoned hospital exterior surrounded by dark trees",
+  "tags": ["World", "Opening"],
+  "aliases": ["Hospital", "the hospital", "abandoned hospital"],
+  "summary": "The opening location where the Player wakes from a coma and first encounters the empty world.",
+  "intro": "The Hospital is the first playable location in Omni. It feels clean, quiet, and wrong because it appears abandoned rather than destroyed.",
+  "details": [
+    { "label": "Location type", "value": "Opening area" },
+    { "label": "Associated character", "value": "The Player" },
+    { "label": "Associated mystery", "value": "Coma, missing time, patient records" },
+    { "label": "Return status", "value": "Revisited later with new access" }
+  ],
+  "facts": [
+    "The Player wakes here with no staff nearby.",
+    "The building contains early clues without explaining Omni immediately.",
+    "A later return reveals restricted records and observation rooms."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "The Hospital introduces Omni through absence. The rooms are intact, but the people who normally occupy them are gone.",
+        "The Player's first tasks are simple: leave the room, search for a working exit, and test whether the outside world is reachable.",
+        "The Hospital becomes more important after The Camp, when the Player can return with enough context to understand what was strange from the beginning."
+      ],
+      "items": [
+        "Opening tone: quiet, clinical, abandoned.",
+        "Key interactions: doors, notes, phones, patient files.",
+        "Late use: reveal the Player was not a normal patient."
+      ]
+    },
+    {
+      "heading": "Clues",
+      "paragraphs": [
+        "Hospital clues are specific enough to reward inspection but incomplete enough to preserve the mystery.",
+        "Useful clues include unusual patient labels, staff notes about visitors, locked observation rooms, and audio fragments that mention Omni without defining it.",
+        "The strongest reveal is not that the hospital caused everything, but that it recorded signs of the almost-human problem before the Player woke up."
+      ],
+      "items": [
+        "Patient files connect the Player to missing time.",
+        "Staff audio can mention repeated phrases or copied voices.",
+        "A locked wing becomes the reason to return later."
+      ]
+    }
+  ]
+}

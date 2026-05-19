@@ -1,0 +1,51 @@
+{
+  "slug": "gameplay",
+  "title": "Gameplay Overview",
+  "image": "/media/kb1to1.webp",
+  "imageAlt": "Gameplay reference image for Omni",
+  "tags": ["Meta", "Game design"],
+  "aliases": ["gameplay", "game explanation", "gameplay overview", "core loop"],
+  "summary": "A high-level explanation of how Omni plays: exploration, investigation, camp returns, and trust-based story pressure.",
+  "intro": "Omni plays like a quiet survival mystery. The main loop is not about fighting everything; it is about moving through empty places, noticing wrong details, and deciding who to trust.",
+  "details": [
+    { "label": "Genre", "value": "Exploration mystery with survival pressure" },
+    { "label": "Primary loop", "value": "Explore, collect clues, return to The Camp, compare stories" },
+    { "label": "Main tension", "value": "Safety versus trust" },
+    { "label": "Combat status", "value": "Optional or limited; not the central identity yet" }
+  ],
+  "facts": [
+    "The Player is often safer at The Camp but less certain there.",
+    "Investigation controls matter as much as movement controls.",
+    "Story progress comes from places, signals, repeated behavior, and character contradictions."
+  ],
+  "sections": [
+    {
+      "heading": "Core Loop",
+      "paragraphs": [
+        "The basic loop is to leave The Camp, explore a route, gather supplies or clues, return, and use new information to challenge what Ali, Amy, or the Camp Residents have said.",
+        "Each outing has both a practical reward and a story reward. A supply run brings back batteries while also revealing a signal clue.",
+        "The Camp reacts to what the Player found, making the hub feel alive and suspicious."
+      ],
+      "items": [
+        "Explore: Hospital, Overgrown Town, Frank's service depot, Signal Tower, Fiona's old neighborhood route, Other Camp.",
+        "Collect: supplies, records, route notes, signal fragments.",
+        "Compare: camp dialogue versus outside evidence, including Frank's timeline, Greg's maintenance rules, and Fiona's recordings.",
+        "Decide: trust, confront, hide information, or investigate further."
+      ]
+    },
+    {
+      "heading": "Investigation",
+      "paragraphs": [
+        "Investigation focuses on small wrong details: repeated phrases, mismatched records, signal behavior, routines that happen too perfectly, and human reactions that arrive too late.",
+        "The Player inspects objects, reads notes, tracks routes, and revisits old places with new tools or context.",
+        "The wiki-like structure of the lore supports the game itself: clues feel like entries being slowly completed rather than a single answer being handed over."
+      ],
+      "items": [
+        "Useful tool: inspect/focus.",
+        "Useful tool: map with revisitable locations.",
+        "Useful tool: signal checker or radio device.",
+        "Useful system: camp dialogue that changes after discoveries."
+      ]
+    }
+  ]
+}

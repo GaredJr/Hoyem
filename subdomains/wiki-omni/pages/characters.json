@@ -2,47 +2,140 @@
   "slug": "characters",
   "title": "Characters",
   "image": "/media/Characters/ali1to1.png",
-  "summary": "Early notes on the cast, their roles, and how they play off each other.",
-  "intro": "These are early character notes, not locked biographies. The goal is to catch what each person feels like, what role they seem to fill in the group, and where their story might start to shift.",
+  "imageAlt": "Character portrait for the Omni cast notes",
+  "tags": ["Cast", "Almost human"],
+  "aliases": ["cast", "known cast", "characters"],
+  "summary": "A reference for the known cast, including the player, Ali, Amy, Frank, Greg, Fiona, and the unidentified people at The Camp.",
+  "intro": "Most characters in Omni appear human at first glance. Their speech, timing, and reactions are close enough to be trusted early on, but not close enough to feel normal for long.",
+  "details": [
+    { "label": "Primary theme", "value": "Trusting people who are not people" },
+    { "label": "First major contact", "value": "Ali, outside the hospital route" },
+    { "label": "Main hub cast", "value": "Ali, Amy, Frank, Greg, Fiona, and The Camp residents" },
+    { "label": "Canon state", "value": "Active story reference" }
+  ],
   "facts": [
-    "Ali and Amy still feel like the clearest anchors in the current material.",
-    "The focus here is tone, chemistry, and first read, not final canon.",
-    "If the cast expands, each character can branch into a full entry of their own."
+    "The player wakes from a coma and has no reliable context for the empty world.",
+    "Ali is the first person who offers help, which makes his incomplete answers easier to accept.",
+    "Amy, Frank, Greg, Fiona, and the camp residents strengthen the idea that some people are copying human behavior rather than naturally living it."
   ],
   "sections": [
     {
-      "heading": "Ali",
+      "heading": "The Player",
       "paragraphs": [
-        "Ali comes across as the grounded one in the group: practical, observant, and easy to trust early.",
-        "The gear and silhouette do a lot of quiet work here. Ali feels built for rough conditions, which makes them a strong anchor once the world starts getting stranger."
+        "The player character wakes up alone in an abandoned hospital after an unknown period of unconsciousness. They have no service, no staff to question, and no immediate proof that anyone else is alive.",
+        "Their role in the story is to be the human point of view. They treat Ali, Amy, and the camp residents as people because that is the only familiar framework they have.",
+        "As the story progresses, the player becomes less concerned with finding any person and more concerned with identifying what actually counts as a person in this world."
       ],
       "items": [
-        "Visual hook: practical gear and a solid silhouette.",
-        "Narrative role: guide, scout, or first companion.",
-        "Emotional read: steady enough to ground riskier personalities."
+        "Known status: human, recently awakened from a coma.",
+        "First objective: leave the hospital and find help.",
+        "Story function: notices contradictions before understanding them.",
+        "Open question: why the player survived or was preserved when others disappeared."
+      ]
+    },
+    {
+      "heading": "Ali",
+      "paragraphs": [
+        "Ali is the first person you meet after you wake up, and you also end up meeting him at The Camp later on. He functions as the player's first guide and first reason to believe the world still has people in it.",
+        "Like most of the other characters in the game, there is obviously something wrong with him, giving an ominous feeling. He looks human enough that the player does not question it right away, but his timing, expressions, and the way he avoids explaining things never feel completely natural.",
+        "Since the player does not yet know the situation of the world during the first encounters, they end up trusting Ali and treating him like a fellow human. He helps with immediate survival, but he also leaves out the information that makes the player afraid of him.",
+        "Ali rarely lies directly. His dialogue works by answering the safest version of a question. When asked what happened, he says the town has been quiet for a long time or that The Camp is safer, without explaining why the town is empty."
+      ],
+      "items": [
+        "Known status: not confirmed human.",
+        "First seen: after the hospital escape route.",
+        "Role: guide, scout, camp contact, withheld-truth character.",
+        "Behavior notes: calm voice, short answers, avoids direct history.",
+        "Reveal thread: Ali knows what the player is before the player knows what Ali is."
       ]
     },
     {
       "heading": "Amy",
       "paragraphs": [
-        "Amy brings a different energy. Where Ali feels steady, Amy feels sharper and more analytical, like someone who notices the extra layer in a situation before anyone says it out loud.",
-        "That difference gives the pair immediate shape. You can imagine it surfacing in dialogue, priorities, and how they read the same problem."
+        "Amy is introduced through The Camp and carries a more analytical presence than Ali. She is not as openly reassuring, but she is observant and often the person who explains patterns in the abandoned world.",
+        "Amy feels like someone who learned how to speak to humans by studying them. She says things that are technically correct, but the comfort arrives slightly late or with the wrong emphasis.",
+        "Her role is strongest when she is helpful and suspicious at the same time. She can guide the player toward signals, routes, or records while still making it clear she already knows more than she is saying."
       ],
       "items": [
-        "Visual hook: a portrait that reads differently from Ali even at thumbnail size.",
-        "Narrative role: strategist, support, or emotional counterweight.",
-        "Dialogue texture: quicker, sharper, and a little harder to read."
+        "Known status: not confirmed human.",
+        "First seen: The Camp.",
+        "Role: analyst, signal reader, keeper of uncomfortable context.",
+        "Behavior notes: watches too long, phrases things too precisely, reacts to fear like data.",
+        "Reveal thread: Amy understands the rules of Omni better than Ali wants her to admit."
       ]
     },
     {
-      "heading": "Relationship Notes",
+      "heading": "The Camp Residents",
       "paragraphs": [
-        "The relationships matter because the cast should feel connected, not filed away as separate profile cards. The more camp scenes, field choices, and shared pressure change how people read each other, the more useful this page becomes."
+        "The Camp residents are the unidentified people living around the hub. They make the camp feel occupied, but not fully alive in the normal sense.",
+        "Some residents are helpful enough to keep the player from dismissing them as enemies. Others repeat routines, avoid certain questions, or speak in lines that sound remembered rather than felt.",
+        "Their main purpose is to make the player question the difference between a safe place and a controlled place. The Camp has food, shelter, and people, but it also has rules nobody explains."
       ],
       "items": [
-        "Track the big trust shifts after each turning point.",
-        "Note which camp upgrades unlock new conversations.",
-        "Keep heavier spoilers deeper in the entry once the final story order is set."
+        "Known status: unknown; likely connected to the same almost-human condition as Ali and Amy.",
+        "First seen: The Camp.",
+        "Role: social pressure, background unease, and witnesses to the camp pattern.",
+        "Common signs: repeated habits, sudden silence, avoided names, rehearsed kindness.",
+        "Open question: whether they are pretending to be human, becoming human, or preserving fragments of missing humans."
+      ]
+    },
+    {
+      "heading": "Frank",
+      "paragraphs": [
+        "Frank is met during the first major supply run after The Camp becomes the player's base. He waits near a service depot, presents himself as a scavenger, and acts like the player's arrival was expected.",
+        "He is loud, wiry, and overconfident. The strange part is not that he tries to seem strong, but that his performance of confidence keeps going even when the situation no longer calls for it.",
+        "Frank opens a shortcut through the depot and helps the player recover supplies, but his name later appears in records connected to the Other Camp. His timeline does not line up with the version of himself standing in front of the player."
+      ],
+      "items": [
+        "Known status: not confirmed human.",
+        "First seen: service depot supply run.",
+        "Role: route opener, scavenger, and early identity contradiction.",
+        "Behavior notes: loud confidence, physical posing, strange indifference to exhaustion.",
+        "Reveal thread: Frank's name appears in Other Camp records before the player meets him."
+      ]
+    },
+    {
+      "heading": "Greg",
+      "paragraphs": [
+        "Greg is found at the Signal Tower, standing guard over equipment that no longer connects to the outside world. He behaves less like a survivor and more like a maintenance role that kept running after the person inside it disappeared.",
+        "He speaks in procedure. He tells the player where to stand, when to wait, and which broadcasts not to answer. His calmness is not comforting like Ali's; it is mechanical.",
+        "Greg proves that the signal problem is tied to people. His voice appears inside the tower loop before he speaks directly to the player."
+      ],
+      "items": [
+        "Known status: not confirmed human.",
+        "First seen: Signal Tower perimeter.",
+        "Role: watchman, signal gatekeeper, maintenance remnant.",
+        "Behavior notes: flat expression, procedural speech, delayed personal answers.",
+        "Reveal thread: Greg's voice is already part of the broadcast loop."
+      ]
+    },
+    {
+      "heading": "Fiona",
+      "paragraphs": [
+        "Fiona is met after the hospital return, on the old neighborhood route toward the Other Camp. She records the abandoned world on a phone that does not work normally.",
+        "She is warm and talkative in a way that feels personal, but she also treats the player like a missing entry in a record. Her friendliness makes the situation feel more wrong, not less.",
+        "Fiona guides the player toward the Other Camp and carries memories that do not stay in order. Her recordings later appear in Omni broadcasts, including details she never sends anywhere."
+      ],
+      "items": [
+        "Known status: not confirmed human.",
+        "First seen: old neighborhood route.",
+        "Role: archivist, witness, and guide toward the Other Camp.",
+        "Behavior notes: grandmotherly warmth, precise memory, impossible phone recordings.",
+        "Reveal thread: Fiona records events before they appear in the signal."
+      ]
+    },
+    {
+      "heading": "Trust Dynamics",
+      "paragraphs": [
+        "Trust is practical before it becomes dangerous. Ali helps the player survive. Amy helps the player understand patterns. Frank opens routes, Greg explains signals, Fiona preserves memories, and The Camp gives shelter. Those benefits make suspicion harder.",
+        "A central story question is whether Ali and Amy are using human care as a tool or whether they are learning it for real. The answer does not need to be simple, and different characters can fall on different sides.",
+        "The player's relationship with the cast changes significantly after each major discovery. Questions and situations that felt strange early on become necessary later."
+      ],
+      "items": [
+        "Early phase: trust from necessity.",
+        "Middle phase: trust weakened by contradictions.",
+        "Late phase: trust becomes a choice, not an assumption.",
+        "Central conflict: Ali wants to keep the player calm; Amy wants the player informed."
       ]
     }
   ]

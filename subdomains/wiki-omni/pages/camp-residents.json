@@ -1,0 +1,36 @@
+{
+  "slug": "camp-residents",
+  "title": "Camp Residents",
+  "image": "/media/wiki-camp.svg",
+  "imageAlt": "Camp reference image for resident notes",
+  "tags": ["Cast", "The Camp"],
+  "aliases": ["camp residents", "residents", "the residents"],
+  "summary": "The unidentified people living at The Camp, notable for repeated routines and almost-human behavior.",
+  "intro": "The Camp Residents make The Camp feel populated, but they also make it feel performed. They are polite, practical, and slightly wrong.",
+  "details": [
+    { "label": "Status", "value": "Unknown; likely connected to Omni" },
+    { "label": "First seen", "value": "The Camp" },
+    { "label": "Shared behavior", "value": "Repeated routines, avoided topics, rehearsed kindness" },
+    { "label": "Story role", "value": "Social unease and evidence of a larger system" }
+  ],
+  "facts": [
+    "The residents do not all behave the same way.",
+    "Some are helpful enough that the Player feels bad suspecting them.",
+    "Their routines connect The Camp to the Other Camp."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "The Camp Residents are the background cast of The Camp. They cook, repair, patrol, and speak with the Player, but their behavior does not fully pass as natural.",
+        "They create uncertainty instead of immediate danger. The Player depends on them for supplies or information while noticing that their reactions are too synchronized.",
+        "The residents become one of the clearest signs that The Camp is part of a controlled pattern."
+      ],
+      "items": [
+        "Primary function: make safety feel conditional.",
+        "Common detail: conversation stops when certain topics are mentioned.",
+        "Reveal thread: some residents are copied from missing humans."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "frank",
+  "title": "Frank",
+  "image": "/media/Characters/Frank.png",
+  "imageAlt": "Portrait reference for Frank",
+  "tags": ["Cast", "Supply runs"],
+  "aliases": ["Frank"],
+  "summary": "A wiry scavenger met during the first major supply run, known for acting stronger and more confident than his body suggests.",
+  "intro": "Frank enters the story after The Camp sends the player into the Overgrown Town for medicine and batteries. He looks like a survivor who has been scraping by alone, but his confidence feels rehearsed and his body language does not match his situation.",
+  "details": [
+    { "label": "Status", "value": "Not confirmed human" },
+    { "label": "First seen", "value": "Service depot supply run" },
+    { "label": "Associated chapter", "value": "Chapter 3: Supply Runs" },
+    { "label": "Narrative role", "value": "Route opener and early contradiction" }
+  ],
+  "facts": [
+    "Frank is found near a service depot used as a supply cache.",
+    "He claims to be one of The Camp's runners, but nobody at The Camp gives the same explanation for him.",
+    "His confidence is loud enough to be funny at first and wrong enough to become unsettling."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Frank is met during the first major supply run after The Camp becomes the player's base. He is alone near a service depot, acting like he has been waiting for the player to arrive.",
+        "He presents himself as a scavenger and insists that he knows the safest route through the depot. His help is real: he opens a shortcut, points out usable supplies, and warns the player before a signal disturbance hits the area.",
+        "The contradiction is that Frank does not behave like someone who has survived alone. He performs confidence, flexes when nobody asks, and treats danger like a scene he has practiced."
+      ],
+      "items": [
+        "First meeting: service depot on the medicine-and-battery supply run.",
+        "Primary function: opens a practical route and introduces social unreliability outside The Camp.",
+        "Behavior notes: overconfident, physically expressive, strangely unconcerned by injury or exhaustion.",
+        "Reveal thread: Frank's name appears in Other Camp records before the player ever meets him."
+      ]
+    },
+    {
+      "heading": "Story Role",
+      "paragraphs": [
+        "Frank makes the world feel less empty while proving that new people do not automatically mean safety. He is helpful enough that the player follows him, but strange enough that Ali's earlier evasions start to feel like part of a larger pattern.",
+        "After Frank is mentioned at The Camp, the residents respond unevenly. Some say he left weeks ago. Others say he was never assigned to that route. Amy records the contradiction instead of resolving it.",
+        "Frank becomes one of the first signs that identities in Omni are unstable. A person appears useful, familiar, and named while still not fitting the timeline."
+      ],
+      "items": [
+        "Connection to Ali: Ali recognizes Frank but does not explain from where.",
+        "Connection to Amy: Amy treats Frank as evidence, not as a friend.",
+        "Connection to Omni: Frank repeats phrases from a supply-run log the player has not found yet."
+      ]
+    }
+  ]
+}

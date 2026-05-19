@@ -1,0 +1,37 @@
+{
+  "slug": "other-camp",
+  "title": "Other Camp",
+  "image": "/media/wiki-camp.svg",
+  "imageAlt": "Camp reference image for the Other Camp",
+  "tags": ["World", "Late midgame"],
+  "aliases": ["Other Camp", "the other camp", "failed camp", "duplicate camp"],
+  "summary": "A later location that reveals The Camp is part of a wider pattern.",
+  "intro": "The Other Camp is a failed, abandoned, or duplicate settlement that mirrors The Camp and warns the Player that their hub is not unique.",
+  "details": [
+    { "label": "Location type", "value": "Late-midgame reveal site" },
+    { "label": "Connected location", "value": "The Camp" },
+    { "label": "Associated mystery", "value": "Repeated rules, copied routines, failed settlement, Fiona's records" },
+    { "label": "Story role", "value": "Shows what happens when the camp pattern breaks" }
+  ],
+  "facts": [
+    "The Other Camp resembles The Camp enough to feel intentional.",
+    "It contains evidence that humans and almost-humans once lived together.",
+    "Its failure makes the Player reconsider whether their own camp is stable."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "The Other Camp appears as an abandoned settlement, a duplicate hub, or a collapsed test site. It mirrors details from The Camp in a way that makes the Player uncomfortable.",
+        "Fiona guides the Player toward it through the old neighborhood, recording details on a phone that does not work normally. Her name appears inside the camp records before the player understands why.",
+        "This location proves that The Camp is not an accident. Its rules, stations, and routines belong to a larger system connected to Omni.",
+        "The Player finds evidence that trust failed here before it fails at their own camp."
+      ],
+      "items": [
+        "Clue: identical camp rules.",
+        "Clue: names matching Frank, Greg, Fiona, and current Camp Residents.",
+        "Story effect: Ali and Amy can no longer pretend The Camp is unique."
+      ]
+    }
+  ]
+}

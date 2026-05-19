@@ -1,56 +1,132 @@
 {
   "title": "Omni Wiki",
-  "description": "A browseable reference for the Omni world, with notes on characters, places, story beats, and controls.",
+  "description": "A browseable reference for the Omni world, with notes on characters, places, story beats, controls, and the forces behind the abandoned world.",
   "pages": [
     {
-      "slug": "keybinds",
-      "title": "Keybinds & Shortcuts",
-      "category": "reference",
-      "image": "/media/kb1to1.webp",
-      "summary": "A quick control sheet for the buttons players use most often.",
-      "path": "/subdomains/wiki-omni/keybinds/",
-      "keywords": ["controls", "shortcuts", "movement", "inventory", "combat"],
-      "file": "./pages/keybinds.json"
-    },
-    {
-      "slug": "characters",
-      "title": "Characters",
-      "category": "cast",
-      "image": "/media/Characters/ali1to1.png",
-      "summary": "Early notes on the cast, their roles, and how they play off each other.",
-      "path": "/subdomains/wiki-omni/characters/",
-      "keywords": ["ali", "amy", "companions", "relationships", "dialogue"],
-      "file": "./pages/characters.json"
-    },
-    {
-      "slug": "map-locations",
-      "title": "Map & Locations",
-      "category": "world",
-      "image": "/media/wiki-map.svg",
-      "summary": "Places worth remembering, plus the routes and landmarks that shape the journey.",
-      "path": "/subdomains/wiki-omni/map-locations/",
-      "keywords": ["map", "regions", "landmarks", "routes", "exploration"],
-      "file": "./pages/map-locations.json"
+      "slug": "gameplay",
+      "category": "meta",
+      "path": "/subdomains/wiki-omni/gameplay/",
+      "keywords": ["gameplay", "systems", "exploration", "investigation", "loop", "survival"],
+      "file": "./pages/gameplay.json"
     },
     {
       "slug": "storyline",
-      "title": "Storyline",
       "category": "story",
-      "image": "/media/wiki-story.svg",
-      "summary": "The current story spine, from opening setup to bigger reveals.",
       "path": "/subdomains/wiki-omni/storyline/",
-      "keywords": ["story", "opening", "midgame", "reveal", "campaign"],
+      "keywords": ["story", "coma", "hospital", "ali", "amy", "frank", "greg", "fiona", "camp", "signal tower", "other camp", "reveal", "omni", "almost human"],
       "file": "./pages/storyline.json"
     },
     {
+      "slug": "characters",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/characters/",
+      "keywords": ["ali", "amy", "frank", "greg", "fiona", "player", "camp residents", "almost human", "not human", "coma", "dialogue"],
+      "file": "./pages/characters.json"
+    },
+    {
+      "slug": "player",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/player/",
+      "keywords": ["player", "protagonist", "coma", "hospital", "human", "survivor"],
+      "file": "./pages/player.json"
+    },
+    {
+      "slug": "ali",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/ali/",
+      "keywords": ["ali", "guide", "not human", "first contact", "camp", "trust"],
+      "file": "./pages/ali.json"
+    },
+    {
+      "slug": "amy",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/amy/",
+      "keywords": ["amy", "camp", "signal", "analyst", "not human", "patterns"],
+      "file": "./pages/amy.json"
+    },
+    {
+      "slug": "frank",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/frank/",
+      "keywords": ["frank", "supply run", "scavenger", "service depot", "strength", "almost human"],
+      "file": "./pages/frank.json"
+    },
+    {
+      "slug": "greg",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/greg/",
+      "keywords": ["greg", "signal tower", "watchman", "maintenance", "radio", "almost human"],
+      "file": "./pages/greg.json"
+    },
+    {
+      "slug": "fiona",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/fiona/",
+      "keywords": ["fiona", "other camp", "phone", "archive", "grandmother", "almost human"],
+      "file": "./pages/fiona.json"
+    },
+    {
+      "slug": "camp-residents",
+      "category": "cast",
+      "path": "/subdomains/wiki-omni/camp-residents/",
+      "keywords": ["camp residents", "almost human", "routines", "the camp", "people"],
+      "file": "./pages/camp-residents.json"
+    },
+    {
+      "slug": "map-locations",
+      "category": "world",
+      "path": "/subdomains/wiki-omni/map-locations/",
+      "keywords": ["map", "hospital", "overgrown", "streets", "routes", "camp", "signal tower", "other camp"],
+      "file": "./pages/map-locations.json"
+    },
+    {
+      "slug": "hospital",
+      "category": "world",
+      "path": "/subdomains/wiki-omni/hospital/",
+      "keywords": ["hospital", "coma", "opening", "patient records", "prologue", "ward"],
+      "file": "./pages/hospital.json"
+    },
+    {
+      "slug": "overgrown-town",
+      "category": "world",
+      "path": "/subdomains/wiki-omni/overgrown-town/",
+      "keywords": ["overgrown town", "streets", "empty town", "routes", "no service", "abandoned"],
+      "file": "./pages/overgrown-town.json"
+    },
+    {
       "slug": "the-camp",
-      "title": "The Camp",
       "category": "hub",
-      "image": "/media/wiki-camp.svg",
-      "summary": "Notes on the home base, its routines, and why it matters between expeditions.",
       "path": "/subdomains/wiki-omni/the-camp/",
-      "keywords": ["camp", "hub", "upgrades", "downtime", "companions"],
+      "keywords": ["the camp", "camp", "hub", "ali", "amy", "frank", "greg", "fiona", "almost human", "routines", "safe", "trust"],
       "file": "./pages/the-camp.json"
+    },
+    {
+      "slug": "signal-tower",
+      "category": "world",
+      "path": "/subdomains/wiki-omni/signal-tower/",
+      "keywords": ["signal tower", "radio", "broadcast", "no service", "omni", "transmission"],
+      "file": "./pages/signal-tower.json"
+    },
+    {
+      "slug": "other-camp",
+      "category": "world",
+      "path": "/subdomains/wiki-omni/other-camp/",
+      "keywords": ["other camp", "failed camp", "duplicate camp", "omni", "routines"],
+      "file": "./pages/other-camp.json"
+    },
+    {
+      "slug": "omni",
+      "category": "meta",
+      "path": "/subdomains/wiki-omni/omni/",
+      "keywords": ["omni", "signal", "system", "almost human", "meta", "lore"],
+      "file": "./pages/omni.json"
+    },
+    {
+      "slug": "keybinds",
+      "category": "reference",
+      "path": "/subdomains/wiki-omni/keybinds/",
+      "keywords": ["controls", "shortcuts", "movement", "inventory", "signal", "flashlight", "inspect", "hospital"],
+      "file": "./pages/keybinds.json"
     }
   ]
 }

@@ -1,37 +1,35 @@
 .frameworkBody {
   background:
-    linear-gradient(rgba(255, 250, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 250, 246, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 16% 12%, rgba(212, 184, 154, 0.16) 0%, rgba(212, 184, 154, 0) 22%),
-    radial-gradient(circle at 86% 10%, rgba(108, 121, 153, 0.15) 0%, rgba(108, 121, 153, 0) 24%),
-    var(--page-background);
+    radial-gradient(circle at 16% 10%, rgba(212, 184, 154, 0.16) 0%, rgba(212, 184, 154, 0) 24%),
+    radial-gradient(circle at 86% 8%, rgba(108, 121, 153, 0.15) 0%, rgba(108, 121, 153, 0) 26%),
+    linear-gradient(180deg, rgba(24, 20, 18, 0.98) 0%, rgba(12, 11, 10, 0.99) 74%, var(--bg) 100%);
+  background-color: var(--bg);
+  background-repeat: no-repeat;
   background-size:
-    28px 28px,
-    28px 28px,
-    auto,
-    auto,
-    auto;
+    920px 620px,
+    920px 620px,
+    100% 100%;
   background-position:
-    center,
-    center,
-    center,
-    center,
+    top left,
+    top right,
     center;
 }
 
 html[data-theme="light"] .frameworkBody {
   background:
-    linear-gradient(rgba(34, 25, 20, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 25, 20, 0.04) 1px, transparent 1px),
-    radial-gradient(circle at 16% 12%, rgba(155, 111, 76, 0.18) 0%, rgba(155, 111, 76, 0) 22%),
-    radial-gradient(circle at 86% 10%, rgba(145, 163, 194, 0.18) 0%, rgba(145, 163, 194, 0) 24%),
-    var(--page-background);
+    radial-gradient(circle at 16% 10%, rgba(155, 111, 76, 0.18) 0%, rgba(155, 111, 76, 0) 24%),
+    radial-gradient(circle at 86% 8%, rgba(145, 163, 194, 0.18) 0%, rgba(145, 163, 194, 0) 26%),
+    linear-gradient(180deg, rgba(255, 250, 245, 0.98) 0%, rgba(241, 234, 225, 0.99) 74%, var(--bg) 100%);
+  background-color: var(--bg);
+  background-repeat: no-repeat;
   background-size:
-    28px 28px,
-    28px 28px,
-    auto,
-    auto,
-    auto;
+    920px 620px,
+    920px 620px,
+    100% 100%;
+  background-position:
+    top left,
+    top right,
+    center;
 }
 
 .frameworkPage {
@@ -102,6 +100,15 @@ html[data-theme="light"] .frameworkBody {
   text-transform: uppercase;
 }
 
+.frameworkLabel [data-lucide],
+.frameworkTab [data-lucide],
+.frameworkFileList [data-lucide],
+.frameworkHeroMeta [data-lucide] {
+  width: 16px;
+  height: 16px;
+  color: var(--accent-strong);
+}
+
 .frameworkHeroTitle,
 .frameworkSectionTitle,
 .frameworkDemoCard h3,
@@ -110,12 +117,12 @@ html[data-theme="light"] .frameworkBody {
 .frameworkUtilityCard h2 {
   font-family: var(--font-serif);
   font-weight: 600;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
 }
 
 .frameworkHeroTitle {
-  max-width: 10ch;
-  font-size: clamp(3rem, 7vw, 5.6rem);
+  max-width: 9ch;
+  font-size: 5rem;
   line-height: 0.92;
 }
 
@@ -230,6 +237,7 @@ html[data-theme="light"] .frameworkWindow {
 
 .frameworkHeroTicker > span,
 .frameworkTab {
+  appearance: none;
   display: inline-flex;
   align-items: center;
   min-height: 30px;
@@ -238,9 +246,14 @@ html[data-theme="light"] .frameworkWindow {
   border-radius: 999px;
   background: var(--chip-bg-soft);
   color: var(--copy-soft);
+  cursor: pointer;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.frameworkHeroTicker > span {
+  cursor: default;
 }
 
 .frameworkHeroTicker > span {
@@ -272,7 +285,7 @@ html[data-theme="light"] .frameworkWindow {
 
 .frameworkSectionTitle,
 .frameworkWorkbenchTitle {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 2.6rem;
   line-height: 1;
 }
 
@@ -378,7 +391,7 @@ html[data-theme="light"] .frameworkPreviewCanvas {
   font-family: var(--font-serif);
   font-size: 1.12rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .frameworkMiniCard p {
@@ -513,6 +526,7 @@ html[data-theme="light"] .frameworkMotionCard {
 }
 
 .frameworkRange {
+  --range-value: 50%;
   width: 100%;
   margin: 0;
   height: 18px;
@@ -532,7 +546,13 @@ html[data-theme="light"] .frameworkMotionCard {
 .frameworkRange::-webkit-slider-runnable-track {
   height: 6px;
   border-radius: 999px;
-  background: linear-gradient(90deg, currentColor, rgba(255, 250, 246, 0.16));
+  background: linear-gradient(
+    90deg,
+    currentColor 0%,
+    currentColor var(--range-value),
+    rgba(255, 250, 246, 0.16) var(--range-value),
+    rgba(255, 250, 246, 0.16) 100%
+  );
 }
 
 .frameworkRange::-webkit-slider-thumb {
@@ -551,7 +571,13 @@ html[data-theme="light"] .frameworkMotionCard {
   height: 6px;
   border: 0;
   border-radius: 999px;
-  background: linear-gradient(90deg, currentColor, rgba(255, 250, 246, 0.16));
+  background: linear-gradient(
+    90deg,
+    currentColor 0%,
+    currentColor var(--range-value),
+    rgba(255, 250, 246, 0.16) var(--range-value),
+    rgba(255, 250, 246, 0.16) 100%
+  );
 }
 
 .frameworkRange::-moz-range-thumb {
@@ -565,7 +591,13 @@ html[data-theme="light"] .frameworkMotionCard {
 
 html[data-theme="light"] .frameworkRange::-webkit-slider-runnable-track,
 html[data-theme="light"] .frameworkRange::-moz-range-track {
-  background: linear-gradient(90deg, currentColor, rgba(34, 25, 20, 0.12));
+  background: linear-gradient(
+    90deg,
+    currentColor 0%,
+    currentColor var(--range-value),
+    rgba(34, 25, 20, 0.12) var(--range-value),
+    rgba(34, 25, 20, 0.12) 100%
+  );
 }
 
 html[data-theme="light"] .frameworkRange::-webkit-slider-thumb,
@@ -671,6 +703,90 @@ html[data-theme="light"] .frameworkCodeWindow {
   gap: 22px;
 }
 
+.frameworkDocs {
+  width: min(var(--content-width), 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.frameworkDocsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.frameworkDocCard {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  min-height: 100%;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.frameworkDocStep {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+}
+
+.frameworkDocCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.42rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.frameworkDocCard p {
+  color: var(--copy);
+  font-family: var(--font-serif);
+  line-height: 1.62;
+}
+
+.frameworkDocTokenList,
+.frameworkChecklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.frameworkDocTokenList > span,
+.frameworkChecklist > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--chip-bg-soft);
+  color: var(--copy-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.frameworkChecklist [data-lucide] {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-strong);
+}
+
 .frameworkExpansionCard {
   position: relative;
   overflow: hidden;
@@ -718,7 +834,7 @@ html[data-theme="light"] .frameworkCodeWindow {
   font-family: var(--font-serif);
   font-size: 2rem;
   font-weight: 600;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   line-height: 0.96;
 }
 
@@ -860,7 +976,14 @@ html[data-theme="light"] .frameworkSignalDots > span {
   color: var(--face);
 }
 
+.frameworkTab:hover {
+  border-color: var(--border-strong);
+  color: var(--face);
+}
+
 .frameworkMiniSite {
+  --mini-accent: rgba(212, 184, 154, 0.9);
+  --mini-cool: rgba(108, 121, 153, 0.84);
   display: grid;
   gap: 16px;
   padding: 18px;
@@ -869,12 +992,50 @@ html[data-theme="light"] .frameworkSignalDots > span {
   background:
     radial-gradient(circle at top left, rgba(212, 184, 154, 0.12) 0%, rgba(212, 184, 154, 0) 34%),
     rgba(18, 16, 15, 0.72);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
 }
 
 html[data-theme="light"] .frameworkMiniSite {
   background:
     radial-gradient(circle at top left, rgba(155, 111, 76, 0.12) 0%, rgba(155, 111, 76, 0) 34%),
     rgba(255, 255, 255, 0.62);
+}
+
+.frameworkMiniSite[data-preview-mode="theme"] {
+  --mini-accent: rgba(155, 111, 76, 0.96);
+  --mini-cool: rgba(145, 163, 194, 0.9);
+  border-color: rgba(212, 184, 154, 0.42);
+  background:
+    radial-gradient(circle at top left, rgba(212, 184, 154, 0.18) 0%, rgba(212, 184, 154, 0) 34%),
+    linear-gradient(135deg, rgba(255, 250, 246, 0.08), rgba(108, 121, 153, 0.08)),
+    rgba(18, 16, 15, 0.76);
+}
+
+html[data-theme="light"] .frameworkMiniSite[data-preview-mode="theme"] {
+  background:
+    radial-gradient(circle at top left, rgba(155, 111, 76, 0.18) 0%, rgba(155, 111, 76, 0) 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(145, 163, 194, 0.16)),
+    rgba(255, 255, 255, 0.7);
+}
+
+.frameworkMiniSite[data-preview-mode="motion"] {
+  border-color: rgba(108, 121, 153, 0.5);
+}
+
+.frameworkMiniSite[data-preview-mode="motion"] .frameworkMiniSiteHero,
+.frameworkMiniSite[data-preview-mode="motion"] .frameworkMiniTile {
+  animation: frameworkFloat 7.5s ease-in-out infinite;
+}
+
+.frameworkMiniSite[data-preview-mode="motion"] .frameworkMiniTile:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.frameworkMiniSite[data-preview-mode="motion"] .frameworkMiniTile:nth-child(3) {
+  animation-delay: -4s;
 }
 
 .frameworkMiniSiteTopbar {
@@ -933,9 +1094,9 @@ html[data-theme="light"] .frameworkMiniSite {
 .frameworkMiniSiteHero h3 {
   max-width: 11ch;
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: 2.4rem;
   font-weight: 600;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   line-height: 0.96;
 }
 
@@ -990,7 +1151,7 @@ html[data-theme="light"] .frameworkMiniSite {
   height: 72px;
   border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(212, 184, 154, 0.9), rgba(108, 121, 153, 0.84)),
+    linear-gradient(135deg, var(--mini-accent), var(--mini-cool)),
     var(--media-bg);
 }
 
@@ -998,7 +1159,7 @@ html[data-theme="light"] .frameworkMiniSite {
   font-family: var(--font-serif);
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .frameworkMiniTile p {
@@ -1077,6 +1238,10 @@ html[data-theme="light"] .frameworkMiniSite {
   color: var(--face);
   text-decoration-color: var(--link-underline);
   text-underline-offset: 0.2em;
+}
+
+.frameworkFileList a {
+  width: fit-content;
 }
 
 .frameworkFileList a:hover {
@@ -1239,7 +1404,8 @@ html[data-theme="light"] .frameworkCodeValue {
   .frameworkHero,
   .frameworkWorkbench,
   .frameworkUtilityStrip,
-  .frameworkExpansionGrid {
+  .frameworkExpansionGrid,
+  .frameworkDocsGrid {
     grid-template-columns: 1fr;
   }
 
@@ -1279,6 +1445,7 @@ html[data-theme="light"] .frameworkCodeValue {
   .frameworkHeroCopy,
   .frameworkHeroPreview,
   .frameworkDemoCard,
+  .frameworkDocCard,
   .frameworkWorkbench,
   .frameworkUtilityCard {
     border-radius: 20px;
@@ -1293,7 +1460,7 @@ html[data-theme="light"] .frameworkCodeValue {
   }
 
   .frameworkHeroTitle {
-    font-size: clamp(2.6rem, 14vw, 4rem);
+    font-size: 3.4rem;
   }
 
   .frameworkPreviewCanvas,

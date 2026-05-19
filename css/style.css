@@ -1,5 +1,9 @@
 @import url("./hoyem-framework.css");
 
+[hidden] {
+  display: none !important;
+}
+
 .homeHero {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
@@ -42,16 +46,15 @@
 }
 
 .homeHeroCopy > h1 {
-  font-size: clamp(3.3rem, 7vw, 5.8rem);
+  font-size: 5.2rem;
   font-weight: 300;
-  letter-spacing: -0.07em;
+  letter-spacing: 0;
   line-height: 0.94;
 }
 
 .homeLead,
 .homeSectionHeading > p:last-child,
 .homeProjectBody,
-.homeProjectList,
 .homeCapabilityCard > p,
 .homeTimelineStep p,
 .homePanelBody,
@@ -141,6 +144,19 @@
   background: var(--surface-soft);
 }
 
+.wikiInlineLink {
+  color: var(--accent-strong);
+  text-decoration-color: rgba(240, 210, 182, 0.46);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.wikiInlineLink:hover,
+.wikiInlineLink:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
 .homePillButton.is-secondary {
   background: var(--secondary-button-bg);
 }
@@ -149,6 +165,42 @@
   display: grid;
   gap: 20px;
   align-content: start;
+}
+
+.homeHeroPanel,
+.homeProjectCard,
+.homeInfoCard,
+.homeContactCard,
+.wikiArchiveShell,
+.wikiArticle,
+.wikiEntryAsideBlock {
+  position: relative;
+  overflow: hidden;
+}
+
+.homeHeroPanel::before,
+.homeProjectCard::before,
+.homeInfoCard::before,
+.homeContactCard::before,
+.wikiArchiveShell::before,
+.wikiArticle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 250, 246, 0.045), rgba(255, 250, 246, 0) 34%),
+    radial-gradient(circle at 92% 10%, rgba(108, 121, 153, 0.14), transparent 34%);
+  pointer-events: none;
+}
+
+.homeHeroPanel > *,
+.homeProjectCard > *,
+.homeInfoCard > *,
+.homeContactCard > *,
+.wikiArchiveShell > *,
+.wikiArticle > * {
+  position: relative;
+  z-index: 1;
 }
 
 .homePanelVisual {
@@ -172,18 +224,55 @@
 .wikiShortcutGroupTitle {
   font-family: var(--font-serif);
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
 }
 
 .homePanelTitle {
   max-width: 24ch;
-  font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+  font-size: 1.7rem;
   line-height: 1.28;
 }
 
 .homePanelBody {
   color: var(--copy);
   max-width: 36ch;
+}
+
+.homeSignalGrid,
+.homeProjectSignals,
+.wikiIntroMosaic {
+  display: grid;
+  gap: 10px;
+}
+
+.homeSignalGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.homeSignalGrid > span,
+.homeProjectSignals > span,
+.wikiIntroMosaic > span {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  min-height: 84px;
+  padding: 14px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel-soft);
+  color: var(--copy-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.homeSignalGrid [data-lucide],
+.homeProjectSignals [data-lucide],
+.wikiIntroMosaic [data-lucide] {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-strong);
 }
 
 .homeStackLabel {
@@ -206,7 +295,7 @@
 .homeInfoCard > h2,
 .homeContactCopy > h2 {
   margin-bottom: 12px;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: 2.6rem;
   line-height: 1.03;
 }
 
@@ -269,9 +358,9 @@
 
 .homeProjectTitle {
   font-family: var(--font-serif);
-  font-size: clamp(1.45rem, 2.2vw, 2.4rem);
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   line-height: 1.04;
 }
 
@@ -279,14 +368,8 @@
   color: var(--copy);
 }
 
-.homeProjectList {
-  display: grid;
-  gap: 8px;
-  color: var(--copy);
-}
-
-.homeProjectList > li {
-  margin-left: 0.2rem;
+.homeProjectSignals {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .homeCardMeta {
@@ -311,6 +394,12 @@
   background: var(--panel-soft);
 }
 
+.homeCapabilityCard > [data-lucide] {
+  width: 30px;
+  height: 30px;
+  color: var(--accent-strong);
+}
+
 .homeCapabilityCard:last-child {
   grid-column: 1 / -1;
 }
@@ -320,7 +409,7 @@
   font-family: var(--font-serif);
   font-size: 1.35rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   line-height: 1.08;
 }
 
@@ -352,6 +441,12 @@
   color: var(--copy);
   font-size: 0.88rem;
   letter-spacing: 0.08em;
+}
+
+.homeTimelineStep > span [data-lucide] {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-strong);
 }
 
 .homeContactCard {
@@ -408,13 +503,52 @@
 }
 
 .wikiPageIntro > h1 {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: 3rem;
   line-height: 1.02;
 }
 
 .wikiPageIntro > p:last-child {
   color: var(--copy);
   max-width: 46rem;
+}
+
+.wikiIntroMosaic {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 760px;
+}
+
+.wikiArchiveStats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: min(760px, 100%);
+  margin-top: 8px;
+}
+
+.wikiStat {
+  display: grid;
+  gap: 4px;
+  min-height: 84px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel-soft);
+}
+
+.wikiStat > strong {
+  color: var(--face);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.wikiStat > span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .wikiArchiveShell {
@@ -485,6 +619,9 @@
 }
 
 .wikiResetButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   min-height: 32px;
   padding: 0 14px;
   border: 1px solid var(--border-strong);
@@ -524,6 +661,11 @@
   gap: 14px;
 }
 
+.wikiArchiveGrid.wikiArchiveGroups {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
 .wikiArchiveGroup {
   display: grid;
   gap: 16px;
@@ -534,15 +676,24 @@
 }
 
 .wikiGroupHeading {
-  display: grid;
-  gap: 8px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-strong);
 }
 
 .wikiGroupHeading > h2 {
   font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-size: 1.7rem;
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
+}
+
+.wikiGroupHeading > .wikiEyebrow {
+  order: 2;
+  white-space: nowrap;
 }
 
 .wikiArchiveList {
@@ -553,10 +704,11 @@
 
 .wikiArchiveCard {
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr);
-  gap: 16px;
-  align-items: center;
-  padding: 14px;
+  grid-template-columns: minmax(96px, 0.42fr) minmax(0, 0.58fr);
+  gap: 0;
+  align-items: stretch;
+  min-height: 190px;
+  padding: 0;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-md);
   background: var(--panel-soft);
@@ -575,10 +727,11 @@
 }
 
 .wikiArchiveCard > img {
-  width: 88px;
-  height: 88px;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--media-border-soft);
-  border-radius: 10px;
+  border-width: 0 1px 0 0;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
   object-fit: cover;
   background: var(--media-bg);
 }
@@ -586,14 +739,22 @@
 .wikiArchiveCardText {
   display: grid;
   gap: 8px;
+  align-content: center;
   min-width: 0;
+  padding: 18px;
+}
+
+.wikiCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
 }
 
 .wikiArchiveCardTitle {
   font-family: var(--font-serif);
   font-size: 1.12rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .wikiArchiveCardSummary,
@@ -665,7 +826,7 @@
 }
 
 .wikiArticleTitle {
-  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-size: 2.9rem;
   line-height: 1.02;
 }
 
@@ -685,6 +846,51 @@
   display: grid;
   gap: 10px;
   color: var(--copy);
+}
+
+.wikiInfoBox {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--panel-soft);
+}
+
+.wikiInfoRow {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.42fr) minmax(0, 0.58fr);
+  min-width: 0;
+  border-top: 1px solid var(--border-strong);
+}
+
+.wikiInfoRow:nth-child(1),
+.wikiInfoRow:nth-child(2) {
+  border-top: 0;
+}
+
+.wikiInfoRow:nth-child(odd) {
+  border-right: 1px solid var(--border-strong);
+}
+
+.wikiInfoRow > dt,
+.wikiInfoRow > dd {
+  margin: 0;
+  min-width: 0;
+  padding: 12px 14px;
+}
+
+.wikiInfoRow > dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wikiInfoRow > dd {
+  color: var(--copy);
+  font-family: var(--font-serif);
+  line-height: 1.45;
 }
 
 .wikiSections {
@@ -741,7 +947,7 @@
 }
 
 .wikiShortcutGroupTitle {
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: 1.6rem;
 }
 
 .wikiShortcutGroupDescription,
@@ -771,7 +977,7 @@
   font-family: var(--font-serif);
   font-size: 1.06rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .wikiShortcutKeys {
@@ -815,13 +1021,15 @@
 }
 
 .wikiEntryList,
-.wikiSectionNav {
+.wikiSectionNav,
+.wikiAsideFacts {
   display: grid;
   gap: 2px;
 }
 
 .wikiEntryLink,
-.wikiSectionNav a {
+.wikiSectionNav a,
+.wikiAsideFacts > div {
   display: block;
   padding: 12px 0;
   border-top: 1px solid var(--border-strong);
@@ -833,14 +1041,39 @@
 }
 
 .wikiEntryLink:first-child,
-.wikiSectionNav a:first-child {
+.wikiSectionNav a:first-child,
+.wikiAsideFacts > div:first-child {
   padding-top: 0;
   border-top: 0;
 }
 
 .wikiEntryLink:last-child,
-.wikiSectionNav a:last-child {
+.wikiSectionNav a:last-child,
+.wikiAsideFacts > div:last-child {
   padding-bottom: 0;
+}
+
+.wikiAsideFacts {
+  margin: 0;
+}
+
+.wikiAsideFacts dt,
+.wikiAsideFacts dd {
+  margin: 0;
+}
+
+.wikiAsideFacts dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wikiAsideFacts dd {
+  margin-top: 4px;
+  color: var(--copy);
+  font-family: var(--font-serif);
+  line-height: 1.45;
 }
 
 .wikiEntryLinkText {
@@ -852,7 +1085,7 @@
   font-family: var(--font-serif);
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--face);
 }
 
@@ -912,7 +1145,7 @@
   font-family: var(--font-serif);
   font-size: 1.08rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .wikiEntryPagerText {
@@ -959,6 +1192,14 @@
     grid-template-columns: 1fr;
   }
 
+  .wikiIntroMosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wikiArchiveStats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .wikiEntryLayout {
     grid-template-areas:
       "aside"
@@ -1003,8 +1244,24 @@
   }
 
   .homeTimelineStep,
-  .wikiShortcutRow {
+  .wikiShortcutRow,
+  .wikiInfoBox,
+  .wikiInfoRow {
     grid-template-columns: 1fr;
+  }
+
+  .wikiInfoRow,
+  .wikiInfoRow:nth-child(1),
+  .wikiInfoRow:nth-child(2) {
+    border-top: 1px solid var(--border-strong);
+  }
+
+  .wikiInfoRow:first-child {
+    border-top: 0;
+  }
+
+  .wikiInfoRow:nth-child(odd) {
+    border-right: 0;
   }
 
   .wikiShortcutKeys {
@@ -1016,6 +1273,11 @@
   }
 
   .wikiEntryPager {
+    grid-template-columns: 1fr;
+  }
+
+  .homeSignalGrid,
+  .homeProjectSignals {
     grid-template-columns: 1fr;
   }
 }
@@ -1073,18 +1335,26 @@
   }
 
   .homeHeroCopy > h1 {
-    font-size: clamp(2.8rem, 16vw, 4rem);
+    font-size: 3.4rem;
   }
 
   .wikiArchiveCard {
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 12px;
-    padding: 12px;
+    grid-template-columns: 92px minmax(0, 1fr);
+    min-height: 146px;
   }
 
-  .wikiArchiveCard > img {
-    width: 72px;
-    height: 72px;
+  .wikiGroupHeading {
+    display: grid;
+    gap: 8px;
+  }
+
+  .wikiGroupHeading > .wikiEyebrow {
+    order: 0;
+    white-space: normal;
+  }
+
+  .wikiArchiveCardText {
+    padding: 14px;
   }
 
   .siteFooter {

@@ -1,0 +1,37 @@
+{
+  "slug": "signal-tower",
+  "title": "Signal Tower",
+  "image": "/media/wiki-omni/signal-tower.png",
+  "imageAlt": "Signal Tower rising over dark forest and mountains",
+  "tags": ["World", "Signal"],
+  "aliases": ["Signal Tower", "the tower", "radio tower", "signal tower"],
+  "summary": "A midgame location that turns the no-service problem into a direct Omni clue.",
+  "intro": "The Signal Tower is a midgame objective where the Player expects outside contact and instead receives evidence that the silence is controlled.",
+  "details": [
+    { "label": "Location type", "value": "Midgame investigation site" },
+    { "label": "Associated characters", "value": "Greg, Amy" },
+    { "label": "Associated mystery", "value": "No-service zones and copied voices" },
+    { "label": "Story role", "value": "Confirms Omni as an active influence" }
+  ],
+  "facts": [
+    "The Signal Tower does not restore normal service.",
+    "It reveals corrupted broadcasts, copied voices, and hospital fragments.",
+    "Greg is already tied to the broadcast loop before the Player reaches the tower room."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "The Signal Tower is reached after The Camp is established and the Player has reason to investigate signal failure.",
+        "Greg waits at the perimeter and follows maintenance procedure for equipment that no longer works normally. He grants access to the upper route only after the Player follows his instructions.",
+        "The Player repairs, climbs, or activates the tower expecting emergency contact. Instead, the tower receives local transmissions that cannot exist normally.",
+        "This location changes the mystery from passive emptiness to active interference."
+      ],
+      "items": [
+        "Primary question: is the outside world unreachable or blocked?",
+        "Key evidence: voices repeated from The Camp or Hospital.",
+        "Character effect: Greg proves the broadcast loop is tied to people; Amy becomes more important; Ali becomes more evasive."
+      ]
+    }
+  ]
+}

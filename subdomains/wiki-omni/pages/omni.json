@@ -1,0 +1,49 @@
+{
+  "slug": "omni",
+  "title": "Omni",
+  "image": "/media/wiki-omni/omni.png",
+  "imageAlt": "Glowing human-like figure facing a shadowed person",
+  "tags": ["Meta", "Lore"],
+  "aliases": ["Omni"],
+  "summary": "The working name for the game's central force, mystery, and design identity.",
+  "intro": "Omni is both the project title and the name for the force behind the empty world. Its nature is revealed through signals, routines, copied voices, and the almost-human behavior around The Camp.",
+  "details": [
+    { "label": "Status", "value": "Central mystery" },
+    { "label": "Forms", "value": "Signal, system, infection, experiment, and presence" },
+    { "label": "Associated clues", "value": "No-service zones, copied voices, repeated routines" },
+    { "label": "Narrative function", "value": "Explains the world while preserving unease" }
+  ],
+  "facts": [
+    "Omni is not fully explained in the opening chapters.",
+    "It is connected to why the Player woke up.",
+    "Ali, Amy, and the Camp Residents are products of Omni or shaped by it."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Omni is the force that copied, preserved, replaced, or reassembled pieces of humanity after the world emptied.",
+        "It is not a standard monster. It learned human behavior from traces: voices, records, routines, fear, care, and memory.",
+        "The Player learns enough truth to understand why The Camp, the Signal Tower, and the Hospital are connected."
+      ],
+      "items": [
+        "Interpretation: a signal that overwrites or imitates people.",
+        "Interpretation: a preservation system that rebuilt humans incorrectly.",
+        "Interpretation: an intelligence trying to understand humanity through performance."
+      ]
+    },
+    {
+      "heading": "Design Rules",
+      "paragraphs": [
+        "Omni is discovered through repeated patterns rather than direct exposition. The Player notices the same phrase in different mouths, the same routine in different places, and the same signal behavior around different clues.",
+        "The horror comes from proximity to normal life. Omni's creations do not look monstrous at first. They look almost right.",
+        "Ali and Amy become more than simple extensions of Omni as the story develops."
+      ],
+      "items": [
+        "Avoid early lore dumps.",
+        "Use copied language, repeated routines, and signal behavior as evidence.",
+        "Keep the emotional question alive: can something copied become real?"
+      ]
+    }
+  ]
+}

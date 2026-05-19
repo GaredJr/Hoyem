@@ -1,0 +1,50 @@
+{
+  "slug": "greg",
+  "title": "Greg",
+  "image": "/media/Characters/Greg.png",
+  "imageAlt": "Portrait reference for Greg",
+  "tags": ["Cast", "Signal Tower"],
+  "aliases": ["Greg"],
+  "summary": "A quiet watchman found at the Signal Tower, tied to maintenance routines and broken emergency broadcasts.",
+  "intro": "Greg is encountered at the Signal Tower. He stands like someone on duty long after the duty stopped making sense, repeating maintenance rules for equipment that no longer connects to the outside world.",
+  "details": [
+    { "label": "Status", "value": "Not confirmed human" },
+    { "label": "First seen", "value": "Signal Tower perimeter" },
+    { "label": "Associated chapter", "value": "Chapter 4: The Signal Tower" },
+    { "label": "Narrative role", "value": "Watchman and signal gatekeeper" }
+  ],
+  "facts": [
+    "Greg is found near the Signal Tower before the player reaches the broadcast room.",
+    "He follows maintenance routines even when the equipment is visibly broken.",
+    "His voice appears in a corrupted broadcast before he speaks directly to the player."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "Greg is the character who makes the Signal Tower feel occupied without making it feel safe. He does not greet the player like a survivor. He checks the player like a procedure.",
+        "He controls access to the tower's upper maintenance route. His help comes through rules: stand here, wait for the tone, do not answer if the broadcast uses your name.",
+        "Greg's almost-human quality is different from Frank's. He does not overperform emotion. He underperforms it, speaking in emergency protocol and staring too long before answering."
+      ],
+      "items": [
+        "First meeting: Signal Tower perimeter gate.",
+        "Primary function: guards access to the tower and explains signal danger through procedure.",
+        "Behavior notes: flat expression, procedural speech, long pauses before personal answers.",
+        "Reveal thread: Greg's voice is already inside the tower's broadcast loop."
+      ]
+    },
+    {
+      "heading": "Story Role",
+      "paragraphs": [
+        "Greg turns the Signal Tower into more than a location objective. His presence proves that the broken broadcasts are connected to people, not just machinery.",
+        "When the player activates the tower, Greg reacts before the equipment does. He knows which sounds are dangerous and which phrases are copied.",
+        "After the tower sequence, Greg becomes a reference point for the player and Amy. His routines match notes found at the Other Camp, linking signal maintenance to the wider camp pattern."
+      ],
+      "items": [
+        "Connection to Amy: Amy understands Greg's warnings faster than she admits.",
+        "Connection to Ali: Ali treats Greg as someone who is not supposed to leave his post.",
+        "Connection to Omni: Greg demonstrates how a role can outlive the person it belonged to."
+      ]
+    }
+  ]
+}

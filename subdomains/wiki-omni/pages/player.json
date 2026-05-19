@@ -1,0 +1,49 @@
+{
+  "slug": "player",
+  "title": "The Player",
+  "image": "/media/wiki-omni/hospital.png",
+  "imageAlt": "Abandoned hospital where the Player wakes up",
+  "tags": ["Cast", "Human"],
+  "aliases": ["player", "protagonist", "the player"],
+  "summary": "The human protagonist who wakes from a coma inside the abandoned hospital.",
+  "intro": "The Player is the point-of-view character in Omni. They begin with no clear memory of the world's collapse and must judge whether the people they meet are safe, human, or only pretending.",
+  "details": [
+    { "label": "Status", "value": "Human; recently awakened" },
+    { "label": "First seen", "value": "Hospital" },
+    { "label": "Primary conflict", "value": "Survival, trust, and missing time" },
+    { "label": "Key relationship", "value": "Ali" }
+  ],
+  "facts": [
+    "The Player wakes alone with no cell service and no staff nearby.",
+    "Their lack of context makes Ali's help feel necessary.",
+    "The Player was preserved, selected, or protected by Omni for reasons uncovered later in the story."
+  ],
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "The Player begins in a hospital bed after an unknown period of unconsciousness. The hospital is quiet, the town outside is empty, and no normal emergency systems respond.",
+        "The Player's early decisions are practical rather than heroic. They search for exits, supplies, signal, and other people because the world gives them no explanation.",
+        "As the story progresses, the Player becomes the test case for trust. Ali, Amy, and The Camp all offer safety while withholding information."
+      ],
+      "items": [
+        "Role: human perspective in an almost-human world.",
+        "Opening objective: leave the hospital and find help.",
+        "Long-term objective: learn what happened and decide who deserves trust."
+      ]
+    },
+    {
+      "heading": "Known History",
+      "paragraphs": [
+        "The Player was hospitalized before the game begins. The coma connects directly to the hospital records and becomes one of the first major personal reveals.",
+        "The Player was not simply forgotten. Their file, room, and treatment connect directly to Omni.",
+        "The Player does not know this early. Their confusion defines the opening tone."
+      ],
+      "items": [
+        "Clue: medical charts that do not match normal coma care.",
+        "Clue: staff notes that refer to observation rather than recovery.",
+        "Reveal thread: other patients like the Player vanished before the opening."
+      ]
+    }
+  ]
+}
