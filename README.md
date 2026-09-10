@@ -17,6 +17,14 @@ krigros
 
 The framework uses `hf-` prefixed classes and pulls its palette, typography, spacing, and chrome directly from the current site design. The main site stylesheet now imports that framework first, then layers page-specific rules on top.
 
+## Flashcards
+
+- Interactive page: `flashcards/index.html` at `/flashcards/`
+- Page styling: `css/flashcards.css`
+- Card content and controls: `scripts/flashcards.js`
+
+The deck contains 18 Norwegian cards about arithmetic and geometric sequences and series. It supports click-to-flip, previous/next controls, shuffling, and keyboard navigation.
+
 ## Omni wiki editing
 
 Wiki entry text lives in JSON so the visible pages can be customized without editing the HTML.

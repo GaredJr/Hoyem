@@ -315,7 +315,8 @@
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
   grid-template-areas:
     "featured secondary-one"
-    "featured secondary-two";
+    "featured secondary-two"
+    "featured secondary-three";
 }
 
 .homeProjectGrid > .is-featured {
@@ -328,6 +329,10 @@
 
 .homeProjectGrid > :nth-child(3) {
   grid-area: secondary-two;
+}
+
+.homeProjectGrid > :nth-child(4) {
+  grid-area: secondary-three;
 }
 
 .homeProjectCard {
@@ -1176,7 +1181,8 @@
 
   .homeProjectGrid > .is-featured,
   .homeProjectGrid > :nth-child(2),
-  .homeProjectGrid > :nth-child(3) {
+  .homeProjectGrid > :nth-child(3),
+  .homeProjectGrid > :nth-child(4) {
     grid-area: auto;
   }
 

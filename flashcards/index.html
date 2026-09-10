@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Følger og rekker | Flashcards</title>
+    <meta
+      name="description"
+      content="En interaktiv kortstokk for å øve på aritmetiske og geometriske følger og rekker."
+    >
+    <meta name="theme-color" content="#110f0e">
+    <script src="/scripts/theme.js"></script>
+    <meta property="og:title" content="Følger og rekker | Flashcards">
+    <meta
+      property="og:description"
+      content="18 kort for å øve på følger, rekker, summer og konvergens."
+    >
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Følger og rekker | Flashcards">
+    <meta
+      name="twitter:description"
+      content="18 kort for å øve på følger, rekker, summer og konvergens."
+    >
+    <link rel="canonical" href="/flashcards/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/flashcards.css" rel="stylesheet">
+  </head>
+  <body class="flashcardBody">
+    <a class="skipLink" href="#main-content">Hopp til kortstokken</a>
+
+    <header class="navbar">
+      <a class="burger" href="/" aria-label="HØYEM forside">
+        <span class="burgerMark">HØYEM</span>
+        <span class="burgerNote">Flashcards</span>
+      </a>
+      <nav class="buttons" aria-label="Hovedmeny">
+        <a href="/subdomains/wiki-omni/" aria-label="Åpne Omni Wiki">
+          <span>Wiki</span>
+          <i data-lucide="book-open"></i>
+        </a>
+        <a href="/framework/" aria-label="Åpne Hoyem Framework">
+          <span>Framework</span>
+          <i data-lucide="blocks"></i>
+        </a>
+        <button class="themeToggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Bytt fargetema">
+          <span class="themeToggleDot" aria-hidden="true"></span>
+          <span class="themeToggleLabel" data-theme-toggle-label>Tema</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main-content" class="center flashcardShell">
+      <section class="flashcardApp" aria-labelledby="deck-title">
+        <header class="flashcardHeading">
+          <div>
+            <p class="flashcardEyebrow"><i data-lucide="layers-3"></i> Kortstokk</p>
+            <h1 id="deck-title">Følger og rekker</h1>
+            <p class="flashcardIntro">Snu kortet, sjekk svaret og gå videre i ditt eget tempo.</p>
+          </div>
+          <div class="flashcardCounter" aria-live="polite" aria-atomic="true">
+            <span id="progressCurrent">01</span>
+            <span class="flashcardCounterRule" aria-hidden="true"></span>
+            <span id="progressTotal">18</span>
+          </div>
+        </header>
+
+        <div class="flashcardProgress" aria-hidden="true">
+          <span id="progressBar"></span>
+        </div>
+
+        <button
+          class="flashcardStage"
+          id="flashcard"
+          type="button"
+          aria-pressed="false"
+          aria-label="Vis svar på kort 1"
+        >
+          <span class="flashcardCard" id="card">
+            <span class="flashcardFace flashcardFront" id="cardFront">
+              <span class="flashcardFaceMeta">
+                <span class="flashcardLabel">Spørsmål</span>
+                <span class="flashcardHint"><i data-lucide="rotate-3d"></i> Snu kortet</span>
+              </span>
+              <span class="flashcardContent" id="question"></span>
+            </span>
+
+            <span class="flashcardFace flashcardBack" id="cardBack" aria-hidden="true">
+              <span class="flashcardFaceMeta">
+                <span class="flashcardLabel">Svar</span>
+                <span class="flashcardHint"><i data-lucide="check"></i> Fasit</span>
+              </span>
+              <span class="flashcardAnswer" id="answer"></span>
+            </span>
+          </span>
+        </button>
+
+        <div class="flashcardControls" aria-label="Kortkontroller">
+          <button class="flashcardButton is-secondary" id="prevBtn" type="button">
+            <i data-lucide="arrow-left"></i>
+            <span>Forrige</span>
+          </button>
+          <button class="flashcardButton is-flip" id="flipBtn" type="button">
+            <i data-lucide="refresh-cw"></i>
+            <span>Vis svar</span>
+          </button>
+          <button class="flashcardButton" id="nextBtn" type="button">
+            <span>Neste</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="flashcardUtility">
+          <button class="flashcardShuffle" id="shuffleBtn" type="button">
+            <i data-lucide="shuffle"></i>
+            <span>Stokk kortene</span>
+          </button>
+          <p><kbd>←</kbd><kbd>→</kbd> bytter kort <span aria-hidden="true">·</span> <kbd>Mellomrom</kbd> snur</p>
+        </div>
+
+        <p class="srOnly" id="deckStatus" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="siteFooter">
+      <div class="siteFooterInner">
+        <a class="siteFooterLink" href="/">Tilbake til hoyem.dev</a>
+        <p class="siteFooterCopy">18 kort · Følger og rekker</p>
+      </div>
+    </footer>
+
+    <script src="/scripts/flashcards.js"></script>
+  </body>
+</html>
