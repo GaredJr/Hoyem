@@ -1,276 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HØYEM | Full Stack Developer</title>
-    <meta
-      name="description"
-      content="Portfolio for HØYEM, an Oslo-based developer building thoughtful websites, archives, and content-heavy interfaces."
-    >
-    <meta name="theme-color" content="#110f0e">
-    <script src="/scripts/theme.js"></script>
-    <meta property="og:title" content="HØYEM | Full Stack Developer">
-    <meta
-      property="og:description"
-      content="Thoughtful websites, worldbuilding archives, and content-heavy interfaces with a strong point of view."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/media/Characters/ali1to1.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HØYEM | Full Stack Developer">
-    <meta
-      name="twitter:description"
-      content="Thoughtful websites, worldbuilding archives, and content-heavy interfaces with a strong point of view."
-    >
-    <meta name="twitter:image" content="/media/Characters/ali1to1.png">
-    <link rel="canonical" href="/">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link href="/css/style.css" rel="stylesheet">
-  </head>
-  <body class="homeBody">
-    <a class="skipLink" href="#main-content">Skip to content</a>
-
-    <header class="navbar">
-      <a class="burger" href="/" aria-label="HØYEM home">
-        <span class="burgerMark">HØYEM</span>
-        <span class="burgerNote">Portfolio</span>
-      </a>
-      <nav class="buttons" aria-label="Primary">
-        <a href="/subdomains/wiki-omni/" aria-label="Open Omni Wiki">
-          <span>Wiki</span>
-          <i data-lucide="book-open"></i>
-        </a>
-        <a href="/framework/" aria-label="Open Hoyem Framework">
-          <span>Framework</span>
-          <i data-lucide="blocks"></i>
-        </a>
-        <a href="https://github.com/GaredJr" aria-label="Open GitHub profile">
-          <span>GitHub</span>
-          <i data-lucide="github"></i>
-        </a>
-        <button class="themeToggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle color theme">
-          <span class="themeToggleDot" aria-hidden="true"></span>
-          <span class="themeToggleLabel" data-theme-toggle-label>Theme</span>
-        </button>
-      </nav>
-    </header>
-
-    <main id="main-content" class="center">
-      <section class="homeHero">
-        <div class="homeHeroCopy">
-          <p class="sectionEyebrow">Portfolio</p>
-          <h1>HØYEM</h1>
-          <p class="homeLead">
-            Finished-feeling websites, world archives, and UI systems with atmosphere, structure, and working parts.
-          </p>
-          <div class="homeHeroMeta" aria-label="Short introduction">
-            <span><i data-lucide="map-pin"></i> Oslo</span>
-            <span><i data-lucide="braces"></i> Full stack</span>
-            <span><i data-lucide="layout-dashboard"></i> UI systems</span>
-          </div>
-          <div class="homeHeroActions">
-            <a class="homePillButton" href="#featured-work"><i data-lucide="sparkles"></i><span>Work</span></a>
-            <a class="homePillButton is-secondary" href="/subdomains/wiki-omni/"><i data-lucide="book-open"></i><span>Wiki</span></a>
-            <a class="homePillButton is-secondary" href="/framework/"><i data-lucide="blocks"></i><span>Framework</span></a>
-            <a class="homePillButton is-secondary" href="/flashcards/"><i data-lucide="layers-3"></i><span>Flashcards</span></a>
-            <a class="homePillButton is-secondary" href="#contact"><i data-lucide="send"></i><span>Contact</span></a>
-          </div>
-        </div>
-
-        <aside class="homeHeroPanel" aria-labelledby="home-panel-title">
-          <img
-            class="homePanelVisual"
-            src="/media/wiki-omni/omni.png"
-            alt="Glowing Omni figure facing a shadowed person"
-            decoding="async"
-          >
-          <p class="homePanelEyebrow">Current spotlight</p>
-          <p class="homePanelTitle" id="home-panel-title">Omni Wiki</p>
-          <p class="homePanelBody">A searchable worldbuilding archive with character files, places, story routes, and automatic wiki links.</p>
-          <div class="homeSignalGrid" aria-label="Omni Wiki highlights">
-            <span><i data-lucide="search"></i> Search</span>
-            <span><i data-lucide="network"></i> Auto links</span>
-            <span><i data-lucide="route"></i> Story canon</span>
-          </div>
-          <div class="homeSkillList" aria-label="Project tags">
-            <span>Archive</span>
-            <span>Worldbuilding</span>
-          </div>
-          <div class="homeHeroActions">
-            <a class="homePillButton" href="/subdomains/wiki-omni/"><i data-lucide="arrow-up-right"></i><span>Open</span></a>
-            <a class="homePillButton is-secondary" href="/subdomains/wiki-omni/keybinds/"><i data-lucide="keyboard"></i><span>Keybinds</span></a>
-          </div>
-        </aside>
-      </section>
-
-      <section class="homeSection" aria-labelledby="featured-work">
-        <div class="homeSectionHeading">
-          <p class="sectionEyebrow">Featured work</p>
-          <h2 id="featured-work">Open the work.</h2>
-          <p>
-            Real pages, reusable systems, and archive patterns you can click through.
-          </p>
-        </div>
-
-        <div class="homeProjectGrid">
-          <article class="homeProjectCard is-featured">
-            <img
-              class="homeProjectVisual"
-              src="/media/wiki-omni/the-camp.png"
-              alt="Dark campfire scene from the Omni Wiki"
-              loading="lazy"
-              decoding="async"
-            >
-            <div class="homeProjectContent">
-              <span class="homeCardTag">Live project</span>
-              <h3 class="homeProjectTitle">Omni Wiki</h3>
-              <p class="homeProjectBody">
-                Lore, controls, characters, and places in a complete archive shell with grouped browsing and entry pages.
-              </p>
-              <div class="homeProjectSignals">
-                <span><i data-lucide="search-check"></i> Search</span>
-                <span><i data-lucide="panel-top"></i> Wiki pages</span>
-                <span><i data-lucide="link"></i> Durable URLs</span>
-              </div>
-              <div class="homeProjectActions">
-                <a class="homePillButton" href="/subdomains/wiki-omni/"><i data-lucide="book-open"></i><span>Archive</span></a>
-                <a class="homePillButton is-secondary" href="/subdomains/wiki-omni/characters/"><i data-lucide="users"></i><span>Sample</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="homeProjectCard">
-            <div class="homeProjectContent">
-              <span class="homeCardTag">Mini case study</span>
-              <h3 class="homeProjectTitle">Archive as product</h3>
-              <p class="homeProjectBody">
-                Grouped categories, entry sidebars, related links, and JSON content that stays easy to customize.
-              </p>
-              <div class="homeProjectSignals">
-                <span><i data-lucide="filter"></i> URL filters</span>
-                <span><i data-lucide="list-tree"></i> Section nav</span>
-                <span><i data-lucide="shield-check"></i> Resilient</span>
-              </div>
-              <div class="homeProjectActions">
-                <a class="homePillButton is-secondary" href="/subdomains/wiki-omni/"><i data-lucide="arrow-up-right"></i><span>Result</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="homeProjectCard">
-            <div class="homeProjectContent">
-              <span class="homeCardTag">CSS system</span>
-              <h3 class="homeProjectTitle">Hoyem Framework</h3>
-              <p class="homeProjectBody">
-                Shared tokens, components, documentation, and theme rules for the site’s dark, textured interface language.
-              </p>
-              <div class="homeProjectSignals">
-                <span><i data-lucide="swatch-book"></i> Tokens</span>
-                <span><i data-lucide="component"></i> Primitives</span>
-                <span><i data-lucide="sun-moon"></i> Themes</span>
-              </div>
-              <div class="homeProjectActions">
-                <a class="homePillButton" href="/framework/"><i data-lucide="blocks"></i><span>Framework</span></a>
-                <a class="homePillButton is-secondary" href="/css/hoyem-framework.css"><i data-lucide="file-code-2"></i><span>CSS</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="homeProjectCard">
-            <div class="homeProjectContent">
-              <span class="homeCardTag">Study tool</span>
-              <h3 class="homeProjectTitle">Følger og rekker</h3>
-              <p class="homeProjectBody">
-                A focused Norwegian flashcard deck for formulas, sums, convergence, and sequence rules.
-              </p>
-              <div class="homeProjectSignals">
-                <span><i data-lucide="layers-3"></i> 18 cards</span>
-                <span><i data-lucide="keyboard"></i> Keyboard</span>
-                <span><i data-lucide="shuffle"></i> Shuffle</span>
-              </div>
-              <div class="homeProjectActions">
-                <a class="homePillButton" href="/flashcards/"><i data-lucide="play"></i><span>Study</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="homeSection homeDetailsGrid">
-        <div class="homeInfoCard">
-          <p class="sectionEyebrow">What I like making</p>
-          <h2>Character, structure, polish.</h2>
-          <div class="homeCapabilityGrid">
-            <article class="homeCapabilityCard">
-              <i data-lucide="layout-template"></i>
-              <h3>Front-end systems</h3>
-              <p>Responsive, reusable, intentional.</p>
-            </article>
-            <article class="homeCapabilityCard">
-              <i data-lucide="library-big"></i>
-              <h3>Content-heavy builds</h3>
-              <p>Text, media, and structure that stay easy to browse.</p>
-            </article>
-            <article class="homeCapabilityCard">
-              <i data-lucide="badge-check"></i>
-              <h3>End-to-end delivery</h3>
-              <p>Direction, build, and finish handled together.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="homeInfoCard">
-          <p class="sectionEyebrow">Process</p>
-          <h2>Three moves.</h2>
-          <div class="homeTimeline">
-            <article class="homeTimelineStep">
-              <span><i data-lucide="compass"></i></span>
-              <div>
-                <h3>Direction</h3>
-                <p>Purpose, audience, mood.</p>
-              </div>
-            </article>
-            <article class="homeTimelineStep">
-              <span><i data-lucide="hammer"></i></span>
-              <div>
-                <h3>Build</h3>
-                <p>Structure, interaction, code.</p>
-              </div>
-            </article>
-            <article class="homeTimelineStep">
-              <span><i data-lucide="sparkle"></i></span>
-              <div>
-                <h3>Polish</h3>
-                <p>Spacing, states, edge cases.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="homeSection" id="contact">
-        <div class="homeContactCard">
-          <div class="homeContactCopy">
-            <p class="sectionEyebrow">Contact</p>
-            <h2>Portfolio, product page, or custom archive?</h2>
-            <p>
-              Send the rough idea. We can make it sharper.
-            </p>
-          </div>
-          <div class="homeContactActions">
-            <a class="homePillButton" href="mailto:contact@hoyem.dev"><i data-lucide="mail"></i><span>Email</span></a>
-            <a class="homePillButton is-secondary" href="https://github.com/GaredJr"><i data-lucide="github"></i><span>GitHub</span></a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="siteFooter">
-      <div class="siteFooterInner">
-        <a class="siteFooterLink" href="mailto:contact@hoyem.dev">contact@hoyem.dev</a>
-        <p class="siteFooterCopy">&copy; 2026 Hoyem.</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f5">
+  <meta name="description" content="Gard Høyem, a developer in Oslo. Try interactive previews of Managetic and Blobdle.">
+  <title>Gard Høyem · Selected work</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <script defer src="scripts/portfolio.js"></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap mast">
+    <a class="wordmark" href="#top" aria-label="Høyem home">HØYEM</a>
+    <nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a class="contact" href="mailto:contact@hoyem.dev">Contact ↗</a></nav>
+  </header>
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="name">
+      <div class="intro"><p class="micro location"><i></i> Oslo, Norway</p>
+        <h1 id="name">Gard<br>Høyem<span>.</span></h1>
+        <p class="lede">I build apps, games, and tools for the web.</p>
       </div>
-    </footer>
-  </body>
-</html>
+      <img class="sculpture" src="media/portfolio/fold.svg" alt="" width="560" height="400">
+    </section>
+    <section id="work" class="wrap" aria-labelledby="work-title">
+      <div class="section-line"><h2 class="micro" id="work-title">Selected work</h2><span aria-hidden="true">↓</span></div>
+      <article class="feature managetic">
+        <div class="feature-copy"><img src="media/portfolio/managetic.svg" class="mark" width="38" height="38" alt="">
+          <h3>Managetic</h3><p>A workspace for shifts, team chat, and company news.</p>
+          <a href="https://managetic.app" class="action">Visit managetic.app <span aria-hidden="true">↗</span></a>
+          <small class="store-note">Available on Google Play</small>
+        </div>
+        <div class="device-stage">
+          <img class="product-shot" src="media/portfolio/managetic-iphone.webp" width="720" height="1080" alt="Managetic’s shift overview on an iPhone, showing hours worked, breaks, and team updates.">
+        </div>
+      </article>
+      <article class="feature blobdle"><div class="feature-copy"><h3>Blobdle</h3><p>A daily game of chance. Roll a blob and see which traits turn up.</p>
+        <a class="external" href="https://blobdle.com">Play Blobdle ↗</a></div>
+        <div class="blob-stage"><div class="blob" aria-hidden="true"><i></i><i></i></div>
+          <p id="traits" aria-live="polite">Jelly · Lilac · Soft glow</p><button id="roll">Roll a blob <span aria-hidden="true">⟳</span></button></div>
+      </article>
+    </section>
+    <section class="wrap about" id="about"><h2 class="micro">About me</h2><div><p>I'm Gard, a developer and student in Oslo. I like making things you can try for yourself, from everyday tools to games built around a single idea.</p><a href="mailto:contact@hoyem.dev">contact@hoyem.dev ↗</a></div></section>
+  </main>
+  <footer class="wrap"><span class="wordmark">HØYEM</span><a href="https://github.com/GaredJr">GitHub ↗</a><a href="#top">Back to top ↑</a></footer>
+</body></html>
