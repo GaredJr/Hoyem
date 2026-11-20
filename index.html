@@ -19,10 +19,13 @@
   <main id="main">
     <section class="wrap hero" aria-labelledby="name">
       <div class="intro"><p class="micro location"><i></i> Oslo, Norway</p>
-        <h1 id="name">Gard<br>Høyem<span>.</span></h1>
+        <h1 id="name" aria-label="Gard Høyem"><span class="name-line"><span>Gard</span></span><span class="name-line"><span>Høyem<b>.</b></span></span></h1>
         <p class="lede">I build apps, games, and tools for the web.</p>
       </div>
-      <img class="sculpture" src="media/portfolio/fold.svg" alt="" width="560" height="400">
+      <div class="sculpture" aria-hidden="true">
+        <img src="media/portfolio/fold.svg" alt="" width="560" height="400">
+        <canvas width="560" height="400"></canvas>
+      </div>
     </section>
     <section id="work" class="wrap" aria-labelledby="work-title">
       <div class="section-line"><h2 class="micro" id="work-title">Selected work</h2><span aria-hidden="true">↓</span></div>
