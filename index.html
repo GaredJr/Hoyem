@@ -53,13 +53,48 @@
         </div>
         <div class="game-foot"><p>Roll a blob. Compare your luck on the daily leaderboard.</p><a href="https://blobdle.com">Play Blobdle ↗</a></div>
       </article>
-      <article class="hardware" aria-labelledby="gesp-title">
+      <article id="gesp" class="hardware" aria-labelledby="gesp-title">
         <div class="hardware-copy">
-          <h2 id="gesp-title">gESP Zero</h2>
-          <p>A pocket-sized PC monitor built around an ESP32.</p>
-          <ul class="specs"><li>ESP32</li><li>0.96″ OLED</li><li>3D-printed enclosure</li></ul>
+          <h2 id="gesp-title">gESP<br> Zero</h2>
+          <p>A pocket monitor for my PC. An ESP32 takes the system stats over USB and draws them on a blue OLED.</p>
+          <label class="layer-control" hidden>Separate layers
+            <input id="layer-depth" type="range" min="0" max="100" value="70">
+          </label>
         </div>
-        <div class="device-stage"><img class="device" src="media/portfolio/gesp-zero.webp" width="1199" height="1312" loading="lazy" alt="Black 3D-printed gESP Zero with a blue OLED showing GPU load and RAM usage."></div>
+        <figure class="cutaway">
+          <svg viewBox="0 0 520 530" role="img" aria-labelledby="drawing-title">
+            <title id="drawing-title">Exploded illustration of the printed shell, ESP32 and OLED face</title>
+            <defs>
+              <pattern id="print-lines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3.5H4" stroke="#777" stroke-width=".6"/></pattern>
+              <pattern id="screen-grid" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="2.4" height="2.4" fill="#254855"/></pattern>
+              <rect id="case-profile" x="-102" y="-137" width="204" height="274" rx="12"/>
+              <g id="rim"><use href="#case-profile" fill="#292b2b" stroke="#999d9e"/></g>
+              <pattern id="contacts" width="9" height="8" patternUnits="userSpaceOnUse"><rect width="5" height="8" fill="#d1d2c8"/></pattern>
+            </defs>
+            <g class="case-layer"><g transform="matrix(1.2 .47 -.72 .62 260 290)">
+              <use href="#rim" y="22"/><use href="#rim" y="16"/><use href="#rim" y="10"/><use href="#rim" y="4"/><use href="#rim"/>
+              <rect x="-91" y="-124" width="182" height="248" rx="6" fill="#101112" stroke="#727676"/>
+              <rect x="-91" y="-124" width="182" height="248" rx="6" fill="url(#print-lines)"/>
+            </g></g>
+            <g transform="matrix(1.2 .47 -.72 .62 260 270)">
+              <rect x="-66" y="-90" width="132" height="180" rx="5" fill="#202725" stroke="#b0b7b2"/>
+              <path d="M-48 64V31l20-20v-30 M-39 68V39l22-22v-35 M50 60V25l-21-21v-36 M45 65V30L22 7v-24" fill="none" stroke="#808c85"/>
+              <rect x="-50" y="-48" width="100" height="7" fill="url(#contacts)"/><rect x="-50" y="44" width="100" height="7" fill="url(#contacts)"/>
+              <rect x="-48" y="-38" width="96" height="78" rx="3" fill="#cacdc7"/>
+              <text y="5" text-anchor="middle" fill="#363b38" font-family="monospace" font-size="16">ESP32</text>
+              <path d="M-42 -58v-17h14v13h14v-13H0v13h14v-13h14v13h14v-13" fill="none" stroke="#aca991" stroke-width="3"/>
+            </g>
+            <g class="face-layer"><g transform="matrix(1.2 .47 -.72 .62 260 250)">
+              <use href="#rim" y="6"/><use href="#case-profile" fill="#171919" stroke="#d3d6d5"/><use href="#case-profile" fill="url(#print-lines)"/>
+              <rect x="-60" y="-80" width="52" height="43" rx="2" fill="#abaeab" stroke="#dce0dd"/>
+              <circle cx="-69" cy="-60" r="2.6" fill="#f39183"/>
+              <rect x="-74" y="23" width="148" height="76" rx="3" fill="#071114" stroke="#8dc6d6"/><rect x="-69" y="28" width="138" height="66" fill="url(#screen-grid)"/>
+              <text x="-58" y="63" font-family="monospace" font-size="23" fill="#b7efff">GPU/RAM</text>
+              <path d="M-56 77H54" stroke="#3a5863" stroke-width="5"/><path d="M-56 77H10" stroke="#ace7fa" stroke-width="5"/>
+            </g></g>
+          </svg>
+          <figcaption>OLED <i></i> ESP32 <i></i> Printed enclosure</figcaption>
+        </figure>
       </article>
       <article class="vortex" aria-labelledby="vortex-title">
         <header><h2 id="vortex-title">Vortex</h2><p>A programming language I’m building in Rust.</p></header>
@@ -72,11 +107,39 @@
           <div class="vx-actions"><button id="run-vx" class="button dark" type="button" hidden>Run example <span aria-hidden="true">▷</span></button><output id="vx-result" aria-live="polite"></output><noscript>Output: 70, Vortex</noscript></div>
         </div>
       </article>
-      <article class="zero" aria-labelledby="zero-title">
-        <header><h2 id="zero-title">Zero IDE</h2><p>A desktop code editor with a command palette for files, tools and themes.</p></header>
-        <figure><a href="media/portfolio/zero-palette.webp" aria-label="Open full-size screenshot of Zero IDE’s command palette"><img src="media/portfolio/zero-palette.webp" width="1280" height="720" loading="lazy" alt="Zero IDE’s command palette filtered to show its available editor themes."></a>
-          <figcaption>Switch themes from the command palette. <a href="media/portfolio/zero-palette.webp">View full size ↗</a></figcaption>
-        </figure>
+      <article id="zero" class="zero" aria-labelledby="zero-title">
+        <div class="source-poster">
+          <h2 id="zero-title">Zero IDE</h2>
+          <svg class="source-glyph" viewBox="0 0 540 420" aria-hidden="true">
+            <defs>
+              <clipPath id="zero-cut"><path clip-rule="evenodd" d="M300 15C427 15 499 99 468 222C437 345 336 408 222 408C103 408 42 322 74 205C104 91 191 15 300 15ZM289 87C232 87 183 137 159 219C138 295 164 336 217 336C280 336 333 278 354 204C374 135 350 87 289 87Z"/><path d="M65 385L417 18L437 34L85 403Z"/></clipPath>
+              <pattern id="source-lines" width="430" height="36" patternUnits="userSpaceOnUse" patternTransform="rotate(-9)">
+                <g font-family="monospace" font-weight="bold" font-size="12" fill="currentColor">
+                  <text class="glyph-line" y="10">dvar x: 10 + 20 * 3   dcon name: "Vortex"   log x   log name</text>
+                  <text class="glyph-line" y="22">log x   log name   dvar x: 10 + 20 * 3   dcon name: "Vortex"</text>
+                  <text class="glyph-line" y="34">dcon name: "Vortex"   log x   log name   dvar x: 10 + 20 * 3</text>
+                </g>
+              </pattern>
+            </defs>
+            <g clip-path="url(#zero-cut)"><rect width="540" height="420" fill="#c8c7bb"/><rect width="540" height="420" fill="url(#source-lines)"/></g>
+          </svg>
+        </div>
+        <div class="source-desk">
+          <p>A desktop code editor built with Rust and TypeScript.</p>
+          <div class="source-page"><span id="active-file" aria-live="polite">hello.vx</span>
+            <pre><code id="source-excerpt">dvar x: 10 + 20 * 3
+dcon name: "Vortex"
+log x
+log name</code></pre>
+          </div>
+          <div class="source-actions"><button id="find-file" class="button dark" type="button" hidden aria-haspopup="dialog">Find a file <span aria-hidden="true">⌕</span></button><a href="media/portfolio/zero-palette.webp">View editor ↗</a></div>
+        </div>
+        <dialog id="file-picker" aria-labelledby="search-title">
+          <form method="dialog"><label id="search-title" for="file-query">Find a file</label><button aria-label="Close file search">×</button></form>
+          <input type="search" id="file-query" placeholder="Search by filename" autocomplete="off" autofocus>
+          <div id="file-list"><button>hello.vx</button><button>languages.ts</button><button>actions.ts</button></div>
+          <p id="no-files" role="status" hidden>No matching files.</p>
+        </dialog>
       </article>
     </section>
     <section class="about" id="about"><h2 class="label">About</h2><p>I’m a developer and student in Oslo. Working in retail got me building software for shifts. At my desk, that curiosity turns into games, tiny devices and tools for writing code.</p></section>

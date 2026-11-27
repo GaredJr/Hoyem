@@ -111,13 +111,7 @@ footer {margin-inline: var(--edge); border-top: 1px solid var(--rule); padding: 
 .blob {width: clamp(115px, 13vw, 210px); height: auto; aspect-ratio: 106/93}
 .blobdle::before {opacity: .75}
 @keyframes glow {0% {opacity: .55; transform: scale(.88)} 36% {opacity: 1} 100% {opacity: .75}}
-.hardware {background: radial-gradient(ellipse at 73% 55%, #313537, #101112 64%); color: #f6f6f4; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5vw}
-.hardware-copy {position: relative; z-index: 1}
-#work .hardware h2 {font-size: clamp(48px, 6.8vw, 135px); text-transform: none}
-.hardware-copy p, .vortex header p, .zero header p {font-size: clamp(18px, 1.6vw, 26px); max-width: 32ch; margin-top: 22px; line-height: 1.4}
-.specs {margin: clamp(32px,6vw,90px) 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; color: #d3dcdf; font: 700 clamp(15px,1.3vw,20px)/1.4 Doto,monospace}
-.device-stage {display: grid; place-items: center; min-width: 0; overflow: clip}
-.device {width: min(92%, 530px); height: auto; transform-origin: 50% 76%}
+.vortex header p {font-size: clamp(18px, 1.6vw, 26px); max-width: 32ch; line-height: 1.4}
 .vortex {display: grid; align-content: center; gap: clamp(32px,5vw,85px); background: #eeeee7}
 .vortex header,.zero header {display: flex; justify-content: space-between; align-items: end; gap: 24px}
 .vx-sheet {border-block: 1px solid #b6b8ae; padding-block: 20px}
@@ -127,27 +121,57 @@ footer {margin-inline: var(--edge); border-top: 1px solid var(--rule); padding: 
 .vx-sheet code em {font-style: normal; color: #435e45}
 .vx-actions {display: flex; gap: 20px; align-items: center; min-height: 48px}
 [hidden] {display: none !important}
-.zero {background: #cacdd1; display: grid; align-content: center; gap: clamp(32px,5vw,80px)}
-.zero figure {margin: 0 auto; width: min(100%,1080px)}
-.zero figure img {width: 100%; height: auto; display: block; box-shadow: 0 14px 40px #23263726}
-.zero figcaption {margin-top: 18px; display: flex; gap: 12px; justify-content: space-between; font-size: 14px}
-.zero figcaption a {white-space: nowrap; text-decoration: underline; text-underline-offset: 3px}
-@media (min-width: 781px) and (prefers-reduced-motion: no-preference) {
-  .device {transform: scale(var(--device-zoom,1))}
-}
-@media (max-width: 780px) {
-  .hardware {grid-template-columns: 1fr; gap: 36px}
-  .device {width: min(88%, 360px)}
-  .vortex header,.zero header {display: block}
-  #work .vortex, #work .zero {min-height: auto; padding-block: 64px}
-  .zero figure {overflow: hidden}
-  .zero figure img {width: 155%; max-width: none; margin-left: -27.5%}
-  .zero figcaption {align-items: start}
-  .game-foot a {white-space: nowrap}
-}
 #vx-result {white-space: pre-line}
 .vx-sheet {min-width: 0}
 @media (max-width: 380px) {
   .hero-foot {align-items: start; flex-direction: column}
   .vx-sheet pre {font-size: 20px}
+}
+
+#work .hardware, #work .zero {
+  display: grid; align-items: center; gap: clamp(28px,5vw,84px);
+  padding-block: clamp(64px,8vw,140px);
+}
+#work .hardware {grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); color: #efefec; background: #121414}
+#work .hardware h2 {font-size: clamp(76px,9vw,170px); line-height: .9; text-transform: none}
+.hardware-copy p,.source-desk > p {max-width: 33ch; font-size: clamp(17px,1.55vw,24px); line-height: 1.45}
+.hardware-copy p {margin: 26px 0 32px; color: #c7cbca}
+.layer-control {display: grid; max-width: 255px; gap: 8px; font: 14px ui-monospace, monospace}
+.layer-control input {width: 100%; min-height: 32px; margin: 0; accent-color: #a8d5df; cursor: ew-resize}
+.cutaway {margin: 0; min-width: 0}
+.cutaway svg {display: block; width: 100%; max-height: 72svh; background: radial-gradient(circle,#7776 .65px,transparent .8px) center/18px 18px}
+.case-layer {transform: translateY(var(--separation,57px))}
+.face-layer {transform: translateY(calc(-1 * var(--separation,57px)))}
+.cutaway figcaption {display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 14px; color: #c7cbca; font: 12px/1.5 ui-monospace,monospace}
+.cutaway i {width: 16px; height: 1px; background: #717876}
+#work .zero {grid-template-columns: minmax(0,1.3fr) minmax(0,.7fr); background: #e9e8df; border-block: 1px solid #bdbeb3}
+.source-poster {display: grid; align-items: end}
+.source-poster > * {grid-area: 1/1}
+#work .zero h2 {position: relative; z-index: 1; font-size: clamp(52px,7.6vw,150px); line-height: .88; white-space: nowrap}
+.source-glyph {width: 100%; margin-bottom: 4%; color: #191c1a}
+.source-desk {min-width: 0}
+.source-page {border-block: 1px solid #92968a; margin: 30px 0 22px; padding: 15px 0}
+#active-file {font: 700 17px Doto, ui-monospace,monospace}
+.source-page pre {min-height: 7.5em; margin: 22px 0 4px; font: clamp(14px,1.35vw,21px)/1.5 ui-monospace,monospace; white-space: pre-wrap; overflow-wrap: anywhere}
+.source-actions {display: flex; align-items: center; flex-wrap: wrap; gap: 18px}
+.source-actions a {text-decoration: underline; text-underline-offset: 4px}
+#file-picker {width: min(420px,90vw); padding: 24px; border: 1px solid #75766c; color: var(--ink); background: var(--paper)}
+#file-picker::backdrop {background: #17181685}
+#file-picker form {display: flex; align-items: center; justify-content: space-between; font: 500 18px Lemon,sans-serif}
+#file-picker button {border: none; background: transparent; padding: 10px; color: inherit; font: inherit; cursor: pointer}
+#file-query {width: 100%; margin: 14px 0; padding: 12px; font: inherit}
+#file-list button {display: block; width: 100%; text-align: left; font-family: monospace}
+#file-list button:is(:hover,:focus-visible) {background: #dedfd5}
+@media (max-width:780px) {
+  #work .hardware,#work .zero {grid-template-columns: minmax(0,1fr); padding-block: 56px}
+  #work .hardware h2 br {display: none}
+  #work .hardware h2 {font-size: clamp(55px,13vw,90px)}
+  .cutaway svg {max-height: 53svh}
+  .source-poster {max-width: 520px}
+  .vortex header {display: block}
+  #work .vortex {min-height: auto; padding-block: 64px}
+  .game-foot a {white-space: nowrap}
+}
+@media (prefers-reduced-motion: no-preference) {
+  .source-glyph {transform: translateY(var(--glyph-y,0px))}
 }

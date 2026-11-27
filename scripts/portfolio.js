@@ -5,6 +5,7 @@ const artwork = document.querySelector(".word-art");
 const product = document.querySelector(".managetic");
 const game = document.querySelector(".blobdle");
 const hardware = document.querySelector(".hardware");
+const sourcePoster = document.querySelector(".source-poster");
 let pointerAngle = 0;
 let currentAngle = 0;
 let frame = 0;
@@ -16,9 +17,8 @@ function paintPosters() {
     product.style.removeProperty("--phone-y");
     return;
   }
-  const hardwareTop = hardware.getBoundingClientRect().top;
-  const approach = Math.max(0, Math.min(1, hardwareTop / innerHeight));
-  hardware.style.setProperty("--device-zoom", 1 + approach * approach * 2.8);
+  const posterTop = sourcePoster.getBoundingClientRect().top;
+  sourcePoster.style.setProperty("--glyph-y", Math.max(-20, Math.min(20, posterTop / innerHeight * 32)) + "px");
   const bounds = hero.getBoundingClientRect();
   if (bounds.bottom > 0 && bounds.top < innerHeight) {
     const pull = Math.max(0, Math.min(1, -bounds.top / bounds.height));
@@ -108,3 +108,59 @@ runExample.addEventListener("click", () => {
   }
 });
 runExample.hidden = false;
+
+const depth = document.getElementById("layer-depth");
+function separateLayers() {
+  hardware.style.setProperty("--separation", (Number(depth.value) * 1.05 - 16) + "px");
+}
+depth.addEventListener("input", separateLayers);
+depth.parentElement.hidden = false;
+separateLayers();
+
+const excerpt = document.getElementById("source-excerpt");
+const sources = {
+  "hello.vx": excerpt.textContent,
+  "languages.ts": 'const extension = path.split(".").pop()?.toLowerCase();\n\nif (!extension) {\n  return "plaintext";\n}',
+  "actions.ts": 'const terms = query\n  .trim()\n  .toLowerCase()\n  .split(/\\s+/)\n  .filter(Boolean);'
+};
+const picker = document.getElementById("file-picker");
+const launcher = document.getElementById("find-file");
+const query = document.getElementById("file-query");
+const fileButtons = [...document.querySelectorAll("#file-list button")];
+function filterFiles() {
+  const keyword = query.value.trim().toLowerCase();
+  for (const file of fileButtons) file.hidden = !file.textContent.toLowerCase().includes(keyword);
+  document.getElementById("no-files").hidden = fileButtons.some(file => !file.hidden);
+}
+launcher.addEventListener("click", () => {
+  query.value = "";
+  filterFiles();
+  picker.showModal();
+  query.focus();
+});
+query.addEventListener("input", filterFiles);
+query.addEventListener("keydown", event => {
+  const first = fileButtons.find(file => !file.hidden);
+  if (event.key === "Enter") {
+    event.preventDefault();
+    first?.click();
+  }
+  if (event.key === "ArrowDown" && first) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+for (const file of fileButtons) {
+  file.addEventListener("click", () => {
+    const source = sources[file.textContent];
+    excerpt.textContent = source;
+    document.getElementById("active-file").textContent = file.textContent;
+    const lines = source.split("\n").filter(Boolean);
+    document.querySelectorAll(".glyph-line").forEach((line, index) => {
+      const rotated = [...lines.slice(index), ...lines.slice(0,index)];
+      line.textContent = (rotated.join("   ") + "   ").repeat(3);
+    });
+    picker.close();
+  });
+}
+launcher.hidden = false;
