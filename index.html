@@ -4,48 +4,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f8f5">
-  <meta name="description" content="Gard Høyem, a developer in Oslo. Try interactive previews of Managetic and Blobdle.">
+  <meta name="description" content="Selected work by Gard Hvidsten Høyem, a developer and student in Oslo. Apps, games, hardware and developer tools, from Managetic to gESP Zero.">
   <title>Gard Høyem · Selected work</title>
   <link rel="icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght@700&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap">
   <link rel="stylesheet" href="css/portfolio.css">
   <script defer src="scripts/portfolio.js"></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="wrap mast">
-    <a class="wordmark" href="#top" aria-label="Høyem home">HØYEM</a>
-    <nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a class="contact" href="mailto:contact@hoyem.dev">Contact ↗</a></nav>
+  <header class="mast">
+    <a class="signature" href="#top">Gard Hvidsten Høyem</a>
+    <nav aria-label="Primary"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact ↘</a></nav>
   </header>
   <main id="main">
-    <section class="wrap hero" aria-labelledby="name">
-      <div class="intro"><p class="micro location"><i></i> Oslo, Norway</p>
-        <h1 id="name" aria-label="Gard Høyem"><span class="name-line"><span>Gard</span></span><span class="name-line"><span>Høyem<b>.</b></span></span></h1>
-        <p class="lede">I build apps, games, and tools for the web.</p>
-      </div>
-      <div class="sculpture" aria-hidden="true">
-        <img src="media/portfolio/fold.svg" alt="" width="560" height="400">
-        <canvas width="560" height="400"></canvas>
-      </div>
+    <section class="hero" aria-labelledby="name">
+      <h1 id="name" aria-label="Høyem">
+        <svg class="word-art" viewBox="0 0 1000 360" aria-hidden="true">
+          <defs>
+            <clipPath id="front-fold"><path d="M0 0H1000V150L320 181 275 151H0Z"/></clipPath>
+            <g id="ribbon"><image href="media/portfolio/thread.svg" width="1000" height="360"/></g>
+          </defs>
+          <use class="thread" href="#ribbon"/>
+          <text x="5" y="252" textLength="990" lengthAdjust="spacingAndGlyphs">HØYEM</text>
+          <g clip-path="url(#front-fold)"><use class="thread" href="#ribbon"/></g>
+        </svg>
+      </h1>
+      <div class="hero-foot"><p>I build apps, games, hardware,<br>and the tools to make them.</p><a class="work-jump label" href="#work">Selected work <span aria-hidden="true">↓</span></a></div>
     </section>
-    <section id="work" class="wrap" aria-labelledby="work-title">
-      <div class="section-line"><h2 class="micro" id="work-title">Selected work</h2><span aria-hidden="true">↓</span></div>
-      <article class="feature managetic">
-        <div class="feature-copy"><img src="media/portfolio/managetic.svg" class="mark" width="38" height="38" alt="">
-          <h3>Managetic</h3><p>A workspace for shifts, team chat, and company news.</p>
-          <a href="https://managetic.app" class="action">Visit managetic.app <span aria-hidden="true">↗</span></a>
-          <small class="store-note">Available on Google Play</small>
+    <section id="work" aria-label="Selected work">
+      <article class="managetic" aria-labelledby="managetic-title">
+        <div class="product-copy">
+          <img class="mark" src="media/portfolio/managetic.svg" alt="" width="42" height="42">
+          <h2 id="managetic-title">Managetic</h2>
+          <p>Shifts, hours, and team chat in one place.</p>
+          <a class="button dark" href="https://managetic.app">Visit managetic.app <span aria-hidden="true">↗</span></a>
+          <small>Available on Google Play</small>
         </div>
-        <div class="device-stage">
-          <img class="product-shot" src="media/portfolio/managetic-iphone.webp" width="720" height="1080" alt="Managetic’s shift overview on an iPhone, showing hours worked, breaks, and team updates.">
+        <div class="phone-stage"><img class="phone" src="media/portfolio/managetic-iphone.webp" alt="Managetic’s shift overview on an iPhone." width="720" height="1080"></div>
+      </article>
+      <article class="blobdle" aria-labelledby="blob-title">
+        <h2 id="blob-title">Blobdle</h2>
+        <div class="blob-stage">
+          <div class="blob" aria-hidden="true"><i></i><i></i></div>
+          <p id="traits" aria-live="polite" aria-atomic="true"><span>Jelly</span> · <span>Lilac</span> · <span>Soft glow</span></p>
+          <button hidden id="roll" class="button" type="button">Roll a blob <span aria-hidden="true">⟳</span></button>
+        </div>
+        <div class="game-foot"><p>Roll a blob. Compare your luck on the daily leaderboard.</p><a href="https://blobdle.com">Play Blobdle ↗</a></div>
+      </article>
+      <article class="hardware" aria-labelledby="gesp-title">
+        <div class="hardware-copy">
+          <h2 id="gesp-title">gESP Zero</h2>
+          <p>A pocket-sized PC monitor built around an ESP32.</p>
+          <ul class="specs"><li>ESP32</li><li>0.96″ OLED</li><li>3D-printed enclosure</li></ul>
+        </div>
+        <div class="device-stage"><img class="device" src="media/portfolio/gesp-zero.webp" width="1199" height="1312" loading="lazy" alt="Black 3D-printed gESP Zero with a blue OLED showing GPU load and RAM usage."></div>
+      </article>
+      <article class="vortex" aria-labelledby="vortex-title">
+        <header><h2 id="vortex-title">Vortex</h2><p>A programming language I’m building in Rust.</p></header>
+        <div class="vx-sheet">
+          <div class="vx-file">hello.vx</div>
+          <pre><code id="vx-code"><b>dvar</b> x: 10 + 20 * 3
+<b>dcon</b> name: <em>"Vortex"</em>
+<b>log</b> x
+<b>log</b> name</code></pre>
+          <div class="vx-actions"><button id="run-vx" class="button dark" type="button" hidden>Run example <span aria-hidden="true">▷</span></button><output id="vx-result" aria-live="polite"></output><noscript>Output: 70, Vortex</noscript></div>
         </div>
       </article>
-      <article class="feature blobdle"><div class="feature-copy"><h3>Blobdle</h3><p>A daily game of chance. Roll a blob and see which traits turn up.</p>
-        <a class="external" href="https://blobdle.com">Play Blobdle ↗</a></div>
-        <div class="blob-stage"><div class="blob" aria-hidden="true"><i></i><i></i></div>
-          <p id="traits" aria-live="polite">Jelly · Lilac · Soft glow</p><button id="roll">Roll a blob <span aria-hidden="true">⟳</span></button></div>
+      <article class="zero" aria-labelledby="zero-title">
+        <header><h2 id="zero-title">Zero IDE</h2><p>A desktop code editor with a command palette for files, tools and themes.</p></header>
+        <figure><a href="media/portfolio/zero-palette.webp" aria-label="Open full-size screenshot of Zero IDE’s command palette"><img src="media/portfolio/zero-palette.webp" width="1280" height="720" loading="lazy" alt="Zero IDE’s command palette filtered to show its available editor themes."></a>
+          <figcaption>Switch themes from the command palette. <a href="media/portfolio/zero-palette.webp">View full size ↗</a></figcaption>
+        </figure>
       </article>
     </section>
-    <section class="wrap about" id="about"><h2 class="micro">About me</h2><div><p>I'm Gard, a developer and student in Oslo. I like making things you can try for yourself, from everyday tools to games built around a single idea.</p><a href="mailto:contact@hoyem.dev">contact@hoyem.dev ↗</a></div></section>
+    <section class="about" id="about"><h2 class="label">About</h2><p>I’m a developer and student in Oslo. Working in retail got me building software for shifts. At my desk, that curiosity turns into games, tiny devices and tools for writing code.</p></section>
   </main>
-  <footer class="wrap"><span class="wordmark">HØYEM</span><a href="https://github.com/GaredJr">GitHub ↗</a><a href="#top">Back to top ↑</a></footer>
-</body></html>
+  <footer id="contact"><a class="email" href="mailto:contact@hoyem.dev">contact@hoyem.dev</a><div class="footer-links"><a href="https://github.com/GaredJr">GitHub ↗</a><a class="initial" href="#top" aria-label="Back to top">Ø</a></div></footer>
+</body>
+</html>
